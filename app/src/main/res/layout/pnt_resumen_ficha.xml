@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ResumenFicha">
 
+    <TextView
+        android:id="@+id/txt_val_velocidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="66dp"
+        android:text="12 m. (6 cas.)"
+        app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
+        app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
+
     <Button
         android:id="@+id/btn_habilidades"
         android:layout_width="wrap_content"
@@ -366,4 +376,109 @@
         android:text="+0"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_car"
         app:layout_constraintTop_toBottomOf="@+id/txt_mod_sab" />
+
+    <TextView
+        android:id="@+id/txt_velocidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Velocidad"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
+
+    <TextView
+        android:id="@+id/txt_iniciativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="90dp"
+        android:text="Iniciativa"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
+
+    <TextView
+        android:id="@+id/txt_val_iniciativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="66dp"
+        android:text="+0"
+        app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
+
+    <ImageButton
+        android:id="@+id/btn_menos_mana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_vida"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/btn_menos_suerte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mas_mana3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_suerte"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/btn_menos_vida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mas_mana2"
+        app:layout_constraintStart_toEndOf="@+id/btn_mas_mana"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_mana"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/btn_mas_mana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/btn_menos_mana"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_vida"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/btn_mas_mana3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_suerte"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/btn_mas_mana2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_menos_suerte"
+        app:layout_constraintStart_toEndOf="@+id/btn_menos_vida"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_mana"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_preferences" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
