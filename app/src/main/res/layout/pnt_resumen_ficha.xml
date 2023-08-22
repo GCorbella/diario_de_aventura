@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResumenFicha">
+
+    <Button
+        android:id="@+id/btn_habilidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Habilidades"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_combate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_combate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Combate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_inventario"
+        app:layout_constraintStart_toEndOf="@+id/btn_habilidades" />
+
+    <Button
+        android:id="@+id/btn_inventario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Inventario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_combate" />
+
+    <TextView
+        android:id="@+id/txt_mana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="42dp"
+        android:text="Maná"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_vida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="Vida"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_suerte"
+        app:layout_constraintStart_toEndOf="@+id/txt_mana"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_suerte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="72dp"
+        android:text="Suerte"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_pts_vida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="24dp"
+        android:text="0/0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mana" />
+
+    <TextView
+        android:id="@+id/txt_pts_suerte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="90dp"
+        android:text="0/0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_suerte" />
+
+    <TextView
+        android:id="@+id/txt_pts_mana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="0/0"
+        app:layout_constraintEnd_toStartOf="@+id/txt_pts_suerte"
+        app:layout_constraintStart_toEndOf="@+id/txt_pts_vida"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vida" />
+
+    <TextView
+        android:id="@+id/txt_salvaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Salvaciones"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pts_mana" />
+
+    <TextView
+        android:id="@+id/txt_atributos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Atributos"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_ref" />
+
+    <TextView
+        android:id="@+id/txt_fortaleza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Fortaleza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
+
+    <TextView
+        android:id="@+id/txt_Reflejos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Reflejos"
+        app:layout_constraintEnd_toStartOf="@+id/txt_voluntad"
+        app:layout_constraintStart_toEndOf="@+id/txt_fortaleza"
+        app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
+
+    <TextView
+        android:id="@+id/txt_voluntad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:text="Voluntad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
+
+    <TextView
+        android:id="@+id/txt_val_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fortaleza" />
+
+    <TextView
+        android:id="@+id/txt_val_ref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_vol"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_for"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Reflejos" />
+
+    <TextView
+        android:id="@+id/txt_val_vol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="90dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_voluntad" />
+
+    <TextView
+        android:id="@+id/txt_fuerza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Fuerza"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_fue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+
+    <TextView
+        android:id="@+id/txt_destreza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Destreza"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_des"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fuerza" />
+
+    <TextView
+        android:id="@+id/txt_constitucion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Constitución"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_con"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_destreza" />
+
+    <TextView
+        android:id="@+id/txt_val_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="140dp"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+
+    <TextView
+        android:id="@+id/txt_val_sab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="140dp"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_int" />
+
+    <TextView
+        android:id="@+id/txt_val_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="140dp"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_sab" />
+
+    <TextView
+        android:id="@+id/txt_val_fue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="26dp"
+        android:text="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+
+    <TextView
+        android:id="@+id/txt_val_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="34dp"
+        android:text="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_fue" />
+
+    <TextView
+        android:id="@+id/txt_val_con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="34dp"
+        android:text="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_des" />
+
+    <TextView
+        android:id="@+id/txt_inteligencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Inteligencia"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_int"
+        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+
+    <TextView
+        android:id="@+id/txt_sabiduria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sabiduria"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_sab"
+        app:layout_constraintTop_toBottomOf="@+id/txt_inteligencia" />
+
+    <TextView
+        android:id="@+id/txt_carisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Carisma"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_car"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sabiduria" />
+
+    <TextView
+        android:id="@+id/txt_mod_fue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:text="+0"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_fue"
+        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+
+    <TextView
+        android:id="@+id/txt_mod_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="+0"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_des"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_fue" />
+
+    <TextView
+        android:id="@+id/txt_mod_con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="+0"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_con"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_des" />
+
+    <TextView
+        android:id="@+id/txt_mod_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:text="+0"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_int"
+        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+
+    <TextView
+        android:id="@+id/txt_mod_sab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="16dp"
+        android:text="+0"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_sab"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_int" />
+
+    <TextView
+        android:id="@+id/txt_mod_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="16dp"
+        android:text="+0"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_car"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_sab" />
+</androidx.constraintlayout.widget.ConstraintLayout>
