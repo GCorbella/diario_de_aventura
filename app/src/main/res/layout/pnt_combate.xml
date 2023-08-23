@@ -550,10 +550,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_hachas2M"
         app:layout_constraintTop_toBottomOf="@+id/txt_hachas2M" />
 
@@ -632,10 +634,12 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/txt_desarmado"
         app:layout_constraintTop_toBottomOf="@+id/txt_desarmado" />
 
@@ -645,10 +649,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_mazas"
         app:layout_constraintTop_toBottomOf="@+id/txt_mazas" />
 
@@ -658,10 +664,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_mazas2M"
         app:layout_constraintTop_toBottomOf="@+id/txt_mazas2M" />
 
@@ -671,10 +679,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_arcos"
         app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
 
@@ -684,10 +694,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_arfuegocortas"
         app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
 
@@ -697,10 +709,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_arfuegolargas"
         app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
 
@@ -710,10 +724,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_hproyectil"
         app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
 
@@ -723,10 +739,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_hrayo"
         app:layout_constraintTop_toBottomOf="@+id/txt_hrayo" />
 
@@ -736,10 +754,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_ballestas"
         app:layout_constraintTop_toBottomOf="@+id/txt_ballestas" />
 
@@ -749,10 +769,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_arrojadizas"
         app:layout_constraintTop_toBottomOf="@+id/txt_arrojadizas" />
 
@@ -762,10 +784,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_hachas"
         app:layout_constraintTop_toBottomOf="@+id/txt_hachas" />
 
@@ -775,10 +799,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_espadas"
         app:layout_constraintTop_toBottomOf="@+id/txt_espadas" />
 
@@ -788,10 +814,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_espadas2M"
         app:layout_constraintTop_toBottomOf="@+id/txt_espadas2M" />
 
@@ -801,10 +829,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_lanzas"
         app:layout_constraintTop_toBottomOf="@+id/txt_lanzas" />
 
@@ -814,10 +844,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_armasdobles"
         app:layout_constraintTop_toBottomOf="@+id/txt_armasdobles" />
 
@@ -827,10 +859,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_dagas"
         app:layout_constraintTop_toBottomOf="@+id/txt_dagas" />
 
@@ -840,10 +874,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="8dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/txt_latigo"
         app:layout_constraintTop_toBottomOf="@+id/txt_latigo" />
 
@@ -853,15 +889,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/txt_val_estoques"
         app:layout_constraintTop_toBottomOf="@+id/txt_estoques" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btn_editarusos_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
