@@ -11,8 +11,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="34dp"
         android:text="12 m. (6 cas.)"
+        app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_defensa" />
+
+    <TextView
+        android:id="@+id/txt_val_defensa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="34dp"
+        android:text="0"
         app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
         app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
 
@@ -382,8 +392,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="Velocidad"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_defensa" />
+
+    <TextView
+        android:id="@+id/txt_defensa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Defensa"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
@@ -392,9 +413,20 @@
         android:id="@+id/txt_iniciativa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="90dp"
         android:text="Iniciativa"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_defensa_desp" />
+
+    <TextView
+        android:id="@+id/txt_defensa_desp"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        android:text="Defensa \nDesprevenido"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
@@ -404,8 +436,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="36dp"
         android:text="+0"
+        app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_defensa_desp" />
+
+    <TextView
+        android:id="@+id/txt_val_defensa_desp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="0"
         app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
         app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
 
