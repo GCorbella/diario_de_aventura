@@ -18,11 +18,11 @@
 
     <TextView
         android:id="@+id/txt_val_defensa"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="34dp"
-        android:text="0"
+        android:text="10"
         app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
         app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
 
@@ -236,7 +236,7 @@
 
     <TextView
         android:id="@+id/txt_val_int"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="125dp"
@@ -246,7 +246,7 @@
 
     <TextView
         android:id="@+id/txt_val_sab"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="125dp"
@@ -256,7 +256,7 @@
 
     <TextView
         android:id="@+id/txt_val_car"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="125dp"
@@ -266,7 +266,7 @@
 
     <TextView
         android:id="@+id/txt_val_fue"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
         android:layout_marginTop="26dp"
@@ -276,7 +276,7 @@
 
     <TextView
         android:id="@+id/txt_val_des"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
         android:layout_marginTop="34dp"
@@ -286,7 +286,7 @@
 
     <TextView
         android:id="@+id/txt_val_con"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
         android:layout_marginTop="34dp"
@@ -443,11 +443,11 @@
 
     <TextView
         android:id="@+id/txt_val_defensa_desp"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="34dp"
-        android:text="0"
+        android:text="10"
         app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
         app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
 

@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import com.example.diario_aventura.R
 
 class ResumenFicha : AppCompatActivity() {
@@ -12,6 +14,28 @@ class ResumenFicha : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pnt_resumen_ficha)
 
+        var i = 0;
+
+        var txtValAtributosArray = arrayOf<TextView>(
+            findViewById(R.id.txt_val_fue),
+            findViewById(R.id.txt_val_des),
+            findViewById(R.id.txt_val_con),
+            findViewById(R.id.txt_val_int),
+            findViewById(R.id.txt_val_sab),
+            findViewById(R.id.txt_val_car)
+        )
+
+        var txtModAtributosArray = arrayOf<TextView>(
+            findViewById(R.id.txt_mod_fue),
+            findViewById(R.id.txt_mod_des),
+            findViewById(R.id.txt_mod_con),
+            findViewById(R.id.txt_mod_int),
+            findViewById(R.id.txt_mod_sab),
+            findViewById(R.id.txt_mod_car)
+        )
+
+
+        //Botones
         val btnHabilidades = findViewById<Button>(R.id.btn_habilidades)
         btnHabilidades.setOnClickListener {
             val intent = Intent(this, Habilidades::class.java)
@@ -34,6 +58,20 @@ class ResumenFicha : AppCompatActivity() {
         btnConfiguracionPJ.setOnClickListener {
             val intent = Intent(this, ConfiguracionPJ::class.java)
             startActivity(intent)
+        }
+
+        //Calculos
+        for (txtMod in txtModAtributosArray) {
+            if (((txtValAtributosArray[i].text.toString().toInt() - 10)/2) >= 0) {
+                txtMod.text = "+" + ((txtValAtributosArray[i].text.toString().toInt() - 10) / 2).toString()
+                i++
+            } else {
+                txtMod.text = ((txtValAtributosArray[i].text.toString().toInt() - 10) / 2).toString()
+                i++
+            }
+            if (i == 6) {
+                i = 0
+            }
         }
     }
 }
