@@ -6,4 +6,858 @@
     android:layout_height="match_parent"
     tools:context=".Combate">
 
+    <TextView
+        android:id="@+id/txt_competencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="COMPETENCIAS"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_at4" />
+
+    <TextView
+        android:id="@+id/txt_desarmado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Desarmado"
+        app:layout_constraintEnd_toStartOf="@+id/txt_dagas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+
+    <TextView
+        android:id="@+id/txt_dagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Dagas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_latigo"
+        app:layout_constraintStart_toEndOf="@+id/txt_desarmado"
+        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+
+    <TextView
+        android:id="@+id/txt_mazas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mazas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_hachas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_desarmado" />
+
+    <TextView
+        android:id="@+id/txt_hachas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hachas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_espadas"
+        app:layout_constraintStart_toEndOf="@+id/txt_mazas"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_dagas" />
+
+    <TextView
+        android:id="@+id/txt_espadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Espadas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_lanzas"
+        app:layout_constraintStart_toEndOf="@+id/txt_hachas"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_latigos" />
+
+    <TextView
+        android:id="@+id/txt_estoques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Estoques"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_latigo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+
+    <TextView
+        android:id="@+id/txt_latigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Látigos y cad."
+        app:layout_constraintEnd_toStartOf="@+id/txt_estoques"
+        app:layout_constraintStart_toEndOf="@+id/txt_dagas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+
+    <TextView
+        android:id="@+id/txt_lanzas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Lanzas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_espadas"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_estoques" />
+
+    <TextView
+        android:id="@+id/txt_mazas2M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mazas(2M)"
+        app:layout_constraintEnd_toStartOf="@+id/txt_hachas2M"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_mazas" />
+
+    <TextView
+        android:id="@+id/txt_hachas2M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hachas(2M)"
+        app:layout_constraintEnd_toStartOf="@+id/txt_espadas2M"
+        app:layout_constraintStart_toEndOf="@+id/txt_mazas2M"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_hachas" />
+
+    <TextView
+        android:id="@+id/txt_espadas2M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Espadas(2M)"
+        app:layout_constraintEnd_toStartOf="@+id/txt_armasdobles"
+        app:layout_constraintStart_toEndOf="@+id/txt_hachas2M"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_espadas" />
+
+    <TextView
+        android:id="@+id/txt_hproyectil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hech. Proyectil"
+        app:layout_constraintEnd_toStartOf="@+id/txt_hrayo"
+        app:layout_constraintStart_toEndOf="@+id/txt_arfuegolargas"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_arrojadizas" />
+
+    <TextView
+        android:id="@+id/txt_hrayo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hech. Rayo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_hproyectil"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_arrojadizas" />
+
+    <TextView
+        android:id="@+id/txt_armasdobles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Armas dobles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_espadas2M"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_lanzas" />
+
+    <TextView
+        android:id="@+id/txt_ballestas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ballestas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_hachas2M" />
+
+    <TextView
+        android:id="@+id/txt_arrojadizas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Armas arrojadizas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_ballestas"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_armasdobles" />
+
+    <TextView
+        android:id="@+id/txt_arcos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Arcos"
+        app:layout_constraintEnd_toStartOf="@+id/txt_ballestas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_mazas2M" />
+
+    <TextView
+        android:id="@+id/txt_arfuegocortas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ar. fuego C."
+        app:layout_constraintEnd_toStartOf="@+id/txt_arfuegolargas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_arcos" />
+
+    <TextView
+        android:id="@+id/txt_arfuegolargas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ar. fuego L."
+        app:layout_constraintEnd_toStartOf="@+id/txt_hproyectil"
+        app:layout_constraintStart_toEndOf="@+id/txt_arfuegocortas"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_ballestas" />
+
+    <EditText
+        android:id="@+id/etxt_at1"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Arma 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_at_desarmado" />
+
+    <EditText
+        android:id="@+id/etxt_at4"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Arma 4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_at3" />
+
+    <EditText
+        android:id="@+id/etxt_at2"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Arma 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_at1" />
+
+    <EditText
+        android:id="@+id/etxt_at3"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Arma 3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_at2" />
+
+    <TextView
+        android:id="@+id/txt_at_desarmado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Desarmado/Presa"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
+        android:text="Precisión"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_danyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="68dp"
+        android:text="Daño"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_prec_desarmado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_precision" />
+
+    <TextView
+        android:id="@+id/txt_prec_arma1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_desarmado" />
+
+    <TextView
+        android:id="@+id/txt_prec_arma2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_arma1" />
+
+    <TextView
+        android:id="@+id/txt_prec_arma3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_arma2" />
+
+    <TextView
+        android:id="@+id/txt_prec_arma4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_arma3" />
+
+    <TextView
+        android:id="@+id/txt_dan_arma1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:text="1d4+0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dan_desarmado" />
+
+    <TextView
+        android:id="@+id/txt_dan_arma3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:text="1d4+0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dan_arma2" />
+
+    <TextView
+        android:id="@+id/txt_dan_arma2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:text="1d4+0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dan_arma1" />
+
+    <TextView
+        android:id="@+id/txt_dan_arma4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:text="1d4+0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dan_arma3" />
+
+    <TextView
+        android:id="@+id/txt_dan_desarmado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="64dp"
+        android:text="1d4+0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_danyo" />
+
+    <ImageButton
+        android:id="@+id/btn_conf_arma1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <ImageButton
+        android:id="@+id/btn_conf_arma4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf_arma3"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <ImageButton
+        android:id="@+id/btn_conf_arma2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf_arma1"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <ImageButton
+        android:id="@+id/btn_conf_arma3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf_arma2"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <TextView
+        android:id="@+id/txt_val_desarmado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_desarmado"
+        app:layout_constraintTop_toBottomOf="@+id/txt_desarmado" />
+
+    <TextView
+        android:id="@+id/txt_val_mazas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_mazas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mazas" />
+
+    <TextView
+        android:id="@+id/txt_val_mazas2M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_mazas2M"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mazas2M" />
+
+    <TextView
+        android:id="@+id/txt_val_arcos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_arcos"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
+
+    <TextView
+        android:id="@+id/txt_val_arcos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_arfuegocortas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
+
+    <TextView
+        android:id="@+id/txt_val_arcos3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_arfuegolargas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
+
+    <TextView
+        android:id="@+id/txt_val_arcos4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_hproyectil"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
+
+    <TextView
+        android:id="@+id/txt_val_arcos5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_hrayo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hrayo" />
+
+    <TextView
+        android:id="@+id/txt_val_ballestas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_ballestas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ballestas" />
+
+    <TextView
+        android:id="@+id/txt_val_arrojadizas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_arrojadizas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arrojadizas" />
+
+    <TextView
+        android:id="@+id/txt_val_hachas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_hachas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hachas" />
+
+    <TextView
+        android:id="@+id/txt_val_hachas2M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_hachas2M"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hachas2M" />
+
+    <EditText
+        android:id="@+id/etxt_u_hachas2M"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_hachas2M"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hachas2M" />
+
+    <TextView
+        android:id="@+id/txt_val_espadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_espadas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_espadas" />
+
+    <TextView
+        android:id="@+id/txt_val_espadas2M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_espadas2M"
+        app:layout_constraintTop_toBottomOf="@+id/txt_espadas2M" />
+
+    <TextView
+        android:id="@+id/txt_val_lanzas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_lanzas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lanzas" />
+
+    <TextView
+        android:id="@+id/txt_val_armasdobles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_armasdobles"
+        app:layout_constraintTop_toBottomOf="@+id/txt_armasdobles" />
+
+    <TextView
+        android:id="@+id/txt_val_dagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_dagas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dagas" />
+
+    <TextView
+        android:id="@+id/txt_val_latigos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_u_latigos"
+        app:layout_constraintTop_toBottomOf="@+id/txt_latigo" />
+
+    <TextView
+        android:id="@+id/txt_val_estoques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/txt_estoques"
+        app:layout_constraintTop_toBottomOf="@+id/txt_estoques" />
+
+    <EditText
+        android:id="@+id/etxt_u_desarmado"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_desarmado"
+        app:layout_constraintTop_toBottomOf="@+id/txt_desarmado" />
+
+    <EditText
+        android:id="@+id/etxt_u_mazas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_mazas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mazas" />
+
+    <EditText
+        android:id="@+id/etxt_u_mazas2M"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_mazas2M"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mazas2M" />
+
+    <EditText
+        android:id="@+id/etxt_u_arcos"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
+
+    <EditText
+        android:id="@+id/etxt_u_arcos2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
+
+    <EditText
+        android:id="@+id/etxt_u_arcos3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
+
+    <EditText
+        android:id="@+id/etxt_u_arcos4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos4"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
+
+    <EditText
+        android:id="@+id/etxt_u_arcos5"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos5"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hrayo" />
+
+    <EditText
+        android:id="@+id/etxt_u_ballestas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_ballestas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ballestas" />
+
+    <EditText
+        android:id="@+id/etxt_u_arrojadizas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arrojadizas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_arrojadizas" />
+
+    <EditText
+        android:id="@+id/etxt_u_hachas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_hachas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hachas" />
+
+    <EditText
+        android:id="@+id/etxt_u_espadas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_espadas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_espadas" />
+
+    <EditText
+        android:id="@+id/etxt_u_espadas2M"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_espadas2M"
+        app:layout_constraintTop_toBottomOf="@+id/txt_espadas2M" />
+
+    <EditText
+        android:id="@+id/etxt_u_lanzas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_lanzas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lanzas" />
+
+    <EditText
+        android:id="@+id/etxt_u_armasdobles"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_armasdobles"
+        app:layout_constraintTop_toBottomOf="@+id/txt_armasdobles" />
+
+    <EditText
+        android:id="@+id/etxt_u_dagas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_dagas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dagas" />
+
+    <EditText
+        android:id="@+id/etxt_u_latigos"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_latigo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_latigo" />
+
+    <EditText
+        android:id="@+id/etxt_u_estoques"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_estoques"
+        app:layout_constraintTop_toBottomOf="@+id/txt_estoques" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
