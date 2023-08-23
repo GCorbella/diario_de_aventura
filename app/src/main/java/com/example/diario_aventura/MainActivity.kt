@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         
         val btnConfiguracion = findViewById<ImageButton>(R.id.btn_conf)
         btnConfiguracion.setOnClickListener { 
-            val intent = Intent(this, configuracion::class.java)
+            val intent = Intent(this, Configuracion::class.java)
             startActivity(intent)
         }
 

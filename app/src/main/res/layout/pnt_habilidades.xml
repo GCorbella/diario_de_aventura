@@ -600,9 +600,10 @@
         android:layout_marginTop="19dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -613,9 +614,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_agilidad" />
 
@@ -626,9 +628,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_artesania1" />
 
@@ -639,9 +642,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_artesania2" />
 
@@ -652,9 +656,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_atletismo" />
 
@@ -665,9 +670,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_avistar" />
 
@@ -678,9 +684,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_buscar" />
 
@@ -691,9 +698,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_concentracion" />
 
@@ -704,9 +712,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_des_manual" />
 
@@ -717,9 +726,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_empatia" />
 
@@ -730,9 +740,10 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_escuchar" />
 
@@ -743,9 +754,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_interpretar1" />
 
@@ -756,9 +768,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_interpretar2" />
 
@@ -769,9 +782,10 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_labia" />
 
@@ -782,9 +796,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_montar" />
 
@@ -795,9 +810,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_pilotar" />
 
@@ -808,9 +824,10 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_sanar" />
 
@@ -821,14 +838,15 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         android:textSize="10sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_sigilo" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_editarusos_h"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"

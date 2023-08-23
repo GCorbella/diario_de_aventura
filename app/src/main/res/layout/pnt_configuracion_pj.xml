@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfiguracionPJ">
+
+    <TextView
+        android:id="@+id/txt_raza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Raza:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_profesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Profesión:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tamanyo" />
+
+    <TextView
+        android:id="@+id/txt_conf_inteligencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Inteligencia:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_inteligencia"
+        app:layout_constraintStart_toEndOf="@+id/etxt_fuerza"
+        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+
+    <TextView
+        android:id="@+id/txt_conf_sabiduria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sabiduria:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_sabiduria"
+        app:layout_constraintStart_toEndOf="@+id/etxt_destreza"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_inteligencia" />
+
+    <EditText
+        android:id="@+id/etxt_fuerza"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="10"
+        app:layout_constraintEnd_toStartOf="@+id/txt_conf_inteligencia"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_fuerza"
+        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+
+    <EditText
+        android:id="@+id/etxt_constitucion"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="10"
+        app:layout_constraintEnd_toStartOf="@+id/txt_conf_carisma"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_constitucion"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_destreza" />
+
+    <EditText
+        android:id="@+id/etxt_sabiduria"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_sabiduria"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_inteligencia" />
+
+    <TextView
+        android:id="@+id/txt_conf_constitucion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Constitución:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_constitucion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_destreza" />
+
+    <EditText
+        android:id="@+id/etxt_destreza"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="10"
+        app:layout_constraintEnd_toStartOf="@+id/txt_conf_sabiduria"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_destreza"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_fuerza" />
+
+    <TextView
+        android:id="@+id/txt_conf_destreza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Destreza:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_destreza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_fuerza" />
+
+    <TextView
+        android:id="@+id/txt_conf_fuerza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Fuerza:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_fuerza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+
+    <EditText
+        android:id="@+id/etxt_inteligencia"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_inteligencia"
+        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+
+    <EditText
+        android:id="@+id/etxt_carisma"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_carisma"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_sabiduria" />
+
+    <TextView
+        android:id="@+id/txt_conf_carisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Carisma:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_carisma"
+        app:layout_constraintStart_toEndOf="@+id/etxt_constitucion"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_sabiduria" />
+
+    <TextView
+        android:id="@+id/txt_tamanyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Tamaño:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_raza" />
+
+    <Spinner
+        android:id="@+id/dspl_raza"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/dspl_profesion"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dspl_tamanyo" />
+
+    <Spinner
+        android:id="@+id/dspl_tamanyo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dspl_raza" />
+
+    <CheckBox
+        android:id="@+id/chk_sextosentido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Sexto Sentido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_constitucion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

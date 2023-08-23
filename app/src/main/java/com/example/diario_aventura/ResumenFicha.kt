@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.diario_aventura.R
 
 class ResumenFicha : AppCompatActivity() {
@@ -26,6 +27,12 @@ class ResumenFicha : AppCompatActivity() {
         val btnInventario = findViewById<Button>(R.id.btn_inventario)
         btnInventario.setOnClickListener {
             val intent = Intent(this, Inventario::class.java)
+            startActivity(intent)
+        }
+
+        val btnConfiguracionPJ = findViewById<ImageButton>(R.id.btn_confpj)
+        btnConfiguracionPJ.setOnClickListener {
+            val intent = Intent(this, ConfiguracionPJ::class.java)
             startActivity(intent)
         }
     }
