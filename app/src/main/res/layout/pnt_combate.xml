@@ -467,7 +467,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
 
     <TextView
-        android:id="@+id/txt_val_arcos2"
+        android:id="@+id/txt_val_arfuegocortas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -477,7 +477,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
 
     <TextView
-        android:id="@+id/txt_val_arcos3"
+        android:id="@+id/txt_val_arfuegolargas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -487,7 +487,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
 
     <TextView
-        android:id="@+id/txt_val_arcos4"
+        android:id="@+id/txt_val_hproyectil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -497,7 +497,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
 
     <TextView
-        android:id="@+id/txt_val_arcos5"
+        android:id="@+id/txt_val_hrayo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -679,7 +679,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
 
     <EditText
-        android:id="@+id/etxt_u_arcos2"
+        android:id="@+id/etxt_u_arfuegocortas"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -688,11 +688,11 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos2"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arfuegocortas"
         app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
 
     <EditText
-        android:id="@+id/etxt_u_arcos3"
+        android:id="@+id/etxt_u_arfuegolargas"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -701,11 +701,11 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos3"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_arfuegolargas"
         app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
 
     <EditText
-        android:id="@+id/etxt_u_arcos4"
+        android:id="@+id/etxt_u_hproyectil"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -714,11 +714,11 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos4"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_hproyectil"
         app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
 
     <EditText
-        android:id="@+id/etxt_u_arcos5"
+        android:id="@+id/etxt_u_hrayo"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -727,7 +727,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos5"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_hrayo"
         app:layout_constraintTop_toBottomOf="@+id/txt_hrayo" />
 
     <EditText
