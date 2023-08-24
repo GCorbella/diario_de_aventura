@@ -1,4 +1,4 @@
-package com.example.diario_aventura
+package com.example.diario_aventura.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

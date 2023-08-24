@@ -1,9 +1,10 @@
-package com.example.diario_aventura
+package com.example.diario_aventura.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
+import com.example.diario_aventura.R
 
 class Habilidades() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
