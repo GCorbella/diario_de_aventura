@@ -8,15 +8,15 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface PersonajeDao {
 
-    @Upsert
-    fun upsertPersonaje(personaje: Personaje)
+    @Insert
+    fun insertPersonaje(personaje: Personaje)
 
     @Delete
     fun deletePersonaje(personaje: Personaje)
 
-    @Query("SELECT * FROM personajes ORDER BY nombre ASC")
-    fun getPersonajesOrderedByNombre(): Flow<List<Personaje>>
+    @Query("SELECT * FROM personaje ORDER BY nombre ASC")
+    fun getPersonajesOrderedByNombre(): List<Personaje>
 
-    @Query("SELECT * FROM personajes ORDER BY raza ASC")
-    fun getPersonajesOrderedByRaza(): Flow<List<Personaje>>
+    @Query("SELECT * FROM personaje ORDER BY raza ASC")
+    fun getPersonajesOrderedByRaza(): List<Personaje>
 }
