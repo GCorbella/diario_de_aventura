@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ResumenFicha">
+    tools:context=".ui.SheetResume">
 
     <TextView
         android:id="@+id/txt_val_velocidad"
@@ -27,34 +27,34 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
 
     <Button
-        android:id="@+id/btn_habilidades"
+        android:id="@+id/btn_skills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Habilidades"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_combate"
+        app:layout_constraintEnd_toStartOf="@+id/btn_combat"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_combate"
+        android:id="@+id/btn_combat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Combate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_inventario"
-        app:layout_constraintStart_toEndOf="@+id/btn_habilidades" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_inventory"
+        app:layout_constraintStart_toEndOf="@+id/btn_skills" />
 
     <Button
-        android:id="@+id/btn_inventario"
+        android:id="@+id/btn_inventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Inventario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_combate" />
+        app:layout_constraintStart_toEndOf="@+id/btn_combat" />
 
     <TextView
         android:id="@+id/txt_mana"
@@ -514,7 +514,7 @@
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_confpj"
+        android:id="@+id/btn_crconf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"

@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import com.example.diario_aventura.DataStoreManager
-import com.example.diario_aventura.DiarioDeAventuras
+import com.example.diario_aventura.AdventureJournal
 import com.example.diario_aventura.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -23,55 +23,60 @@ class MainActivity : AppCompatActivity() {
         // Obtener el personaje seleccionado desde DataStore y asignarlo a la variable global
         val context = this
         CoroutineScope(Dispatchers.IO).launch {
-            val selectedPersonajeId: Int? = DataStoreManager.getSelectedPersonajeId(context).first()
+            val selectedCharacterId: Int? = DataStoreManager.getSelectedCharacterId(context).first()
 
             // Si el valor es diferente de null y de -1, lo asignamos a la variable global
-            if (selectedPersonajeId != null && selectedPersonajeId != -1) {
-                DiarioDeAventuras.personajeSeleccionadoId = selectedPersonajeId
+            if (selectedCharacterId != null && selectedCharacterId != -1) {
+                AdventureJournal.selectedCharacterId = selectedCharacterId
             }
         }
 
-        val btnConfiguracion = findViewById<ImageButton>(R.id.btn_conf)
-        btnConfiguracion.setOnClickListener {
-            val intent = Intent(this, Configuracion::class.java)
+        val btnConfiguration = findViewById<ImageButton>(R.id.btn_conf)
+        btnConfiguration.setOnClickListener {
+            val intent = Intent(this, Configuration::class.java)
             startActivity(intent)
         }
 
-        val btnFicha = findViewById<Button>(R.id.btn_ficha)
-        btnFicha.setOnClickListener {
-            val intent = Intent(this, ResumenFicha::class.java)
+        val btnCrSheet = findViewById<Button>(R.id.btn_sheet)
+        btnCrSheet.setOnClickListener {
+            val intent = Intent(this, SheetResume::class.java)
             startActivity(intent)
         }
 
-        updatePersonajeName()
+        updateCharacterName()
     }
 
     override fun onResume() {
         super.onResume()
-        updatePersonajeName()
+        updateCharacterName()
     }
 
-    private fun updatePersonajeName() {
+    private fun updateCharacterName() {
         val context = this
         CoroutineScope(Dispatchers.IO).launch {
-            val selectedPersonajeId: Int? = DataStoreManager.getSelectedPersonajeId(context).first()
+            val selectedCharacterId: Int? = DataStoreManager.getSelectedCharacterId(context).first()
 
-            if (selectedPersonajeId != null && selectedPersonajeId != -1) {
-                val db = (application as DiarioDeAventuras).db
-                val personajeSeleccionado = db.personajeDao().getPersonajeById(selectedPersonajeId)
+            if (selectedCharacterId != null && selectedCharacterId != -1) {
+                val db = (application as AdventureJournal).db
+                val selectedCharacter = db.characterDao().getCharacterById(selectedCharacterId)
 
                 runOnUiThread {
-                    val txtDiarioDe = findViewById<TextView>(R.id.txt_diarioDe)
-                    val textoDiario = getString(R.string.diario_de_personaje, personajeSeleccionado.nombre)
-                    txtDiarioDe.text = textoDiario
+                    val txtJournalOf = findViewById<TextView>(R.id.txt_journalOf)
+                    if (selectedCharacter != null) {
+                        val journalText = getString(R.string.journal_of_character, selectedCharacter.name)
+                        txtJournalOf.text = journalText
+                    } else {
+                        txtJournalOf.text = getString(R.string.journal_of_character, "xxxxxxxx")
+                    }
                 }
             } else {
                 runOnUiThread {
-                    val txtDiarioDe = findViewById<TextView>(R.id.txt_diarioDe)
-                    val textoDiario = getString(R.string.diario_de_personaje, "xxxxxxxx")
-                    txtDiarioDe.text = textoDiario
+                    val txtJournalOf = findViewById<TextView>(R.id.txt_journalOf)
+                    val journalText = getString(R.string.journal_of_character, "xxxxxxxx")
+                    txtJournalOf.text = journalText
                 }
             }
         }
     }
+
 }

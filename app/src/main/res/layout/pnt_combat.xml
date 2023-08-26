@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Combate">
+    tools:context=".ui.Combat">
 
     <TextView
-        android:id="@+id/txt_competencias"
+        android:id="@+id/txt_proficiencies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -18,194 +18,194 @@
         app:layout_constraintTop_toBottomOf="@+id/etxt_at4" />
 
     <TextView
-        android:id="@+id/txt_desarmado"
+        android:id="@+id/txt_unarmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Desarmado"
-        app:layout_constraintEnd_toStartOf="@+id/txt_dagas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_daggers"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_proficiencies" />
 
     <TextView
-        android:id="@+id/txt_dagas"
+        android:id="@+id/txt_daggers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Dagas"
-        app:layout_constraintEnd_toStartOf="@+id/txt_latigo"
-        app:layout_constraintStart_toEndOf="@+id/txt_desarmado"
-        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_whips"
+        app:layout_constraintStart_toEndOf="@+id/txt_unarmed"
+        app:layout_constraintTop_toBottomOf="@+id/txt_proficiencies" />
 
     <TextView
-        android:id="@+id/txt_mazas"
+        android:id="@+id/txt_maces"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Mazas"
-        app:layout_constraintEnd_toStartOf="@+id/txt_hachas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_axes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_desarmado" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_unarmed" />
 
     <TextView
-        android:id="@+id/txt_hachas"
+        android:id="@+id/txt_axes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Hachas"
-        app:layout_constraintEnd_toStartOf="@+id/txt_espadas"
-        app:layout_constraintStart_toEndOf="@+id/txt_mazas"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_dagas" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_swords"
+        app:layout_constraintStart_toEndOf="@+id/txt_maces"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_daggers" />
 
     <TextView
-        android:id="@+id/txt_espadas"
+        android:id="@+id/txt_swords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Espadas"
-        app:layout_constraintEnd_toStartOf="@+id/txt_lanzas"
-        app:layout_constraintStart_toEndOf="@+id/txt_hachas"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_latigos" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_spears"
+        app:layout_constraintStart_toEndOf="@+id/txt_axes"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_whips" />
 
     <TextView
-        android:id="@+id/txt_estoques"
+        android:id="@+id/txt_rapiers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Estoques"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_latigo"
-        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+        app:layout_constraintStart_toEndOf="@+id/txt_whips"
+        app:layout_constraintTop_toBottomOf="@+id/txt_proficiencies" />
 
     <TextView
-        android:id="@+id/txt_latigo"
+        android:id="@+id/txt_whips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Látigos y cad."
-        app:layout_constraintEnd_toStartOf="@+id/txt_estoques"
-        app:layout_constraintStart_toEndOf="@+id/txt_dagas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_competencias" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_rapiers"
+        app:layout_constraintStart_toEndOf="@+id/txt_daggers"
+        app:layout_constraintTop_toBottomOf="@+id/txt_proficiencies" />
 
     <TextView
-        android:id="@+id/txt_lanzas"
+        android:id="@+id/txt_spears"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Lanzas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_espadas"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_estoques" />
+        app:layout_constraintStart_toEndOf="@+id/txt_swords"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_rapiers" />
 
     <TextView
-        android:id="@+id/txt_mazas2M"
+        android:id="@+id/txt_2hMaces"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Mazas(2M)"
-        app:layout_constraintEnd_toStartOf="@+id/txt_hachas2M"
+        app:layout_constraintEnd_toStartOf="@+id/txt_2hAxes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_mazas" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_maces" />
 
     <TextView
-        android:id="@+id/txt_hachas2M"
+        android:id="@+id/txt_2hAxes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Hachas(2M)"
-        app:layout_constraintEnd_toStartOf="@+id/txt_espadas2M"
-        app:layout_constraintStart_toEndOf="@+id/txt_mazas2M"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_hachas" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_2hSwords"
+        app:layout_constraintStart_toEndOf="@+id/txt_2hMaces"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_axes" />
 
     <TextView
-        android:id="@+id/txt_espadas2M"
+        android:id="@+id/txt_2hSwords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Espadas(2M)"
-        app:layout_constraintEnd_toStartOf="@+id/txt_armasdobles"
-        app:layout_constraintStart_toEndOf="@+id/txt_hachas2M"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_espadas" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_doubleWeapons"
+        app:layout_constraintStart_toEndOf="@+id/txt_2hAxes"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_swords" />
 
     <TextView
-        android:id="@+id/txt_hproyectil"
+        android:id="@+id/txt_projectileS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Hech. Proyectil"
-        app:layout_constraintEnd_toStartOf="@+id/txt_hrayo"
-        app:layout_constraintStart_toEndOf="@+id/txt_arfuegolargas"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_arrojadizas" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_rayS"
+        app:layout_constraintStart_toEndOf="@+id/txt_longFirearms"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_throwingW" />
 
     <TextView
-        android:id="@+id/txt_hrayo"
+        android:id="@+id/txt_rayS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Hech. Rayo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_hproyectil"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_arrojadizas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_projectileS"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_throwingW" />
 
     <TextView
-        android:id="@+id/txt_armasdobles"
+        android:id="@+id/txt_doubleWeapons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Armas dobles"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_espadas2M"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_lanzas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_2hSwords"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_spears" />
 
     <TextView
-        android:id="@+id/txt_ballestas"
+        android:id="@+id/txt_crossbows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Ballestas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_hachas2M" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_2hAxes" />
 
     <TextView
-        android:id="@+id/txt_arrojadizas"
+        android:id="@+id/txt_throwingW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Armas arrojadizas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_ballestas"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_armasdobles" />
+        app:layout_constraintStart_toEndOf="@+id/txt_crossbows"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_doubleWeapons" />
 
     <TextView
-        android:id="@+id/txt_arcos"
+        android:id="@+id/txt_bows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Arcos"
-        app:layout_constraintEnd_toStartOf="@+id/txt_ballestas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_crossbows"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_mazas2M" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_2hMaces" />
 
     <TextView
-        android:id="@+id/txt_arfuegocortas"
+        android:id="@+id/txt_shortFirearms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Ar. fuego C."
-        app:layout_constraintEnd_toStartOf="@+id/txt_arfuegolargas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_longFirearms"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_arcos" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_bows" />
 
     <TextView
-        android:id="@+id/txt_arfuegolargas"
+        android:id="@+id/txt_longFirearms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Ar. fuego L."
-        app:layout_constraintEnd_toStartOf="@+id/txt_hproyectil"
-        app:layout_constraintStart_toEndOf="@+id/txt_arfuegocortas"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_ballestas" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_projectileS"
+        app:layout_constraintStart_toEndOf="@+id/txt_shortFirearms"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_crossbows" />
 
     <EditText
         android:id="@+id/etxt_at1"
@@ -217,7 +217,7 @@
         android:inputType="textPersonName"
         android:text="Arma 1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_at_desarmado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_at_unarmed" />
 
     <EditText
         android:id="@+id/etxt_at4"
@@ -256,7 +256,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etxt_at2" />
 
     <TextView
-        android:id="@+id/txt_at_desarmado"
+        android:id="@+id/txt_at_unarmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -277,7 +277,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_danyo"
+        android:id="@+id/txt_dmg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -287,7 +287,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_prec_desarmado"
+        android:id="@+id/txt_prec_unarmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
@@ -297,255 +297,255 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_precision" />
 
     <TextView
-        android:id="@+id/txt_prec_arma1"
+        android:id="@+id/txt_prec_weapon1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
         android:layout_marginTop="24dp"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_prec_desarmado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_unarmed" />
 
     <TextView
-        android:id="@+id/txt_prec_arma2"
+        android:id="@+id/txt_prec_weapon2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
         android:layout_marginTop="32dp"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_prec_arma1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_weapon1" />
 
     <TextView
-        android:id="@+id/txt_prec_arma3"
+        android:id="@+id/txt_prec_weapon3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
         android:layout_marginTop="32dp"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_prec_arma2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_weapon2" />
 
     <TextView
-        android:id="@+id/txt_prec_arma4"
+        android:id="@+id/txt_prec_weapon4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
         android:layout_marginTop="32dp"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_prec_arma3" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_prec_weapon3" />
 
     <TextView
-        android:id="@+id/txt_dan_arma1"
+        android:id="@+id/txt_dmg_weapon1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="64dp"
         android:text="1d4+0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dan_desarmado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dmg_unarmed" />
 
     <TextView
-        android:id="@+id/txt_dan_arma3"
+        android:id="@+id/txt_dmg_weapon3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:text="1d4+0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dan_arma2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dmg_weapon2" />
 
     <TextView
-        android:id="@+id/txt_dan_arma2"
+        android:id="@+id/txt_dmg_weapon2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:text="1d4+0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dan_arma1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dmg_weapon1" />
 
     <TextView
-        android:id="@+id/txt_dan_arma4"
+        android:id="@+id/txt_dmg_weapon4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:text="1d4+0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dan_arma3" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dmg_weapon3" />
 
     <TextView
-        android:id="@+id/txt_dan_desarmado"
+        android:id="@+id/txt_dmg_unarmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="64dp"
         android:text="1d4+0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_danyo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dmg" />
 
     <ImageButton
-        android:id="@+id/btn_conf_arma1"
+        android:id="@+id/btn_conf_weapon1"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="72dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma1"
+        app:layout_constraintStart_toEndOf="@+id/txt_dmg_weapon1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <ImageButton
-        android:id="@+id/btn_conf_arma4"
+        android:id="@+id/btn_conf_weapon4"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma4"
-        app:layout_constraintTop_toBottomOf="@+id/btn_conf_arma3"
+        app:layout_constraintStart_toEndOf="@+id/txt_dmg_weapon4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf_weapon3"
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <ImageButton
-        android:id="@+id/btn_conf_arma2"
+        android:id="@+id/btn_conf_weapon2"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_conf_arma1"
+        app:layout_constraintStart_toEndOf="@+id/txt_dmg_weapon2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf_weapon1"
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <ImageButton
-        android:id="@+id/btn_conf_arma3"
+        android:id="@+id/btn_conf_weapon3"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_dan_arma3"
-        app:layout_constraintTop_toBottomOf="@+id/btn_conf_arma2"
+        app:layout_constraintStart_toEndOf="@+id/txt_dmg_weapon3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf_weapon2"
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <TextView
-        android:id="@+id/txt_val_desarmado"
+        android:id="@+id/txt_val_unarmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_desarmado"
-        app:layout_constraintTop_toBottomOf="@+id/txt_desarmado" />
+        app:layout_constraintStart_toStartOf="@+id/txt_unarmed"
+        app:layout_constraintTop_toBottomOf="@+id/txt_unarmed" />
 
     <TextView
-        android:id="@+id/txt_val_mazas"
+        android:id="@+id/txt_val_maces"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-8dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_mazas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mazas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_maces"
+        app:layout_constraintTop_toBottomOf="@+id/txt_maces" />
 
     <TextView
-        android:id="@+id/txt_val_mazas2M"
+        android:id="@+id/txt_val_2hMaces"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_mazas2M"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mazas2M" />
+        app:layout_constraintStart_toStartOf="@+id/txt_2hMaces"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2hMaces" />
 
     <TextView
-        android:id="@+id/txt_val_arcos"
+        android:id="@+id/txt_val_bows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-8dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_arcos"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
+        app:layout_constraintStart_toStartOf="@+id/txt_bows"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bows" />
 
     <TextView
-        android:id="@+id/txt_val_arfuegocortas"
+        android:id="@+id/txt_val_shortFirearms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_arfuegocortas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_shortFirearms"
+        app:layout_constraintTop_toBottomOf="@+id/txt_shortFirearms" />
 
     <TextView
-        android:id="@+id/txt_val_arfuegolargas"
+        android:id="@+id/txt_val_longFirearms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_arfuegolargas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_longFirearms"
+        app:layout_constraintTop_toBottomOf="@+id/txt_longFirearms" />
 
     <TextView
-        android:id="@+id/txt_val_hproyectil"
+        android:id="@+id/txt_val_projectileS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_hproyectil"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
+        app:layout_constraintStart_toStartOf="@+id/txt_projectileS"
+        app:layout_constraintTop_toBottomOf="@+id/txt_projectileS" />
 
     <TextView
-        android:id="@+id/txt_val_hrayo"
+        android:id="@+id/txt_val_rayS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_hrayo"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hrayo" />
+        app:layout_constraintStart_toStartOf="@+id/txt_rayS"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rayS" />
 
     <TextView
-        android:id="@+id/txt_val_ballestas"
+        android:id="@+id/txt_val_crossbows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_ballestas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ballestas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_crossbows"
+        app:layout_constraintTop_toBottomOf="@+id/txt_crossbows" />
 
     <TextView
-        android:id="@+id/txt_val_arrojadizas"
+        android:id="@+id/txt_val_throwingW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_arrojadizas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arrojadizas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_throwingW"
+        app:layout_constraintTop_toBottomOf="@+id/txt_throwingW" />
 
     <TextView
-        android:id="@+id/txt_val_hachas"
+        android:id="@+id/txt_val_axes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_hachas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hachas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_axes"
+        app:layout_constraintTop_toBottomOf="@+id/txt_axes" />
 
     <TextView
-        android:id="@+id/txt_val_hachas2M"
+        android:id="@+id/txt_val_2hAxes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_hachas2M"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hachas2M" />
+        app:layout_constraintStart_toStartOf="@+id/txt_2hAxes"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2hAxes" />
 
     <EditText
-        android:id="@+id/etxt_u_hachas2M"
+        android:id="@+id/etxt_u_2hAxes"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -556,81 +556,81 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_hachas2M"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hachas2M" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_2hAxes"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2hAxes" />
 
     <TextView
-        android:id="@+id/txt_val_espadas"
+        android:id="@+id/txt_val_swords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_espadas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_espadas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_swords"
+        app:layout_constraintTop_toBottomOf="@+id/txt_swords" />
 
     <TextView
-        android:id="@+id/txt_val_espadas2M"
+        android:id="@+id/txt_val_2hSwords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_espadas2M"
-        app:layout_constraintTop_toBottomOf="@+id/txt_espadas2M" />
+        app:layout_constraintStart_toStartOf="@+id/txt_2hSwords"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2hSwords" />
 
     <TextView
-        android:id="@+id/txt_val_lanzas"
+        android:id="@+id/txt_val_spears"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_lanzas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_lanzas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_spears"
+        app:layout_constraintTop_toBottomOf="@+id/txt_spears" />
 
     <TextView
-        android:id="@+id/txt_val_armasdobles"
+        android:id="@+id/txt_val_doubleWeapons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_armasdobles"
-        app:layout_constraintTop_toBottomOf="@+id/txt_armasdobles" />
+        app:layout_constraintStart_toStartOf="@+id/txt_doubleWeapons"
+        app:layout_constraintTop_toBottomOf="@+id/txt_doubleWeapons" />
 
     <TextView
-        android:id="@+id/txt_val_dagas"
+        android:id="@+id/txt_val_daggers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_dagas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dagas" />
+        app:layout_constraintStart_toStartOf="@+id/txt_daggers"
+        app:layout_constraintTop_toBottomOf="@+id/txt_daggers" />
 
     <TextView
-        android:id="@+id/txt_val_latigos"
+        android:id="@+id/txt_val_whips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="0"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_u_latigos"
-        app:layout_constraintTop_toBottomOf="@+id/txt_latigo" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_u_whips"
+        app:layout_constraintTop_toBottomOf="@+id/txt_whips" />
 
     <TextView
-        android:id="@+id/txt_val_estoques"
+        android:id="@+id/txt_val_rapiers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/txt_estoques"
-        app:layout_constraintTop_toBottomOf="@+id/txt_estoques" />
+        app:layout_constraintStart_toStartOf="@+id/txt_rapiers"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rapiers" />
 
     <EditText
-        android:id="@+id/etxt_u_desarmado"
+        android:id="@+id/etxt_u_unarmed"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -640,26 +640,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintEnd_toEndOf="@+id/txt_desarmado"
-        app:layout_constraintTop_toBottomOf="@+id/txt_desarmado" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_unarmed"
+        app:layout_constraintTop_toBottomOf="@+id/txt_unarmed" />
 
     <EditText
-        android:id="@+id/etxt_u_mazas"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
-        android:layout_gravity="center_horizontal"
-        android:ems="10"
-        android:inputType="number"
-        android:text="0"
-        android:textSize="10sp"
-        android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_mazas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mazas" />
-
-    <EditText
-        android:id="@+id/etxt_u_mazas2M"
+        android:id="@+id/etxt_u_maces"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -670,11 +655,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_mazas2M"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mazas2M" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_maces"
+        app:layout_constraintTop_toBottomOf="@+id/txt_maces" />
 
     <EditText
-        android:id="@+id/etxt_u_arcos"
+        android:id="@+id/etxt_u_2hMaces"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -685,11 +670,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arcos"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arcos" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_2hMaces"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2hMaces" />
 
     <EditText
-        android:id="@+id/etxt_u_arfuegocortas"
+        android:id="@+id/etxt_u_bows"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -700,11 +685,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arfuegocortas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegocortas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_bows"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bows" />
 
     <EditText
-        android:id="@+id/etxt_u_arfuegolargas"
+        android:id="@+id/etxt_u_shortFirearms"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -715,11 +700,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arfuegolargas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arfuegolargas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_shortFirearms"
+        app:layout_constraintTop_toBottomOf="@+id/txt_shortFirearms" />
 
     <EditText
-        android:id="@+id/etxt_u_hproyectil"
+        android:id="@+id/etxt_u_longFirearms"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -730,11 +715,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_hproyectil"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hproyectil" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_longFirearms"
+        app:layout_constraintTop_toBottomOf="@+id/txt_longFirearms" />
 
     <EditText
-        android:id="@+id/etxt_u_hrayo"
+        android:id="@+id/etxt_u_projectileS"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -745,11 +730,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_hrayo"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hrayo" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_projectileS"
+        app:layout_constraintTop_toBottomOf="@+id/txt_projectileS" />
 
     <EditText
-        android:id="@+id/etxt_u_ballestas"
+        android:id="@+id/etxt_u_rayS"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -760,11 +745,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_ballestas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ballestas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_rayS"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rayS" />
 
     <EditText
-        android:id="@+id/etxt_u_arrojadizas"
+        android:id="@+id/etxt_u_crossbows"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -775,11 +760,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_arrojadizas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_arrojadizas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_crossbows"
+        app:layout_constraintTop_toBottomOf="@+id/txt_crossbows" />
 
     <EditText
-        android:id="@+id/etxt_u_hachas"
+        android:id="@+id/etxt_u_throwingW"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -790,11 +775,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_hachas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hachas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_throwingW"
+        app:layout_constraintTop_toBottomOf="@+id/txt_throwingW" />
 
     <EditText
-        android:id="@+id/etxt_u_espadas"
+        android:id="@+id/etxt_u_axes"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -805,11 +790,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_espadas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_espadas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_axes"
+        app:layout_constraintTop_toBottomOf="@+id/txt_axes" />
 
     <EditText
-        android:id="@+id/etxt_u_espadas2M"
+        android:id="@+id/etxt_u_swords"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -820,11 +805,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_espadas2M"
-        app:layout_constraintTop_toBottomOf="@+id/txt_espadas2M" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_swords"
+        app:layout_constraintTop_toBottomOf="@+id/txt_swords" />
 
     <EditText
-        android:id="@+id/etxt_u_lanzas"
+        android:id="@+id/etxt_u_2hSwords"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -835,11 +820,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_lanzas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_lanzas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_2hSwords"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2hSwords" />
 
     <EditText
-        android:id="@+id/etxt_u_armasdobles"
+        android:id="@+id/etxt_u_spears"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -850,11 +835,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_armasdobles"
-        app:layout_constraintTop_toBottomOf="@+id/txt_armasdobles" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_spears"
+        app:layout_constraintTop_toBottomOf="@+id/txt_spears" />
 
     <EditText
-        android:id="@+id/etxt_u_dagas"
+        android:id="@+id/etxt_u_doubleWeapons"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -865,11 +850,26 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_dagas"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dagas" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_doubleWeapons"
+        app:layout_constraintTop_toBottomOf="@+id/txt_doubleWeapons" />
 
     <EditText
-        android:id="@+id/etxt_u_latigos"
+        android:id="@+id/etxt_u_daggers"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="10sp"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_daggers"
+        app:layout_constraintTop_toBottomOf="@+id/txt_daggers" />
+
+    <EditText
+        android:id="@+id/etxt_u_whips"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -880,11 +880,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintEnd_toEndOf="@+id/txt_latigo"
-        app:layout_constraintTop_toBottomOf="@+id/txt_latigo" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_whips"
+        app:layout_constraintTop_toBottomOf="@+id/txt_whips" />
 
     <EditText
-        android:id="@+id/etxt_u_estoques"
+        android:id="@+id/etxt_u_rapiers"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -895,11 +895,11 @@
         android:text="0"
         android:textSize="10sp"
         android:enabled="false"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_estoques"
-        app:layout_constraintTop_toBottomOf="@+id/txt_estoques" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_rapiers"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rapiers" />
 
     <ImageButton
-        android:id="@+id/btn_editarusos_c"
+        android:id="@+id/btn_edituses_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"

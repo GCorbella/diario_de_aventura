@@ -6,10 +6,10 @@ import android.widget.EditText
 import android.widget.ImageButton
 import com.example.diario_aventura.R
 
-class Habilidades() : AppCompatActivity() {
+class Skills() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.pnt_habilidades)
+        setContentView(R.layout.pnt_skills)
 
         var editTextArray = arrayOf<EditText>(
             findViewById(R.id.etxt_u_agilidad),

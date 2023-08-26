@@ -4,7 +4,7 @@
     package="com.example.diario_aventura">
 
     <application
-        android:name=".DiarioDeAventuras"
+        android:name=".AdventureJournal"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,22 +15,22 @@
         android:theme="@style/Theme.Diario_aventura"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ConfiguracionPJ"
+            android:name=".ui.CrConfiguration"
             android:exported="false" />
         <activity
-            android:name=".ui.Inventario"
+            android:name=".ui.Inventory"
             android:exported="false" />
         <activity
-            android:name=".ui.Combate"
+            android:name=".ui.Combat"
             android:exported="false" />
         <activity
-            android:name=".ui.Habilidades"
+            android:name=".ui.Skills"
             android:exported="false" />
         <activity
-            android:name=".ui.ResumenFicha"
+            android:name=".ui.SheetResume"
             android:exported="false" />
         <activity
-            android:name=".ui.Configuracion"
+            android:name=".ui.Configuration"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

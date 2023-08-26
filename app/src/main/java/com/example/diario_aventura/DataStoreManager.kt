@@ -22,7 +22,7 @@ object DataStoreManager {
         }
     }
 
-    fun getSelectedPersonajeId(context: Context): Flow<Int?> {
+    fun getSelectedCharacterId(context: Context): Flow<Int?> {
         return context.dataStore.data.map { preferences ->
             preferences[DataStoreKeys.KEY_SELECTED_PERSONAJE_ID]
         }
