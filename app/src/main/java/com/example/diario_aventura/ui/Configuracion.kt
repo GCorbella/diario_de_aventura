@@ -6,11 +6,14 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
+import com.example.diario_aventura.DataStoreManager
 import com.example.diario_aventura.DiarioDeAventuras
 import com.example.diario_aventura.R
 import com.example.diario_aventura.db.entities.Personaje
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -33,6 +36,11 @@ class Configuracion : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val personajeSeleccionado = personajes[position]
                 DiarioDeAventuras.personajeSeleccionadoId = personajeSeleccionado.id
+
+                // Obtener el contexto de la actividad y guardar el personaje seleccionado en DataStore
+                val context = this@Configuracion
+                CoroutineScope(Dispatchers.IO).launch {
+                    DataStoreManager.saveSelectedPersonajeId(context, personajeSeleccionado.id) }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {

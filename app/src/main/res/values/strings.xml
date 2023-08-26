@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Diario_aventura</string>
+    <string name="diario_de_personaje">Diario de \n%1$s</string>
 </resources>

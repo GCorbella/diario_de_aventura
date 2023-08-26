@@ -19,4 +19,7 @@ interface PersonajeDao {
 
     @Query("SELECT * FROM personaje ORDER BY raza ASC")
     fun getPersonajesOrderedByRaza(): List<Personaje>
+
+    @Query("SELECT * FROM personaje WHERE id = :id")
+    fun getPersonajeById(id: Int): Personaje
 }

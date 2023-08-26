@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
+import com.example.diario_aventura.DiarioDeAventuras
 import com.example.diario_aventura.R
 
 class ResumenFicha : AppCompatActivity() {
@@ -72,5 +74,13 @@ class ResumenFicha : AppCompatActivity() {
                 i = 0
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Mostrar el valor de la variable global en un Toast
+        val toastMessage = "Personaje seleccionado: ${DiarioDeAventuras.personajeSeleccionadoId}"
+        Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
     }
 }
