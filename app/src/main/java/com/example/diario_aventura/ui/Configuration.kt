@@ -16,20 +16,20 @@ import kotlinx.coroutines.withContext
 
 class Configuration : AppCompatActivity() {
 
-    private lateinit var dspl_cr: Spinner
+    private lateinit var dsplCr: Spinner
     private lateinit var characters: List<Character>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pnt_configuration)
 
-        dspl_cr = findViewById(R.id.dspl_cr)
+        dsplCr = findViewById(R.id.dspl_cr)
 
         CoroutineScope(Dispatchers.Main).launch {
             loadCharactersInSpinner()
         }
 
-        dspl_cr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        dsplCr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedCharacter = characters[position]
                 AdventureJournal.selectedCharacterId = selectedCharacter.id
@@ -78,12 +78,62 @@ class Configuration : AppCompatActivity() {
 
             dialog.show()
         }
+
+        val btnDltCharacter = findViewById<Button>(R.id.btn_dlt_cr)
+        btnDltCharacter.setOnClickListener {
+            val dialogView = layoutInflater.inflate(R.layout.dialog_dlt_cr, null)
+            val txtDltCr = dialogView.findViewById<TextView>(R.id.txt_dltcr)
+            val btnDltCrAffirmative = dialogView.findViewById<Button>(R.id.btn_dltcr_affirmative)
+            val btnDltCrNegative = dialogView.findViewById<Button>(R.id.btn_dltcr_negative)
+
+            val dialogBuilder = AlertDialog.Builder(this)
+                .setView(dialogView)
+                .setTitle("Eliminar Personaje")
+
+            val dialog = dialogBuilder.create()
+
+            // Obtener el personaje seleccionado actualmente en el Spinner
+            val selectedCharacterPosition = dsplCr.selectedItemPosition
+            if (selectedCharacterPosition != AdapterView.INVALID_POSITION) {
+                val selectedCharacter = characters[selectedCharacterPosition]
+                txtDltCr.text = getString(R.string.delete_character, selectedCharacter.name)
+            }
+
+            btnDltCrAffirmative.setOnClickListener {
+                // Obtener el personaje seleccionado actualmente en el Spinner
+                val selectedCharacterPosition = dsplCr.selectedItemPosition
+                if (selectedCharacterPosition != AdapterView.INVALID_POSITION) {
+                    val selectedCharacter = characters[selectedCharacterPosition]
+
+                    // Eliminar el personaje de la base de datos
+                    CoroutineScope(Dispatchers.IO).launch {
+                        (application as AdventureJournal).db.characterDao().deleteCharacter(selectedCharacter)
+                    }
+
+                    // Actualizar la lista de personajes en el Spinner
+                    CoroutineScope(Dispatchers.Main).launch {
+                        loadCharactersInSpinner()
+                    }
+
+                    // Actualizar la variable global AdventureJournal.selectedCharacterId
+                    AdventureJournal.selectedCharacterId = -1
+                }
+                Toast.makeText(this, "Personaje eliminado", Toast.LENGTH_SHORT).show()
+                dialog.dismiss()
+            }
+
+            btnDltCrNegative.setOnClickListener {
+                dialog.dismiss()
+            }
+
+            dialog.show()
+        }
     }
 
     override fun onResume() {
         super.onResume()
 
-        dspl_cr = findViewById(R.id.dspl_cr)
+        dsplCr = findViewById(R.id.dspl_cr)
 
         CoroutineScope(Dispatchers.Main).launch {
             loadCharactersInSpinner()
@@ -100,6 +150,6 @@ class Configuration : AppCompatActivity() {
 
         val adapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, charactersNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        dspl_cr.adapter = adapter
+        dsplCr.adapter = adapter
     }
 }

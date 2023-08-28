@@ -11,7 +11,7 @@ interface CharacterDAO {
     fun insertCharacter(character: Character)
 
     @Delete
-    fun deletePersonaje(character: Character)
+    fun deleteCharacter(character: Character)
 
     @Query("SELECT * FROM character ORDER BY name ASC")
     fun getCharactersOrderedByName(): List<Character>

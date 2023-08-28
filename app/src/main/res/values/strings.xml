@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Diario_aventura</string>
     <string name="journal_of_character">Diario de \n%1$s</string>
+    <string name="delete_character">¿Quieres eliminar a %1$s ?</string>
 </resources>
