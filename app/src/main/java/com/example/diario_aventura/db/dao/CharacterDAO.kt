@@ -23,7 +23,7 @@ interface CharacterDAO {
     fun getCharacterById(id: Int): Character
 
     fun createNewCharacter(name: String) {
-        val newCharacter = Character(0,name,"")
+        val newCharacter = Character(0,name,0)
         insertCharacter(newCharacter)
     }
 }

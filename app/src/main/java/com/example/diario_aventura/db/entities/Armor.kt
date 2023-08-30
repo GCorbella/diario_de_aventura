@@ -10,4 +10,4 @@ data class Armor (
     val id: Int = 0,
     @ColumnInfo(name = "name")
     val name: String = "",
-        )
+)
