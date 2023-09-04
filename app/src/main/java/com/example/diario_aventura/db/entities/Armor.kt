@@ -10,4 +10,20 @@ data class Armor (
     val id: Int = 0,
     @ColumnInfo(name = "name")
     val name: String = "",
+    @ColumnInfo(name = "type")
+    val type: String = "",
+    @ColumnInfo(name = "cut_reduction")
+    val rCut: Int = 0,
+    @ColumnInfo(name = "piercing_reduction")
+    val rPiercing: Int = 0,
+    @ColumnInfo(name = "blunt_reduction")
+    val rBlunt: Int = 0,
+    @ColumnInfo(name = "max_dexterity")
+    val maxDex: Int = 8,
+    @ColumnInfo(name = "skill_penalty")
+    val skillPenalty: Int = 0,
+    @ColumnInfo(name = "spell_failure")
+    val spellFailure: Int = 0,
+    @ColumnInfo(name = "speed_penalty")
+    val speedPenalty: Int = 0
 )

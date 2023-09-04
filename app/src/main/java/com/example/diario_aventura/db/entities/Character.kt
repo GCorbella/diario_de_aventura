@@ -12,6 +12,15 @@ data class Character(
     val name: String = "",
     @ColumnInfo(name = "race")
     val race: Int = 0,
+    @ColumnInfo(name = "background")
+    val background: Int = 0,
+//Stats
+    @ColumnInfo(name = "current_health")
+    val cHealth: Int = 0,
+    @ColumnInfo(name = "current_mana")
+    val cMana: Int = 0,
+    @ColumnInfo(name = "current_luck")
+    val cLuck: Int = 0,
 //Attributes
     @ColumnInfo(name = "strength")
     val strength: Int = 0,
