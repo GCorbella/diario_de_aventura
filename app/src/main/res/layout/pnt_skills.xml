@@ -407,9 +407,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_agility"
         app:layout_constraintStart_toEndOf="@+id/txt_val_agility"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_agility"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -417,9 +417,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_crafting1"
         app:layout_constraintStart_toEndOf="@+id/txt_val_crafting1"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_agility"
+        app:layout_constraintTop_toTopOf="@+id/txt_crafting1"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -427,9 +427,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_crafting2"
         app:layout_constraintStart_toEndOf="@+id/txt_val_crafting2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_crafting1"
+        app:layout_constraintTop_toTopOf="@+id/txt_crafting2"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -437,9 +437,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_athletics"
         app:layout_constraintStart_toEndOf="@+id/txt_val_athletics"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_crafting2"
+        app:layout_constraintTop_toTopOf="@+id/txt_athletics"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -447,9 +447,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_spot"
         app:layout_constraintStart_toEndOf="@+id/txt_val_spot"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_athletics"
+        app:layout_constraintTop_toTopOf="@+id/txt_spot"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -457,9 +457,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_search"
         app:layout_constraintStart_toEndOf="@+id/txt_val_search"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_spot"
+        app:layout_constraintTop_toTopOf="@+id/txt_search"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -467,9 +467,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_concentration"
         app:layout_constraintStart_toEndOf="@+id/txt_val_concentration"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_search"
+        app:layout_constraintTop_toTopOf="@+id/txt_concentration"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -477,9 +477,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_manual_dexterity"
         app:layout_constraintStart_toEndOf="@+id/txt_val_manual_dexterity"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_concentration"
+        app:layout_constraintTop_toTopOf="@+id/txt_manual_dexterity"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -487,9 +487,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_empathy"
         app:layout_constraintStart_toEndOf="@+id/txt_val_empathy"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_manual_dexterity"
+        app:layout_constraintTop_toTopOf="@+id/txt_empathy"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -497,9 +497,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_listen"
         app:layout_constraintStart_toEndOf="@+id/txt_val_listen"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_empathy"
+        app:layout_constraintTop_toTopOf="@+id/txt_listen"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -507,9 +507,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_perform1"
         app:layout_constraintStart_toEndOf="@+id/txt_val_perform1"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_listen"
+        app:layout_constraintTop_toTopOf="@+id/txt_perform1"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -517,9 +517,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_perform2"
         app:layout_constraintStart_toEndOf="@+id/txt_val_perform2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_perform1"
+        app:layout_constraintTop_toTopOf="@+id/txt_perform2"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -527,9 +527,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_persuasion"
         app:layout_constraintStart_toEndOf="@+id/txt_val_persuasion"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_perform2"
+        app:layout_constraintTop_toTopOf="@+id/txt_persuasion"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -537,9 +537,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_mount"
         app:layout_constraintStart_toEndOf="@+id/txt_val_mount"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_persuasion"
+        app:layout_constraintTop_toTopOf="@+id/txt_mount"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -547,9 +547,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_pilot"
         app:layout_constraintStart_toEndOf="@+id/txt_val_pilot"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_mount"
+        app:layout_constraintTop_toTopOf="@+id/txt_pilot"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -557,9 +557,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_heal"
         app:layout_constraintStart_toEndOf="@+id/txt_val_heal"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_pilot"
+        app:layout_constraintTop_toTopOf="@+id/txt_heal"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -567,9 +567,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_stealth"
         app:layout_constraintStart_toEndOf="@+id/txt_val_stealth"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_heal"
+        app:layout_constraintTop_toTopOf="@+id/txt_stealth"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -577,9 +577,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_survival"
         app:layout_constraintStart_toEndOf="@+id/txt_val_survival"
-        app:layout_constraintTop_toBottomOf="@+id/btn_more_stealth"
+        app:layout_constraintTop_toTopOf="@+id/txt_survival"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <TextView

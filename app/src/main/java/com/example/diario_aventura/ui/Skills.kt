@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import com.example.diario_aventura.AdventureJournal
 import com.example.diario_aventura.R
 import kotlinx.coroutines.CoroutineScope
@@ -11,7 +12,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class Skills : AppCompatActivity() {
-    private val editTextArray = mutableListOf<EditText>() // Usar mutableListOf en lugar de arrayOf
+    private val editTextArray = mutableListOf<EditText>()
+    private val moreBtnArray = mutableListOf<ImageButton>()
+    private val skillValueArray = mutableListOf<TextView>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,52 @@ class Skills : AppCompatActivity() {
                 findViewById(R.id.etxt_u_heal),
                 findViewById(R.id.etxt_u_stealth),
                 findViewById(R.id.etxt_u_survival)
+            )
+        )
+
+        moreBtnArray.addAll(
+            listOf(
+                findViewById(R.id.btn_more_agility),
+                findViewById(R.id.btn_more_crafting1),
+                findViewById(R.id.btn_more_crafting2),
+                findViewById(R.id.btn_more_athletics),
+                findViewById(R.id.btn_more_spot),
+                findViewById(R.id.btn_more_search),
+                findViewById(R.id.btn_more_concentration),
+                findViewById(R.id.btn_more_manual_dexterity),
+                findViewById(R.id.btn_more_empathy),
+                findViewById(R.id.btn_more_listen),
+                findViewById(R.id.btn_more_perform1),
+                findViewById(R.id.btn_more_perform2),
+                findViewById(R.id.btn_more_persuasion),
+                findViewById(R.id.btn_more_mount),
+                findViewById(R.id.btn_more_pilot),
+                findViewById(R.id.btn_more_heal),
+                findViewById(R.id.btn_more_stealth),
+                findViewById(R.id.btn_more_survival)
+            )
+        )
+
+        skillValueArray.addAll(
+            listOf(
+                findViewById(R.id.txt_val_agility),
+                findViewById(R.id.txt_val_crafting1),
+                findViewById(R.id.txt_val_crafting2),
+                findViewById(R.id.txt_val_athletics),
+                findViewById(R.id.txt_val_spot),
+                findViewById(R.id.txt_val_search),
+                findViewById(R.id.txt_val_concentration),
+                findViewById(R.id.txt_val_manual_dexterity),
+                findViewById(R.id.txt_val_empathy),
+                findViewById(R.id.txt_val_listen),
+                findViewById(R.id.txt_val_perform1),
+                findViewById(R.id.txt_val_perform2),
+                findViewById(R.id.txt_val_persuasion),
+                findViewById(R.id.txt_val_mount),
+                findViewById(R.id.txt_val_pilot),
+                findViewById(R.id.txt_val_heal),
+                findViewById(R.id.txt_val_stealth),
+                findViewById(R.id.txt_val_survival)
             )
         )
 
@@ -81,6 +130,25 @@ class Skills : AppCompatActivity() {
                         characterDao.updateCharacter(it)
                     }
                 }
+                updateSkillValues()
+            }
+        }
+
+        // Agregar listeners a los botones "More"
+        for (i in 0 until moreBtnArray.size) {
+            val moreButton = moreBtnArray[i]
+            val editText = editTextArray[i]
+
+            moreButton.setOnClickListener {
+                val currentValue = editText.text.toString().toInt()
+                val updatedValue = currentValue + 1
+                editText.setText(updatedValue.toString())
+
+                // Actualiza el valor en la base de datos
+                updateCharacterProperty(i, updatedValue)
+
+                // Actualiza los valores de habilidad basados en los usos
+                updateSkillValues()
             }
         }
     }
@@ -125,6 +193,79 @@ class Skills : AppCompatActivity() {
                         eTxt.isEnabled = false // Deshabilita los EditText después de cargar los datos
                     }
                 }
+            }
+        }
+    }
+
+    private fun calculateValueFromUsages(usages: Int): Int {
+        return when (usages) {
+            in 0..29 -> 0
+            in 30..49 -> 1
+            in 50..74 -> 2
+            in 75..104 -> 3
+            in 105..139 -> 4
+            in 140..179 -> 5
+            in 180..224 -> 6
+            in 225..274 -> 7
+            in 275..329 -> 8
+            in 330..389 -> 9
+            in 390..454 -> 10
+            in 455..524 -> 11
+            in 525..604 -> 12
+            in 605..689 -> 13
+            in 690..779 -> 14
+            in 780..874 -> 15
+            in 875..974 -> 16
+            in 975..1079 -> 17
+            in 1080..1189 -> 18
+            in 1190..1499 -> 19
+            in 1500..5000 -> 20
+            else -> 0 // Valor predeterminado si no se encuentra en ningún rango
+        }
+    }
+
+    private fun updateSkillValues() {
+        // Itera a través de los EditText y TextView para actualizar los valores de habilidad basados en los usos
+        for (i in 0 until editTextArray.size) {
+            val editText = editTextArray[i]
+            val skillValueTextView = skillValueArray[i]
+
+            val currentValue = editText.text.toString().toInt()
+            val newValue = calculateValueFromUsages(currentValue)
+            skillValueTextView.text = newValue.toString()
+        }
+    }
+
+    private fun updateCharacterProperty(propertyIndex: Int, updatedValue: Int) {
+        val characterId = AdventureJournal.selectedCharacterId
+        val characterDao = (application as AdventureJournal).db.characterDao()
+
+        CoroutineScope(Dispatchers.IO).launch {
+            val character = characterDao.getCharacterById(characterId)
+
+            character?.let {
+                when (propertyIndex) {
+                    0 -> it.uAgility = updatedValue
+                    1 -> it.uCrafting1 = updatedValue
+                    2 -> it.uCrafting2 = updatedValue
+                    3 -> it.uAthletics = updatedValue
+                    4 -> it.uSpot = updatedValue
+                    5 -> it.uSearch = updatedValue
+                    6 -> it.uConcentration = updatedValue
+                    7 -> it.uManualDexterity = updatedValue
+                    8 -> it.uEmpathy = updatedValue
+                    9 -> it.uListen = updatedValue
+                    10 -> it.uPerform1 = updatedValue
+                    11 -> it.uPerform2 = updatedValue
+                    12 -> it.uPersuasion = updatedValue
+                    13 -> it.uMount = updatedValue
+                    14 -> it.uPilot = updatedValue
+                    15 -> it.uHeal = updatedValue
+                    16 -> it.uStealth = updatedValue
+                    17 -> it.uSurvival = updatedValue
+                }
+
+                characterDao.updateCharacter(it)
             }
         }
     }
