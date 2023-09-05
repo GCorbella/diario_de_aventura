@@ -155,7 +155,6 @@ class Skills : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
         // Cargar y establecer los datos del personaje cada vez que se muestra la pantalla
         loadCharacterDataToEditText()
     }
@@ -192,6 +191,7 @@ class Skills : AppCompatActivity() {
                     for (eTxt in editTextArray) {
                         eTxt.isEnabled = false // Deshabilita los EditText después de cargar los datos
                     }
+                    updateSkillValues()
                 }
             }
         }
