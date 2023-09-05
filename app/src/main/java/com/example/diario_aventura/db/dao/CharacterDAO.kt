@@ -13,6 +13,9 @@ interface CharacterDAO {
     @Delete
     fun deleteCharacter(character: Character)
 
+    @Update
+    fun updateCharacter(character: Character)
+
     @Query("SELECT * FROM character ORDER BY name ASC")
     fun getCharactersOrderedByName(): List<Character>
 
