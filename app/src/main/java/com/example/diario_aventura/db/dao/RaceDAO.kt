@@ -12,9 +12,15 @@ interface RaceDAO {
     @Insert
     fun insertRace(race: Race)
 
+    @Insert
+    fun insertRaces(races: List<Race>)
+
     @Delete
     fun deleteRace(race: Race)
 
     @Query("SELECT * FROM race ORDER BY name ASC")
     fun getRacesOrderedByName(): List<Race>
+
+    @Query("SELECT * FROM race WHERE id = :id")
+    fun getRaceById(id: Int): Race
 }

@@ -13,9 +13,6 @@ class AdventureJournal : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        db = Room.databaseBuilder(
-            applicationContext,
-            CharactersDB::class.java, "characters",
-        ).build()
+        db = CharactersDB.getInstance(this)
     }
 }
