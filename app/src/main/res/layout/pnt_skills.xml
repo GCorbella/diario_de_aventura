@@ -7,7 +7,7 @@
     tools:context=".ui.Skills">
 
     <TextView
-        android:id="@+id/txt_agilidad"
+        android:id="@+id/txt_agility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_artesania1"
+        android:id="@+id/txt_crafting1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -26,10 +26,10 @@
         android:text="Artesania"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_agilidad" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_agility" />
 
     <TextView
-        android:id="@+id/txt_artesania2"
+        android:id="@+id/txt_crafting2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -37,10 +37,10 @@
         android:text="Artesania"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_artesania1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_crafting1" />
 
     <TextView
-        android:id="@+id/txt_montar"
+        android:id="@+id/txt_mount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -48,10 +48,10 @@
         android:text="Montar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_labia" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_persuasion" />
 
     <TextView
-        android:id="@+id/txt_escuchar"
+        android:id="@+id/txt_listen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -59,10 +59,10 @@
         android:text="Escuchar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_empatia" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_empathy" />
 
     <TextView
-        android:id="@+id/txt_concentracion"
+        android:id="@+id/txt_concentration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -70,10 +70,10 @@
         android:text="Concentración"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buscar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_search" />
 
     <TextView
-        android:id="@+id/txt_sanar"
+        android:id="@+id/txt_heal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -81,10 +81,10 @@
         android:text="Sanar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pilotar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pilot" />
 
     <TextView
-        android:id="@+id/txt_supervivencia"
+        android:id="@+id/txt_survival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -92,10 +92,10 @@
         android:text="Supervivencia"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_sigilo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_stealth" />
 
     <TextView
-        android:id="@+id/txt_sigilo"
+        android:id="@+id/txt_stealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -103,10 +103,10 @@
         android:text="Sigilo"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_sanar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_heal" />
 
     <TextView
-        android:id="@+id/txt_interpretar2"
+        android:id="@+id/txt_perform2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -114,10 +114,10 @@
         android:text="Interpretar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_interpretar1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_perform1" />
 
     <TextView
-        android:id="@+id/txt_pilotar"
+        android:id="@+id/txt_pilot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -125,10 +125,10 @@
         android:text="Pilotar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_montar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_mount" />
 
     <TextView
-        android:id="@+id/txt_atletismo"
+        android:id="@+id/txt_athletics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -136,10 +136,10 @@
         android:text="Atletismo"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_artesania2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_crafting2" />
 
     <TextView
-        android:id="@+id/txt_empatia"
+        android:id="@+id/txt_empathy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -147,10 +147,10 @@
         android:text="Empatía"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_des_manual" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_manual_dexterity" />
 
     <TextView
-        android:id="@+id/txt_interpretar1"
+        android:id="@+id/txt_perform1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -158,10 +158,10 @@
         android:text="Interpretar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_escuchar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_listen" />
 
     <TextView
-        android:id="@+id/txt_avistar"
+        android:id="@+id/txt_spot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -169,10 +169,10 @@
         android:text="Avistar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_atletismo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_athletics" />
 
     <TextView
-        android:id="@+id/txt_des_manual"
+        android:id="@+id/txt_manual_dexterity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -180,10 +180,10 @@
         android:text="Des. Manual"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_concentracion" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_concentration" />
 
     <TextView
-        android:id="@+id/txt_labia"
+        android:id="@+id/txt_persuasion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -191,10 +191,10 @@
         android:text="Labia"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_interpretar2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_perform2" />
 
     <TextView
-        android:id="@+id/txt_buscar"
+        android:id="@+id/txt_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -202,10 +202,10 @@
         android:text="Buscar"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_avistar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_spot" />
 
     <TextView
-        android:id="@+id/txt_val_agilidad"
+        android:id="@+id/txt_val_agility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -216,7 +216,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_val_artesania1"
+        android:id="@+id/txt_val_crafting1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -224,10 +224,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_agilidad" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_agility" />
 
     <TextView
-        android:id="@+id/txt_val_artesania2"
+        android:id="@+id/txt_val_crafting2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -235,10 +235,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_artesania1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_crafting1" />
 
     <TextView
-        android:id="@+id/txt_val_atletismo"
+        android:id="@+id/txt_val_athletics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -246,10 +246,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_artesania2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_crafting2" />
 
     <TextView
-        android:id="@+id/txt_val_avistar"
+        android:id="@+id/txt_val_spot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -257,10 +257,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_atletismo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_athletics" />
 
     <TextView
-        android:id="@+id/txt_val_buscar"
+        android:id="@+id/txt_val_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -268,10 +268,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_avistar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_spot" />
 
     <TextView
-        android:id="@+id/txt_val_concentracion"
+        android:id="@+id/txt_val_concentration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -279,10 +279,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_buscar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_search" />
 
     <TextView
-        android:id="@+id/txt_val_des_manuañ"
+        android:id="@+id/txt_val_manual_dexterity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -290,10 +290,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_concentracion" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_concentration" />
 
     <TextView
-        android:id="@+id/txt_val_empatia"
+        android:id="@+id/txt_val_empathy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -301,10 +301,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_des_manuañ" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_manual_dexterity" />
 
     <TextView
-        android:id="@+id/txt_val_escuchar"
+        android:id="@+id/txt_val_listen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -312,10 +312,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_empatia" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_empathy" />
 
     <TextView
-        android:id="@+id/txt_val_interpretar1"
+        android:id="@+id/txt_val_perform1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -323,10 +323,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_escuchar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_listen" />
 
     <TextView
-        android:id="@+id/txt_val_interpretar2"
+        android:id="@+id/txt_val_perform2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -334,10 +334,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_interpretar1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_perform1" />
 
     <TextView
-        android:id="@+id/txt_val_labia"
+        android:id="@+id/txt_val_persuasion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -345,10 +345,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_interpretar2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_perform2" />
 
     <TextView
-        android:id="@+id/txt_val_montar"
+        android:id="@+id/txt_val_mount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -356,10 +356,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_labia" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_persuasion" />
 
     <TextView
-        android:id="@+id/txt_val_pilotar"
+        android:id="@+id/txt_val_pilot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -367,10 +367,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_montar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_mount" />
 
     <TextView
-        android:id="@+id/txt_val_sanar"
+        android:id="@+id/txt_val_heal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -378,10 +378,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_pilotar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_pilot" />
 
     <TextView
-        android:id="@+id/txt_val_sigilo"
+        android:id="@+id/txt_val_stealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -389,10 +389,10 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_sanar" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_heal" />
 
     <TextView
-        android:id="@+id/txt_val_supervivencia"
+        android:id="@+id/txt_val_survival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -400,190 +400,190 @@
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_sigilo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_stealth" />
 
     <ImageButton
-        android:id="@+id/btn_mas_agilidad"
+        android:id="@+id/btn_more_agility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_agilidad"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_agility"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_artesania1"
+        android:id="@+id/btn_more_crafting1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_artesania1"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_agilidad"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_crafting1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_agility"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_artesania2"
+        android:id="@+id/btn_more_crafting2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_artesania2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_artesania1"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_crafting2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_crafting1"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_atletismo"
+        android:id="@+id/btn_more_athletics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_atletismo"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_artesania2"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_athletics"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_crafting2"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_avistar"
+        android:id="@+id/btn_more_spot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_avistar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_atletismo"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_spot"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_athletics"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_buscar"
+        android:id="@+id/btn_more_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_buscar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_avistar"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_search"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_spot"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_concentracion"
+        android:id="@+id/btn_more_concentration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_concentracion"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_buscar"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_concentration"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_search"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_des_manual"
+        android:id="@+id/btn_more_manual_dexterity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_des_manuañ"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_concentracion"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_manual_dexterity"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_concentration"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_empatia"
+        android:id="@+id/btn_more_empathy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_empatia"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_des_manual"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_empathy"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_manual_dexterity"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_escuchar"
+        android:id="@+id/btn_more_listen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_escuchar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_empatia"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_listen"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_empathy"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_interpretar1"
+        android:id="@+id/btn_more_perform1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_interpretar1"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_escuchar"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_perform1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_listen"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_interpretar2"
+        android:id="@+id/btn_more_perform2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_interpretar2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_interpretar1"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_perform2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_perform1"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_labia"
+        android:id="@+id/btn_more_persuasion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_labia"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_interpretar2"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_persuasion"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_perform2"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_montar"
+        android:id="@+id/btn_more_mount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_montar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_labia"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_mount"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_persuasion"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_pilotar"
+        android:id="@+id/btn_more_pilot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_pilotar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_montar"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_pilot"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_mount"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_sanar"
+        android:id="@+id/btn_more_heal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_sanar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_pilotar"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_heal"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_pilot"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_sigilo"
+        android:id="@+id/btn_more_stealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_sigilo"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_sanar"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_stealth"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_heal"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_supervivencia"
+        android:id="@+id/btn_more_survival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_supervivencia"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mas_sigilo"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_survival"
+        app:layout_constraintTop_toBottomOf="@+id/btn_more_stealth"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <TextView
-        android:id="@+id/txt_usos"
+        android:id="@+id/txt_uses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -594,7 +594,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etxt_u_agilidad"
+        android:id="@+id/etxt_u_agility"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
@@ -608,7 +608,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etxt_u_artesania1"
+        android:id="@+id/etxt_u_crafting1"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -619,10 +619,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_agilidad" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_agility" />
 
     <EditText
-        android:id="@+id/etxt_u_artesania2"
+        android:id="@+id/etxt_u_crafting2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -633,10 +633,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_artesania1" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_crafting1" />
 
     <EditText
-        android:id="@+id/etxt_u_atletismo"
+        android:id="@+id/etxt_u_athletics"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -647,10 +647,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_artesania2" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_crafting2" />
 
     <EditText
-        android:id="@+id/etxt_u_avistar"
+        android:id="@+id/etxt_u_spot"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -661,10 +661,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_atletismo" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_athletics" />
 
     <EditText
-        android:id="@+id/etxt_u_buscar"
+        android:id="@+id/etxt_u_search"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -675,10 +675,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_avistar" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_spot" />
 
     <EditText
-        android:id="@+id/etxt_u_concentracion"
+        android:id="@+id/etxt_u_concentration"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -689,10 +689,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_buscar" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_search" />
 
     <EditText
-        android:id="@+id/etxt_u_des_manual"
+        android:id="@+id/etxt_u_manual_dexterity"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -703,10 +703,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_concentracion" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_concentration" />
 
     <EditText
-        android:id="@+id/etxt_u_empatia"
+        android:id="@+id/etxt_u_empathy"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -717,10 +717,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_des_manual" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_manual_dexterity" />
 
     <EditText
-        android:id="@+id/etxt_u_escuchar"
+        android:id="@+id/etxt_u_listen"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -731,10 +731,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_empatia" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_empathy" />
 
     <EditText
-        android:id="@+id/etxt_u_interpretar1"
+        android:id="@+id/etxt_u_perform1"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -745,10 +745,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_escuchar" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_listen" />
 
     <EditText
-        android:id="@+id/etxt_u_interpretar2"
+        android:id="@+id/etxt_u_perform2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -759,10 +759,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_interpretar1" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_perform1" />
 
     <EditText
-        android:id="@+id/etxt_u_labia"
+        android:id="@+id/etxt_u_persuasion"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -773,10 +773,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_interpretar2" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_perform2" />
 
     <EditText
-        android:id="@+id/etxt_u_montar"
+        android:id="@+id/etxt_u_mount"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -787,10 +787,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_labia" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_persuasion" />
 
     <EditText
-        android:id="@+id/etxt_u_pilotar"
+        android:id="@+id/etxt_u_pilot"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -801,10 +801,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_montar" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_mount" />
 
     <EditText
-        android:id="@+id/etxt_u_sanar"
+        android:id="@+id/etxt_u_heal"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -815,10 +815,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_pilotar" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_pilot" />
 
     <EditText
-        android:id="@+id/etxt_u_sigilo"
+        android:id="@+id/etxt_u_stealth"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -829,10 +829,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_sanar" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_heal" />
 
     <EditText
-        android:id="@+id/etxt_u_supervivencia"
+        android:id="@+id/etxt_u_survival"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -843,10 +843,10 @@
         android:textSize="10sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_sigilo" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_stealth" />
 
     <ImageButton
-        android:id="@+id/btn_editarusos_h"
+        android:id="@+id/btn_edituses_h"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"

@@ -12,27 +12,27 @@ class Skills() : AppCompatActivity() {
         setContentView(R.layout.pnt_skills)
 
         var editTextArray = arrayOf<EditText>(
-            findViewById(R.id.etxt_u_agilidad),
-            findViewById(R.id.etxt_u_artesania1),
-            findViewById(R.id.etxt_u_artesania2),
-            findViewById(R.id.etxt_u_atletismo),
-            findViewById(R.id.etxt_u_avistar),
-            findViewById(R.id.etxt_u_buscar),
-            findViewById(R.id.etxt_u_concentracion),
-            findViewById(R.id.etxt_u_des_manual),
-            findViewById(R.id.etxt_u_empatia),
-            findViewById(R.id.etxt_u_escuchar),
-            findViewById(R.id.etxt_u_interpretar1),
-            findViewById(R.id.etxt_u_interpretar2),
-            findViewById(R.id.etxt_u_labia),
-            findViewById(R.id.etxt_u_montar),
-            findViewById(R.id.etxt_u_pilotar),
-            findViewById(R.id.etxt_u_sanar),
-            findViewById(R.id.etxt_u_sigilo),
-            findViewById(R.id.etxt_u_supervivencia)
+            findViewById(R.id.etxt_u_agility),
+            findViewById(R.id.etxt_u_crafting1),
+            findViewById(R.id.etxt_u_crafting2),
+            findViewById(R.id.etxt_u_athletics),
+            findViewById(R.id.etxt_u_spot),
+            findViewById(R.id.etxt_u_search),
+            findViewById(R.id.etxt_u_concentration),
+            findViewById(R.id.etxt_u_manual_dexterity),
+            findViewById(R.id.etxt_u_empathy),
+            findViewById(R.id.etxt_u_listen),
+            findViewById(R.id.etxt_u_perform1),
+            findViewById(R.id.etxt_u_perform2),
+            findViewById(R.id.etxt_u_persuasion),
+            findViewById(R.id.etxt_u_mount),
+            findViewById(R.id.etxt_u_pilot),
+            findViewById(R.id.etxt_u_heal),
+            findViewById(R.id.etxt_u_stealth),
+            findViewById(R.id.etxt_u_survival)
         )
 
-        val btnEditarUsos = findViewById<ImageButton>(R.id.btn_editarusos_h)
+        val btnEditarUsos = findViewById<ImageButton>(R.id.btn_edituses_h)
 
         btnEditarUsos.setOnClickListener {
             // Cambia el estado de edición del EditText
