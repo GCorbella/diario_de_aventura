@@ -7,7 +7,7 @@
     tools:context=".ui.CrConfiguration">
 
     <TextView
-        android:id="@+id/txt_raza"
+        android:id="@+id/txt_race"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -18,156 +18,156 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_profesion"
+        android:id="@+id/txt_background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:text="Profesión:"
+        android:text="Trasfondo:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tamanyo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_size" />
 
     <TextView
-        android:id="@+id/txt_conf_inteligencia"
+        android:id="@+id/txt_conf_intelligence"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Inteligencia:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_inteligencia"
-        app:layout_constraintStart_toEndOf="@+id/etxt_fuerza"
-        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_intelligence"
+        app:layout_constraintStart_toEndOf="@+id/etxt_strength"
+        app:layout_constraintTop_toBottomOf="@+id/txt_background" />
 
     <TextView
-        android:id="@+id/txt_conf_sabiduria"
+        android:id="@+id/txt_conf_wisdom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Sabiduria:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_sabiduria"
-        app:layout_constraintStart_toEndOf="@+id/etxt_destreza"
-        app:layout_constraintTop_toBottomOf="@+id/txt_conf_inteligencia" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_wisdom"
+        app:layout_constraintStart_toEndOf="@+id/etxt_dexterity"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_intelligence" />
 
     <EditText
-        android:id="@+id/etxt_fuerza"
+        android:id="@+id/etxt_strength"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="10"
-        app:layout_constraintEnd_toStartOf="@+id/txt_conf_inteligencia"
-        app:layout_constraintStart_toEndOf="@+id/txt_conf_fuerza"
-        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conf_strength"
+        app:layout_constraintEnd_toStartOf="@+id/txt_conf_intelligence"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_strength"
+        app:layout_constraintTop_toTopOf="@+id/txt_conf_strength" />
 
     <EditText
-        android:id="@+id/etxt_constitucion"
+        android:id="@+id/etxt_constitution"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="10"
-        app:layout_constraintEnd_toStartOf="@+id/txt_conf_carisma"
-        app:layout_constraintStart_toEndOf="@+id/txt_conf_constitucion"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_destreza" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conf_constitution"
+        app:layout_constraintEnd_toStartOf="@+id/txt_conf_charisma"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_constitution"
+        app:layout_constraintTop_toTopOf="@+id/txt_conf_constitution" />
 
     <EditText
-        android:id="@+id/etxt_sabiduria"
+        android:id="@+id/etxt_wisdom"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conf_wisdom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_conf_sabiduria"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_inteligencia" />
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_wisdom"
+        app:layout_constraintTop_toTopOf="@+id/txt_conf_wisdom" />
 
     <TextView
-        android:id="@+id/txt_conf_constitucion"
+        android:id="@+id/txt_conf_constitution"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Constitución:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_constitucion"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_constitution"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_conf_destreza" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_dexterity" />
 
     <EditText
-        android:id="@+id/etxt_destreza"
+        android:id="@+id/etxt_dexterity"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="10"
-        app:layout_constraintEnd_toStartOf="@+id/txt_conf_sabiduria"
-        app:layout_constraintStart_toEndOf="@+id/txt_conf_destreza"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_fuerza" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conf_dexterity"
+        app:layout_constraintEnd_toStartOf="@+id/txt_conf_wisdom"
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_dexterity"
+        app:layout_constraintTop_toTopOf="@+id/txt_conf_dexterity" />
 
     <TextView
-        android:id="@+id/txt_conf_destreza"
+        android:id="@+id/txt_conf_dexterity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Destreza:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_destreza"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_dexterity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_conf_fuerza" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_strength" />
 
     <TextView
-        android:id="@+id/txt_conf_fuerza"
+        android:id="@+id/txt_conf_strength"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Fuerza:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_fuerza"
+        app:layout_constraintEnd_toStartOf="@+id/etxt_strength"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_background" />
 
     <EditText
-        android:id="@+id/etxt_inteligencia"
+        android:id="@+id/etxt_intelligence"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conf_intelligence"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_conf_inteligencia"
-        app:layout_constraintTop_toBottomOf="@+id/txt_profesion" />
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_intelligence"
+        app:layout_constraintTop_toTopOf="@+id/txt_conf_intelligence" />
 
     <EditText
-        android:id="@+id/etxt_carisma"
+        android:id="@+id/etxt_charisma"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conf_charisma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_conf_carisma"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sabiduria" />
+        app:layout_constraintStart_toEndOf="@+id/txt_conf_charisma"
+        app:layout_constraintTop_toTopOf="@+id/txt_conf_charisma" />
 
     <TextView
-        android:id="@+id/txt_conf_carisma"
+        android:id="@+id/txt_conf_charisma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Carisma:"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/etxt_carisma"
-        app:layout_constraintStart_toEndOf="@+id/etxt_constitucion"
-        app:layout_constraintTop_toBottomOf="@+id/txt_conf_sabiduria" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_charisma"
+        app:layout_constraintStart_toEndOf="@+id/etxt_constitution"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_wisdom" />
 
     <TextView
-        android:id="@+id/txt_tamanyo"
+        android:id="@+id/txt_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -175,43 +175,44 @@
         android:text="Tamaño:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_raza" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_race" />
 
-    <Spinner
-        android:id="@+id/dspl_raza"
+    <TextView
+        android:id="@+id/txt_race_selection"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
         android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_race"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/txt_race" />
 
-    <Spinner
-        android:id="@+id/dspl_profesion"
+    <TextView
+        android:id="@+id/txt_background_selection"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
         android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dspl_tamanyo" />
+        app:layout_constraintTop_toTopOf="@+id/txt_background" />
 
-    <Spinner
-        android:id="@+id/dspl_tamanyo"
+    <TextView
+        android:id="@+id/txt_size_selection"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dspl_raza" />
+        app:layout_constraintTop_toTopOf="@+id/txt_size" />
 
     <CheckBox
-        android:id="@+id/chk_sextosentido"
+        android:id="@+id/chk_sixthsense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Sexto Sentido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_conf_constitucion" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_constitution" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

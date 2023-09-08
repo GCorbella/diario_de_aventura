@@ -8,7 +8,9 @@ import androidx.appcompat.app.AlertDialog
 import com.example.diario_aventura.DataStoreManager
 import com.example.diario_aventura.AdventureJournal
 import com.example.diario_aventura.R
+import com.example.diario_aventura.db.entities.Background
 import com.example.diario_aventura.db.entities.Character
+import com.example.diario_aventura.db.entities.Race
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +19,11 @@ import kotlinx.coroutines.withContext
 class Configuration : AppCompatActivity() {
 
     private lateinit var dsplCr: Spinner
+    private lateinit var spinnerRace: Spinner
+    private lateinit var spinnerBackground: Spinner
     private lateinit var characters: List<Character>
+    private lateinit var races: List<Race>
+    private lateinit var backgrounds: List<Background>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +54,8 @@ class Configuration : AppCompatActivity() {
         btnNewCharacter.setOnClickListener {
             val dialogView = layoutInflater.inflate(R.layout.dialog_new_cr, null)
             val etxtNewCrName = dialogView.findViewById<EditText>(R.id.etxt_new_cr_name)
+            spinnerRace = dialogView.findViewById(R.id.spinner_race)
+            spinnerBackground = dialogView.findViewById(R.id.spinner_background)
             val btnCreateCr = dialogView.findViewById<Button>(R.id.btn_create_cr)
 
             val dialogBuilder = AlertDialog.Builder(this)
@@ -56,14 +64,22 @@ class Configuration : AppCompatActivity() {
 
             val dialog = dialogBuilder.create()
 
+            CoroutineScope(Dispatchers.Main).launch {
+                loadRacesInSpinner()
+                loadBackgroundsInSpinner()
+            }
+
             btnCreateCr.setOnClickListener {
                 val crName = etxtNewCrName.text.toString()
+                val selectedRace = races[spinnerRace.selectedItemPosition]
+                val selectedBackground = backgrounds[spinnerBackground.selectedItemPosition]
+
                 if (crName.isNotBlank()) {
                     // Aquí puedes insertar el nuevo personaje en la base de datos
                     // y actualizar la lista de personajes en el desplegable
                     // También puedes cerrar el diálogo si el proceso se completa con éxito
                     CoroutineScope(Dispatchers.IO).launch {
-                        (application as AdventureJournal).db.characterDao().createNewCharacter(crName)
+                        (application as AdventureJournal).db.characterDao().createNewCharacter(crName,selectedRace.id,selectedBackground.id)
                     }
                     CoroutineScope(Dispatchers.Main).launch {
                         loadCharactersInSpinner()
@@ -151,5 +167,31 @@ class Configuration : AppCompatActivity() {
         val adapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, charactersNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         dsplCr.adapter = adapter
+    }
+
+    private suspend fun loadRacesInSpinner() {
+        // Cargar la lista de razas desde la base de datos
+        races = withContext(Dispatchers.IO) {
+            (application as AdventureJournal).db.raceDao().getRacesOrderedById()
+        }
+
+        val racesNames = races.map { it.name }
+
+        val adapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, racesNames)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerRace.adapter = adapter
+    }
+
+    private suspend fun loadBackgroundsInSpinner() {
+        // Cargar la lista de trasfondos desde la base de datos
+        backgrounds = withContext(Dispatchers.IO) {
+            (application as AdventureJournal).db.backgroundDao().getBackgroundsOrderedByName()
+        }
+
+        val backgroundsNames = backgrounds.map { it.name }
+
+        val adapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, backgroundsNames)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerBackground.adapter = adapter
     }
 }

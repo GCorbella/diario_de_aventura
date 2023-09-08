@@ -25,8 +25,8 @@ interface CharacterDAO {
     @Query("SELECT * FROM character WHERE id = :id")
     fun getCharacterById(id: Int): Character
 
-    fun createNewCharacter(name: String) {
-        val newCharacter = Character(0,name,0)
+    fun createNewCharacter(name: String, race: Int, background: Int) {
+        val newCharacter = Character(0,name,race,background)
         insertCharacter(newCharacter)
     }
 }
