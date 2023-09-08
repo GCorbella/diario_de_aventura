@@ -23,17 +23,17 @@ data class Character(
     val cLuck: Int = 0,
 //Attributes
     @ColumnInfo(name = "strength")
-    val strength: Int = 0,
+    var strength: Int = 10,
     @ColumnInfo(name = "dexterity")
-    val dexterity: Int = 0,
+    var dexterity: Int = 10,
     @ColumnInfo(name = "constitution")
-    val constitution: Int = 0,
+    var constitution: Int = 10,
     @ColumnInfo(name = "intelligence")
-    val intelligence: Int = 0,
+    var intelligence: Int = 10,
     @ColumnInfo(name = "wisdom")
-    val wisdom: Int = 0,
+    var wisdom: Int = 10,
     @ColumnInfo(name = "charisma")
-    val charisma: Int = 0,
+    var charisma: Int = 10,
 //Saves
     @ColumnInfo(name = "u_fortitude")
     val uFortitude: Int = 14,

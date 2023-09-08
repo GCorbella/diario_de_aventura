@@ -208,7 +208,7 @@
         android:layout_marginTop="24dp"
         android:text="Fuerza"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/txt_val_fue"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_str"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
 
@@ -219,7 +219,7 @@
         android:layout_marginTop="32dp"
         android:text="Destreza"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/txt_val_des"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_dex"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_fuerza" />
 
@@ -245,7 +245,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
 
     <TextView
-        android:id="@+id/txt_val_sab"
+        android:id="@+id/txt_val_wis"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
@@ -255,17 +255,17 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_val_int" />
 
     <TextView
-        android:id="@+id/txt_val_car"
+        android:id="@+id/txt_val_cha"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="125dp"
         android:text="10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_sab" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_wis" />
 
     <TextView
-        android:id="@+id/txt_val_fue"
+        android:id="@+id/txt_val_str"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
@@ -275,14 +275,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
 
     <TextView
-        android:id="@+id/txt_val_des"
+        android:id="@+id/txt_val_dex"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
         android:layout_marginTop="34dp"
         android:text="10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_fue" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_str" />
 
     <TextView
         android:id="@+id/txt_val_con"
@@ -292,7 +292,7 @@
         android:layout_marginTop="34dp"
         android:text="10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_des" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_val_dex" />
 
     <TextView
         android:id="@+id/txt_inteligencia"
@@ -313,7 +313,7 @@
         android:text="Sabiduria"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_sab"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_wis"
         app:layout_constraintTop_toBottomOf="@+id/txt_inteligencia" />
 
     <TextView
@@ -324,28 +324,28 @@
         android:text="Carisma"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_car"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_cha"
         app:layout_constraintTop_toBottomOf="@+id/txt_sabiduria" />
 
     <TextView
-        android:id="@+id/txt_mod_fue"
+        android:id="@+id/txt_mod_str"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="26dp"
         android:text="+0"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_fue"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_str"
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
 
     <TextView
-        android:id="@+id/txt_mod_des"
+        android:id="@+id/txt_mod_dex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="34dp"
         android:text="+0"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_des"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_fue" />
+        app:layout_constraintStart_toEndOf="@+id/txt_val_dex"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_str" />
 
     <TextView
         android:id="@+id/txt_mod_con"
@@ -355,7 +355,7 @@
         android:layout_marginTop="34dp"
         android:text="+0"
         app:layout_constraintStart_toEndOf="@+id/txt_val_con"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_des" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_dex" />
 
     <TextView
         android:id="@+id/txt_mod_int"
@@ -368,24 +368,24 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
 
     <TextView
-        android:id="@+id/txt_mod_sab"
+        android:id="@+id/txt_mod_wis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="16dp"
         android:text="+0"
-        app:layout_constraintEnd_toStartOf="@+id/txt_val_sab"
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_wis"
         app:layout_constraintTop_toBottomOf="@+id/txt_mod_int" />
 
     <TextView
-        android:id="@+id/txt_mod_car"
+        android:id="@+id/txt_mod_cha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="16dp"
         android:text="+0"
-        app:layout_constraintEnd_toStartOf="@+id/txt_val_car"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_sab" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_val_cha"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mod_wis" />
 
     <TextView
         android:id="@+id/txt_velocidad"
