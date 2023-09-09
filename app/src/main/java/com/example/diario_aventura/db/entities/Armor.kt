@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Armor (
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "armor_id")
     val id: Long = 0,
     @ColumnInfo(name = "name")
     val name: String = "",

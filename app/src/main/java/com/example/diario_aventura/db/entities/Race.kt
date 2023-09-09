@@ -9,6 +9,7 @@ import com.example.diario_aventura.enums.Skills
 @Entity
 data class Race (
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "race_id")
     val id: Long = 0,
     @ColumnInfo(name = "name")
     val name: String = "",

@@ -12,17 +12,17 @@ object DataStoreManager {
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
     private object DataStoreKeys {
-        val KEY_SELECTED_PERSONAJE_ID = intPreferencesKey("selected_personaje_id")
+        val KEY_SELECTED_PERSONAJE_ID = longPreferencesKey("selected_personaje_id")
         // Define otras claves aquí si es necesario
     }
 
-    suspend fun saveSelectedPersonajeId(context: Context, personajeId: Int) {
+    suspend fun saveSelectedCharacterId(context: Context, characterId: Long) {
         context.dataStore.edit { settings ->
-            settings[DataStoreKeys.KEY_SELECTED_PERSONAJE_ID] = personajeId
+            settings[DataStoreKeys.KEY_SELECTED_PERSONAJE_ID] = characterId
         }
     }
 
-    fun getSelectedCharacterId(context: Context): Flow<Int?> {
+    fun getSelectedCharacterId(context: Context): Flow<Long?> {
         return context.dataStore.data.map { preferences ->
             preferences[DataStoreKeys.KEY_SELECTED_PERSONAJE_ID]
         }

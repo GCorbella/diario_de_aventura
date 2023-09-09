@@ -23,10 +23,10 @@ class MainActivity : AppCompatActivity() {
         // Obtener el personaje seleccionado desde DataStore y asignarlo a la variable global
         val context = this
         CoroutineScope(Dispatchers.IO).launch {
-            val selectedCharacterId: Int? = DataStoreManager.getSelectedCharacterId(context).first()
+            val selectedCharacterId: Long? = DataStoreManager.getSelectedCharacterId(context).first()
 
             // Si el valor es diferente de null y de -1, lo asignamos a la variable global
-            if (selectedCharacterId != null && selectedCharacterId != -1) {
+            if (selectedCharacterId != null && selectedCharacterId != -1L) {
                 AdventureJournal.selectedCharacterId = selectedCharacterId
             }
         }
@@ -54,9 +54,9 @@ class MainActivity : AppCompatActivity() {
     private fun updateCharacterName() {
         val context = this
         CoroutineScope(Dispatchers.IO).launch {
-            val selectedCharacterId: Int? = DataStoreManager.getSelectedCharacterId(context).first()
+            val selectedCharacterId: Long? = DataStoreManager.getSelectedCharacterId(context).first()
 
-            if (selectedCharacterId != null && selectedCharacterId != -1) {
+            if (selectedCharacterId != null && selectedCharacterId != -1L) {
                 val db = (application as AdventureJournal).db
                 val selectedCharacter = db.characterDao().getCharacterById(selectedCharacterId)
 

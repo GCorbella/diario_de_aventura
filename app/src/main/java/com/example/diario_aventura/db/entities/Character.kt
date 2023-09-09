@@ -7,13 +7,14 @@ import androidx.room.PrimaryKey
 @Entity
 data class Character(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "character_id")
     val id: Long = 0,
     @ColumnInfo(name = "name")
     val name: String = "",
     @ColumnInfo(name = "race")
-    val race: Int = 0,
+    val race: Long = 0,
     @ColumnInfo(name = "background")
-    val background: Int = 0,
+    val background: Long = 0,
 //Stats
     @ColumnInfo(name = "current_health")
     val cHealth: Int = 0,

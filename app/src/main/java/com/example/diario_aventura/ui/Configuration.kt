@@ -38,12 +38,12 @@ class Configuration : AppCompatActivity() {
         dsplCr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedCharacter = characters[position]
-                AdventureJournal.selectedCharacterId = selectedCharacter.id.toInt()
+                AdventureJournal.selectedCharacterId = selectedCharacter.id
 
                 // Obtener el contexto de la actividad y guardar el personaje seleccionado en DataStore
                 val context = this@Configuration
                 CoroutineScope(Dispatchers.IO).launch {
-                    DataStoreManager.saveSelectedPersonajeId(context, selectedCharacter.id.toInt()) }
+                    DataStoreManager.saveSelectedCharacterId(context, selectedCharacter.id) }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -79,7 +79,7 @@ class Configuration : AppCompatActivity() {
                     // y actualizar la lista de personajes en el desplegable
                     CoroutineScope(Dispatchers.IO).launch {
                         val characterDao = (application as AdventureJournal).db.characterDao()
-                        val newCharacterId = characterDao.createNewCharacter(crName, selectedRace.id.toInt(), selectedBackground.id.toInt())
+                        characterDao.createNewCharacter(crName, selectedRace.id, selectedBackground.id)
 
                         CoroutineScope(Dispatchers.Main).launch {
                             loadCharactersInSpinner()
@@ -133,7 +133,7 @@ class Configuration : AppCompatActivity() {
                     }
 
                     // Actualizar la variable global AdventureJournal.selectedCharacterId
-                    AdventureJournal.selectedCharacterId = -1
+                    AdventureJournal.selectedCharacterId = -1L
                 }
                 Toast.makeText(this, "Personaje eliminado", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()

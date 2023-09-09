@@ -22,10 +22,10 @@ interface CharacterDAO {
     @Query("SELECT * FROM character ORDER BY race ASC")
     fun getCharactersOrderedByRace(): List<Character>
 
-    @Query("SELECT * FROM character WHERE id = :id")
-    fun getCharacterById(id: Int): Character
+    @Query("SELECT * FROM character WHERE character_id = :id")
+    fun getCharacterById(id: Long): Character
 
-    fun createNewCharacter(name: String, race: Int, background: Int): Long {
+    fun createNewCharacter(name: String, race: Long, background: Long): Long {
         val newCharacter = Character(name = name, race = race, background = background)
         return insertCharacter(newCharacter)
     }

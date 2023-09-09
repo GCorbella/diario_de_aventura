@@ -22,6 +22,6 @@ interface BackgroundDAO {
     @Query("SELECT * FROM background ORDER BY name ASC")
     fun getBackgroundsOrderedByName(): List<Background>
 
-    @Query("SELECT * FROM background WHERE id = :id")
-    fun getBackgroundById(id: Int): Background
+    @Query("SELECT * FROM background WHERE background_id = :id")
+    fun getBackgroundById(id: Long): Background
 }

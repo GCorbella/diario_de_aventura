@@ -18,12 +18,12 @@ interface RaceDAO {
     @Delete
     fun deleteRace(race: Race)
 
-    @Query("SELECT * FROM race ORDER BY id ASC")
+    @Query("SELECT * FROM race ORDER BY race_id ASC")
     fun getRacesOrderedById(): List<Race>
 
     @Query("SELECT * FROM race ORDER BY name ASC")
     fun getRacesOrderedByName(): List<Race>
 
-    @Query("SELECT * FROM race WHERE id = :id")
-    fun getRaceById(id: Int): Race
+    @Query("SELECT * FROM race WHERE race_id = :id")
+    fun getRaceById(id: Long): Race
 }

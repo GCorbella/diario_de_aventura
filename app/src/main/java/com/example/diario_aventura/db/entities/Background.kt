@@ -8,6 +8,7 @@ import com.example.diario_aventura.enums.Skills
 @Entity
 data class Background(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "background_id")
     val id: Long = 0,
     @ColumnInfo(name = "name")
     val name: String = "",

@@ -8,7 +8,7 @@ class AdventureJournal : Application() {
     lateinit var db : CharactersDB // Declaración con lateinit para diferir la inicialización
 
     companion object {
-        var selectedCharacterId: Int = -1 // Valor predeterminado
+        var selectedCharacterId: Long = -1L // Valor predeterminado
     }
 
     override fun onCreate() {

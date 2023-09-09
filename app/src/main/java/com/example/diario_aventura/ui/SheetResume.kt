@@ -9,15 +9,22 @@ import android.widget.TextView
 import com.example.diario_aventura.AdventureJournal
 import com.example.diario_aventura.R
 import com.example.diario_aventura.db.CharactersDB
+import com.example.diario_aventura.db.entities.Character
+import com.example.diario_aventura.db.entities.Race
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class SheetResume : AppCompatActivity() {
+
+    private lateinit var character: Character
+    private lateinit var characterRace: Race
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pnt_sheet_resume)
 
+        loadCharacter()
         refreshAndCalculate()
 
         //Botones
@@ -49,28 +56,22 @@ class SheetResume : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
+        loadCharacter()
         // Actualizar los valores cada vez que se llega a la pantalla
         refreshAndCalculate()
     }
 
     private fun refreshAndCalculate() {
-        val selectedCharacterId = AdventureJournal.selectedCharacterId
-        val charactersDB = CharactersDB.getInstance(applicationContext)
-        val characterDao = charactersDB.characterDao()
-        val raceDao = charactersDB.raceDao()
-
         CoroutineScope(Dispatchers.IO).launch {
-            val character = characterDao.getCharacterById(selectedCharacterId)
-            val race = raceDao.getRaceById(character.race)
 
             // Actualizar los TextViews con los valores del personaje
             runOnUiThread {
-                findViewById<TextView>(R.id.txt_val_str).text = (character.strength + race.strength).toString()
-                findViewById<TextView>(R.id.txt_val_dex).text = (character.dexterity + race.dexterity).toString()
-                findViewById<TextView>(R.id.txt_val_con).text = (character.constitution + race.constitution).toString()
-                findViewById<TextView>(R.id.txt_val_int).text = (character.intelligence + race.intelligence).toString()
-                findViewById<TextView>(R.id.txt_val_wis).text = (character.wisdom + race.wisdom).toString()
-                findViewById<TextView>(R.id.txt_val_cha).text = (character.charisma + race.charisma).toString()
+                findViewById<TextView>(R.id.txt_val_str).text = (character.strength + characterRace.strength).toString()
+                findViewById<TextView>(R.id.txt_val_dex).text = (character.dexterity + characterRace.dexterity).toString()
+                findViewById<TextView>(R.id.txt_val_con).text = (character.constitution + characterRace.constitution).toString()
+                findViewById<TextView>(R.id.txt_val_int).text = (character.intelligence + characterRace.intelligence).toString()
+                findViewById<TextView>(R.id.txt_val_wis).text = (character.wisdom + characterRace.wisdom).toString()
+                findViewById<TextView>(R.id.txt_val_cha).text = (character.charisma + characterRace.charisma).toString()
 
                 // Realizar cálculos y actualizar los modificadores
                 calculateAndSetModifiers()
@@ -110,6 +111,17 @@ class SheetResume : AppCompatActivity() {
             if (i == 6) {
                 i = 0
             }
+        }
+    }
+
+    private fun loadCharacter() {
+        val characterId = AdventureJournal.selectedCharacterId
+        val characterDao = (application as AdventureJournal).db.characterDao()
+        val raceDao = (application as AdventureJournal).db.raceDao()
+
+        CoroutineScope(Dispatchers.IO).launch {
+            character = characterDao.getCharacterById(characterId)
+            characterRace = raceDao.getRaceById(character.race)
         }
     }
 }
