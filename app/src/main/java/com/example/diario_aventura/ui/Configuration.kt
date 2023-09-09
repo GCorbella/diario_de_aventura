@@ -38,12 +38,12 @@ class Configuration : AppCompatActivity() {
         dsplCr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedCharacter = characters[position]
-                AdventureJournal.selectedCharacterId = selectedCharacter.id
+                AdventureJournal.selectedCharacterId = selectedCharacter.id.toInt()
 
                 // Obtener el contexto de la actividad y guardar el personaje seleccionado en DataStore
                 val context = this@Configuration
                 CoroutineScope(Dispatchers.IO).launch {
-                    DataStoreManager.saveSelectedPersonajeId(context, selectedCharacter.id) }
+                    DataStoreManager.saveSelectedPersonajeId(context, selectedCharacter.id.toInt()) }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -77,15 +77,16 @@ class Configuration : AppCompatActivity() {
                 if (crName.isNotBlank()) {
                     // Aquí puedes insertar el nuevo personaje en la base de datos
                     // y actualizar la lista de personajes en el desplegable
-                    // También puedes cerrar el diálogo si el proceso se completa con éxito
                     CoroutineScope(Dispatchers.IO).launch {
-                        (application as AdventureJournal).db.characterDao().createNewCharacter(crName,selectedRace.id,selectedBackground.id)
+                        val characterDao = (application as AdventureJournal).db.characterDao()
+                        val newCharacterId = characterDao.createNewCharacter(crName, selectedRace.id.toInt(), selectedBackground.id.toInt())
+
+                        CoroutineScope(Dispatchers.Main).launch {
+                            loadCharactersInSpinner()
+                            Toast.makeText(this@Configuration, "Personaje creado", Toast.LENGTH_SHORT).show()
+                            dialog.dismiss()
+                        }
                     }
-                    CoroutineScope(Dispatchers.Main).launch {
-                        loadCharactersInSpinner()
-                    }
-                    Toast.makeText(this, "Personaje creado", Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
                 } else {
                     // Muestra un mensaje de error si el nombre está en blanco
                     Toast.makeText(this, "Ingresa un nombre válido", Toast.LENGTH_SHORT).show()

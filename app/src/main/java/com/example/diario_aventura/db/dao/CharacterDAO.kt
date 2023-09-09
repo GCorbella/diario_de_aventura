@@ -8,7 +8,7 @@ import com.example.diario_aventura.db.entities.Character
 interface CharacterDAO {
 
     @Insert
-    fun insertCharacter(character: Character)
+    fun insertCharacter(character: Character): Long
 
     @Delete
     fun deleteCharacter(character: Character)
@@ -25,8 +25,8 @@ interface CharacterDAO {
     @Query("SELECT * FROM character WHERE id = :id")
     fun getCharacterById(id: Int): Character
 
-    fun createNewCharacter(name: String, race: Int, background: Int) {
-        val newCharacter = Character(0,name,race,background)
-        insertCharacter(newCharacter)
+    fun createNewCharacter(name: String, race: Int, background: Int): Long {
+        val newCharacter = Character(name = name, race = race, background = background)
+        return insertCharacter(newCharacter)
     }
 }

@@ -8,7 +8,7 @@ import com.example.diario_aventura.enums.Proficiencies
 @Entity
 data class Weapon (
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Long = 0,
     @ColumnInfo(name = "name")
     val name: String = "",
     @ColumnInfo(name = "proficiency")
