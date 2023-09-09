@@ -11,20 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="34dp"
         android:text="12 m. (6 cas.)"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_velocidad"
         app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_defensa" />
+        app:layout_constraintTop_toTopOf="@+id/txt_velocidad" />
 
     <TextView
         android:id="@+id/txt_val_defensa"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="34dp"
         android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_defensa"
         app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
-        app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
+        app:layout_constraintTop_toTopOf="@+id/txt_defensa" />
 
     <Button
         android:id="@+id/btn_skills"
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="24dp"
         android:text="Maná"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
         android:id="@+id/txt_vida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="24dp"
         android:text="Vida"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/txt_suerte"
@@ -82,7 +82,7 @@
         android:id="@+id/txt_suerte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:text="Suerte"
         android:textSize="20sp"
@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="0/0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_mana" />
@@ -103,7 +103,7 @@
         android:id="@+id/txt_pts_suerte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="90dp"
         android:text="0/0"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +113,7 @@
         android:id="@+id/txt_pts_mana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="0/0"
         app:layout_constraintEnd_toStartOf="@+id/txt_pts_suerte"
         app:layout_constraintStart_toEndOf="@+id/txt_pts_vida"
@@ -123,7 +123,7 @@
         android:id="@+id/txt_salvaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="72dp"
         android:text="Salvaciones"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Fortaleza"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
@@ -155,7 +155,7 @@
         android:id="@+id/txt_Reflejos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Reflejos"
         app:layout_constraintEnd_toStartOf="@+id/txt_voluntad"
         app:layout_constraintStart_toEndOf="@+id/txt_fortaleza"
@@ -165,7 +165,7 @@
         android:id="@+id/txt_voluntad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
         android:text="Voluntad"
         app:layout_constraintEnd_toEndOf="parent"
@@ -176,7 +176,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_fortaleza" />
@@ -185,7 +185,7 @@
         android:id="@+id/txt_val_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="0"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_vol"
         app:layout_constraintStart_toEndOf="@+id/txt_val_for"
@@ -195,7 +195,7 @@
         android:id="@+id/txt_val_vol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="90dp"
         android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
@@ -403,7 +403,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:text="Defensa"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -424,32 +424,32 @@
         android:id="@+id/txt_defensa_desp"
         android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="92dp"
         android:text="Defensa \nDesprevenido"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_defensa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
+        app:layout_constraintTop_toTopOf="@+id/txt_defensa" />
 
     <TextView
         android:id="@+id/txt_val_iniciativa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
         android:text="+0"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_iniciativa"
         app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_defensa_desp" />
+        app:layout_constraintTop_toTopOf="@+id/txt_iniciativa" />
 
     <TextView
         android:id="@+id/txt_val_defensa_desp"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="34dp"
         android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_defensa_desp"
         app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
-        app:layout_constraintTop_toBottomOf="@+id/txt_carisma" />
+        app:layout_constraintTop_toTopOf="@+id/txt_defensa_desp" />
 
     <ImageButton
         android:id="@+id/btn_menos_mana"
@@ -517,10 +517,10 @@
         android:id="@+id/btn_crconf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
         android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_atributos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_atributos"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

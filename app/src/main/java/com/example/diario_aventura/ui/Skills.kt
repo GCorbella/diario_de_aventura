@@ -7,6 +7,9 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.example.diario_aventura.AdventureJournal
 import com.example.diario_aventura.R
+import com.example.diario_aventura.db.entities.Character
+import com.example.diario_aventura.db.entities.Race
+import com.example.diario_aventura.enums.Skills
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,10 +18,14 @@ class Skills : AppCompatActivity() {
     private val editTextArray = mutableListOf<EditText>()
     private val moreBtnArray = mutableListOf<ImageButton>()
     private val skillValueArray = mutableListOf<TextView>()
+    private lateinit var character: Character
+    private lateinit var characterRace: Race
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pnt_skills)
+
+        loadCharacter()
 
         // Inicializa el array con los EditText
         editTextArray.addAll(
@@ -100,11 +107,9 @@ class Skills : AppCompatActivity() {
 
             // Guarda los cambios en la base de datos si se desactivan los EditText
             if (!editTextArray[0].isEnabled) {
-                val characterId = AdventureJournal.selectedCharacterId
                 val characterDao = (application as AdventureJournal).db.characterDao()
 
                 CoroutineScope(Dispatchers.IO).launch {
-                    val character = characterDao.getCharacterById(characterId)
 
                     character?.let {
                         // Actualiza las propiedades del personaje utilizando las referencias previamente obtenidas
@@ -155,17 +160,13 @@ class Skills : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        loadCharacter()
         // Cargar y establecer los datos del personaje cada vez que se muestra la pantalla
         loadCharacterDataToEditText()
     }
 
     private fun loadCharacterDataToEditText() {
-        val characterId = AdventureJournal.selectedCharacterId
-        val characterDao = (application as AdventureJournal).db.characterDao()
-
         CoroutineScope(Dispatchers.IO).launch {
-            val character = characterDao.getCharacterById(characterId)
-
             character?.let {
                 // Actualizar los valores de los EditText con los datos del personaje
                 runOnUiThread {
@@ -229,19 +230,127 @@ class Skills : AppCompatActivity() {
         for (i in 0 until editTextArray.size) {
             val editText = editTextArray[i]
             val skillValueTextView = skillValueArray[i]
-
             val currentValue = editText.text.toString().toInt()
-            val newValue = calculateValueFromUsages(currentValue)
-            skillValueTextView.text = newValue.toString()
+            var newValue = calculateValueFromUsages(currentValue)
+
+            when (i) {
+                0 -> {
+                    if (characterRace.bSkill == Skills.AGILITY) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                }
+                1 -> {
+                    if (characterRace.bSkill == Skills.CRAFTING_1) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence) - 10) / 2)).toString() // Inteligencia (INT)
+                }
+                2 -> {
+                    if (characterRace.bSkill == Skills.CRAFTING_1) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence) - 10) / 2)).toString() // Inteligencia (INT)
+                }
+                3 -> {
+                    if (characterRace.bSkill == Skills.ATHLETICS) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.strength + characterRace.strength) - 10) / 2)).toString() // Fuerza (STR)
+                }
+                4 -> {
+                    if (characterRace.bSkill == Skills.SPOT) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                }
+                5 -> {
+                    if (characterRace.bSkill == Skills.SEARCH) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence) - 10) / 2)).toString() // Inteligencia (INT)
+                }
+                6 -> {
+                    if (characterRace.bSkill == Skills.CONCENTRATION) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.constitution + characterRace.constitution) - 10) / 2)).toString() // Constitución (CON)
+                }
+                7 -> {
+                    if (characterRace.bSkill == Skills.MANUAL_DEXTERITY) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                }
+                8 -> {
+                    if (characterRace.bSkill == Skills.EMPATHY) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                }
+                9 -> {
+                    if (characterRace.bSkill == Skills.LISTEN) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                }
+                10 -> {
+                    if (characterRace.bSkill == Skills.PERFORM_1) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                }
+                11 -> {
+                    if (characterRace.bSkill == Skills.PERFORM_1) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                }
+                12 -> {
+                    if (characterRace.bSkill == Skills.PERSUASION) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                }
+                13 -> {
+                    if (characterRace.bSkill == Skills.MOUNT) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                }
+                14 -> {
+                    if (characterRace.bSkill == Skills.PILOT) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                }
+                15 -> {
+                    if (characterRace.bSkill == Skills.HEAL) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                }
+                16 -> {
+                    if (characterRace.bSkill == Skills.STEALTH) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                }
+                17 -> {
+                    if (characterRace.bSkill == Skills.SURVIVAL) {
+                        newValue += 3
+                    }
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                }
+                else -> skillValueTextView.text = newValue.toString() // Valor predeterminado
+            }
         }
     }
 
     private fun updateCharacterProperty(propertyIndex: Int, updatedValue: Int) {
-        val characterId = AdventureJournal.selectedCharacterId
         val characterDao = (application as AdventureJournal).db.characterDao()
 
         CoroutineScope(Dispatchers.IO).launch {
-            val character = characterDao.getCharacterById(characterId)
 
             character?.let {
                 when (propertyIndex) {
@@ -267,6 +376,17 @@ class Skills : AppCompatActivity() {
 
                 characterDao.updateCharacter(it)
             }
+        }
+    }
+
+    private fun loadCharacter() {
+        val characterId = AdventureJournal.selectedCharacterId
+        val characterDao = (application as AdventureJournal).db.characterDao()
+        val raceDao = (application as AdventureJournal).db.raceDao()
+
+        CoroutineScope(Dispatchers.IO).launch {
+            character = characterDao.getCharacterById(characterId)
+            characterRace = raceDao.getRaceById(character.race)
         }
     }
 }
