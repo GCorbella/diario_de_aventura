@@ -210,8 +210,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Sexto Sentido"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chk_enh_initiative"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conf_constitution" />
+
+    <CheckBox
+        android:id="@+id/chk_enh_initiative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Iniciativa Mejorada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chk_sixthsense"
         app:layout_constraintTop_toBottomOf="@+id/txt_conf_constitution" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

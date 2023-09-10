@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import com.example.diario_aventura.AdventureJournal
@@ -15,6 +16,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.example.diario_aventura.db.CharactersDB
+import com.example.diario_aventura.db.entities.Background
+import com.example.diario_aventura.db.entities.Race
 
 
 class CrConfiguration : AppCompatActivity() {
@@ -27,10 +30,17 @@ class CrConfiguration : AppCompatActivity() {
     private lateinit var etxtIntelligence: EditText
     private lateinit var etxtWisdom: EditText
     private lateinit var etxtCharisma: EditText
+    private lateinit var chkSixthSense: CheckBox
+    private lateinit var chkEnhancedInitiative: CheckBox
+    private lateinit var character: Character
+    private lateinit var characterRace: Race
+    private lateinit var characterBackground: Background
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pnt_cr_configuration)
+
+        loadCharacter()
 
         txtRaceSelection = findViewById(R.id.txt_race_selection)
         txtSizeSelection = findViewById(R.id.txt_size_selection)
@@ -41,22 +51,16 @@ class CrConfiguration : AppCompatActivity() {
         etxtIntelligence = findViewById(R.id.etxt_intelligence)
         etxtWisdom = findViewById(R.id.etxt_wisdom)
         etxtCharisma = findViewById(R.id.etxt_charisma)
+        chkSixthSense = findViewById(R.id.chk_sixthsense)
+        chkEnhancedInitiative = findViewById(R.id.chk_enh_initiative)
 
-        val selectedCharacterId = AdventureJournal.selectedCharacterId
-        val charactersDB = CharactersDB.getInstance(applicationContext)
-        val characterDao = charactersDB.characterDao()
-        val raceDao = charactersDB.raceDao()
-        val backgroundDAO = charactersDB.backgroundDao()
+        val characterDao = (application as AdventureJournal).db.characterDao()
 
         CoroutineScope(Dispatchers.IO).launch {
-            val character = characterDao.getCharacterById(selectedCharacterId)
-            val race = raceDao.getRaceById(character.race)
-            val background = backgroundDAO.getBackgroundById(character.background)
-
             withContext(Dispatchers.Main) {
-                txtRaceSelection.text = "${race.name}"
-                txtSizeSelection.text = "${race.size}"
-                txtBackgroundSelection.text = "${background.name}"
+                txtRaceSelection.text = "${characterRace.name}"
+                txtSizeSelection.text = "${characterRace.size}"
+                txtBackgroundSelection.text = "${characterBackground.name}"
 
                 etxtStrength.setText(character.strength.toString())
                 etxtDexterity.setText(character.dexterity.toString())
@@ -107,6 +111,34 @@ class CrConfiguration : AppCompatActivity() {
                     characterDao.updateCharacter(character)
                 }
             })
+        }
+
+        chkSixthSense.setOnClickListener {
+            character.sixthSense = chkSixthSense.isChecked
+            CoroutineScope(Dispatchers.IO).launch {
+                characterDao.updateCharacter(character)
+            }
+        }
+
+        // Agregar OnClickListener para el botón "Iniciativa Mejorada"
+        chkEnhancedInitiative.setOnClickListener {
+            character.enhInitiative = chkEnhancedInitiative.isChecked
+            CoroutineScope(Dispatchers.IO).launch {
+                characterDao.updateCharacter(character)
+            }
+        }
+    }
+
+    private fun loadCharacter() {
+        val characterId = AdventureJournal.selectedCharacterId
+        val characterDao = (application as AdventureJournal).db.characterDao()
+        val raceDao = (application as AdventureJournal).db.raceDao()
+        val backgroundDAO = (application as AdventureJournal).db.backgroundDao()
+
+        CoroutineScope(Dispatchers.IO).launch {
+            character = characterDao.getCharacterById(characterId)
+            characterRace = raceDao.getRaceById(character.race)
+            characterBackground = backgroundDAO.getBackgroundById(character.background)
         }
     }
 

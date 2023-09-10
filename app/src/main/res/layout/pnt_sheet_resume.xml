@@ -6,25 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".ui.SheetResume">
 
+    <ImageButton
+        android:id="@+id/btn_edituses_sav"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_salvaciones"
+        app:layout_constraintStart_toEndOf="@+id/txt_salvaciones"
+        app:layout_constraintTop_toTopOf="@+id/txt_salvaciones"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
     <TextView
-        android:id="@+id/txt_val_velocidad"
+        android:id="@+id/txt_val_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:text="12 m. (6 cas.)"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_velocidad"
-        app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
-        app:layout_constraintTop_toTopOf="@+id/txt_velocidad" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_speed"
+        app:layout_constraintStart_toEndOf="@+id/txt_speed"
+        app:layout_constraintTop_toTopOf="@+id/txt_speed" />
 
     <TextView
-        android:id="@+id/txt_val_defensa"
+        android:id="@+id/txt_val_defense"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_defensa"
-        app:layout_constraintStart_toEndOf="@+id/txt_velocidad"
-        app:layout_constraintTop_toTopOf="@+id/txt_defensa" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_defense"
+        app:layout_constraintStart_toEndOf="@+id/txt_speed"
+        app:layout_constraintTop_toTopOf="@+id/txt_defense" />
 
     <Button
         android:id="@+id/btn_skills"
@@ -90,33 +100,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_pts_vida"
+        android:id="@+id/txt_mana_pts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
         android:layout_marginTop="16dp"
         android:text="0/0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_mana"
+        app:layout_constraintStart_toStartOf="@+id/txt_mana"
         app:layout_constraintTop_toBottomOf="@+id/txt_mana" />
 
     <TextView
-        android:id="@+id/txt_pts_suerte"
+        android:id="@+id/txt_luck_pts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="90dp"
         android:text="0/0"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_suerte"
+        app:layout_constraintStart_toStartOf="@+id/txt_suerte"
         app:layout_constraintTop_toBottomOf="@+id/txt_suerte" />
 
     <TextView
-        android:id="@+id/txt_pts_mana"
+        android:id="@+id/txt_health_pts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="0/0"
-        app:layout_constraintEnd_toStartOf="@+id/txt_pts_suerte"
-        app:layout_constraintStart_toEndOf="@+id/txt_pts_vida"
+        app:layout_constraintEnd_toEndOf="@+id/txt_vida"
+        app:layout_constraintStart_toStartOf="@+id/txt_vida"
         app:layout_constraintTop_toBottomOf="@+id/txt_vida" />
 
     <TextView
@@ -128,7 +138,7 @@
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_mana" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_health_pts" />
 
     <TextView
         android:id="@+id/txt_atributos"
@@ -142,7 +152,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_val_ref" />
 
     <TextView
-        android:id="@+id/txt_fortaleza"
+        android:id="@+id/txt_fortitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -152,17 +162,17 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
 
     <TextView
-        android:id="@+id/txt_Reflejos"
+        android:id="@+id/txt_reflexes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Reflejos"
-        app:layout_constraintEnd_toStartOf="@+id/txt_voluntad"
-        app:layout_constraintStart_toEndOf="@+id/txt_fortaleza"
+        app:layout_constraintEnd_toStartOf="@+id/txt_will"
+        app:layout_constraintStart_toEndOf="@+id/txt_fortitude"
         app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
 
     <TextView
-        android:id="@+id/txt_voluntad"
+        android:id="@+id/txt_will"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -175,31 +185,34 @@
         android:id="@+id/txt_val_for"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_fortaleza" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_u_fortitude"
+        app:layout_constraintStart_toStartOf="@+id/txt_fortitude"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fortitude" />
 
     <TextView
         android:id="@+id/txt_val_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="0"
-        app:layout_constraintEnd_toStartOf="@+id/txt_val_vol"
-        app:layout_constraintStart_toEndOf="@+id/txt_val_for"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Reflejos" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_u_reflexes"
+        app:layout_constraintStart_toStartOf="@+id/txt_reflexes"
+        app:layout_constraintTop_toBottomOf="@+id/txt_reflexes" />
 
     <TextView
-        android:id="@+id/txt_val_vol"
+        android:id="@+id/txt_val_will"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="90dp"
+        android:layout_marginEnd="8dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_voluntad" />
+        app:layout_constraintEnd_toStartOf="@+id/etxt_u_will"
+        app:layout_constraintStart_toStartOf="@+id/txt_will"
+        app:layout_constraintTop_toBottomOf="@+id/txt_will" />
 
     <TextView
         android:id="@+id/txt_fuerza"
@@ -388,7 +401,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_mod_wis" />
 
     <TextView
-        android:id="@+id/txt_velocidad"
+        android:id="@+id/txt_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -396,10 +409,10 @@
         android:text="Velocidad"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_defensa" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_defense" />
 
     <TextView
-        android:id="@+id/txt_defensa"
+        android:id="@+id/txt_defense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -410,7 +423,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
 
     <TextView
-        android:id="@+id/txt_iniciativa"
+        android:id="@+id/txt_initiative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -418,99 +431,97 @@
         android:text="Iniciativa"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_defensa_desp" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_defense_desp" />
 
     <TextView
-        android:id="@+id/txt_defensa_desp"
+        android:id="@+id/txt_defense_desp"
         android:layout_width="104dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="92dp"
         android:text="Defensa \nDesprevenido"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_defensa"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_defense"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txt_defensa" />
+        app:layout_constraintTop_toTopOf="@+id/txt_defense" />
 
     <TextView
-        android:id="@+id/txt_val_iniciativa"
+        android:id="@+id/txt_val_initiative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="+0"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_iniciativa"
-        app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
-        app:layout_constraintTop_toTopOf="@+id/txt_iniciativa" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_initiative"
+        app:layout_constraintStart_toEndOf="@+id/txt_initiative"
+        app:layout_constraintTop_toTopOf="@+id/txt_initiative" />
 
     <TextView
-        android:id="@+id/txt_val_defensa_desp"
+        android:id="@+id/txt_val_defense_desp"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_defensa_desp"
-        app:layout_constraintStart_toEndOf="@+id/txt_iniciativa"
-        app:layout_constraintTop_toTopOf="@+id/txt_defensa_desp" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_defense_desp"
+        app:layout_constraintStart_toEndOf="@+id/txt_initiative"
+        app:layout_constraintTop_toTopOf="@+id/txt_defense_desp" />
 
     <ImageButton
-        android:id="@+id/btn_menos_mana"
+        android:id="@+id/btn_lMana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_vida"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mMana"
+        app:layout_constraintStart_toStartOf="@+id/txt_mana_pts"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mana_pts"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/btn_menos_suerte"
+        android:id="@+id/btn_lLuck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_mas_mana3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_suerte"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mLuck"
+        app:layout_constraintStart_toStartOf="@+id/txt_luck_pts"
+        app:layout_constraintTop_toBottomOf="@+id/txt_luck_pts"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/btn_menos_vida"
+        android:id="@+id/btn_lHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_mas_mana2"
-        app:layout_constraintStart_toEndOf="@+id/btn_mas_mana"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_mana"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mHealth"
+        app:layout_constraintStart_toStartOf="@+id/txt_health_pts"
+        app:layout_constraintTop_toBottomOf="@+id/txt_health_pts"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_mana"
+        android:id="@+id/btn_mMana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_menos_mana"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_vida"
+        app:layout_constraintEnd_toEndOf="@+id/txt_mana_pts"
+        app:layout_constraintStart_toEndOf="@+id/btn_lMana"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mana_pts"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_mana3"
+        android:id="@+id/btn_mLuck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="56dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_suerte"
+        app:layout_constraintEnd_toEndOf="@+id/txt_luck_pts"
+        app:layout_constraintStart_toEndOf="@+id/btn_lLuck"
+        app:layout_constraintTop_toBottomOf="@+id/txt_luck_pts"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/btn_mas_mana2"
+        android:id="@+id/btn_mHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_menos_suerte"
-        app:layout_constraintStart_toEndOf="@+id/btn_menos_vida"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pts_mana"
+        app:layout_constraintEnd_toEndOf="@+id/txt_health_pts"
+        app:layout_constraintStart_toEndOf="@+id/btn_lHealth"
+        app:layout_constraintTop_toBottomOf="@+id/txt_health_pts"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -522,5 +533,53 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_atributos"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
+
+    <EditText
+        android:id="@+id/etxt_u_fortitude"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="-16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="14"
+        android:textSize="10sp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_val_for"
+        app:layout_constraintEnd_toEndOf="@+id/txt_fortitude"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_for"
+        app:layout_constraintTop_toTopOf="@+id/txt_val_for" />
+
+    <EditText
+        android:id="@+id/etxt_u_reflexes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="-16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="14"
+        android:textSize="10sp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_val_ref"
+        app:layout_constraintEnd_toEndOf="@+id/txt_reflexes"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_ref"
+        app:layout_constraintTop_toTopOf="@+id/txt_val_ref" />
+
+    <EditText
+        android:id="@+id/etxt_u_will"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="-16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="14"
+        android:textSize="10sp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_val_will"
+        app:layout_constraintEnd_toEndOf="@+id/txt_will"
+        app:layout_constraintStart_toEndOf="@+id/txt_val_will"
+        app:layout_constraintTop_toTopOf="@+id/txt_val_will" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

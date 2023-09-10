@@ -846,7 +846,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etxt_u_stealth" />
 
     <ImageButton
-        android:id="@+id/btn_edituses_h"
+        android:id="@+id/btn_edituses_sklls"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"

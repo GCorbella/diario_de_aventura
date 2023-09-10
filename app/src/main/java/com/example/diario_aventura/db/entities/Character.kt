@@ -17,11 +17,11 @@ data class Character(
     val background: Long = 0,
 //Stats
     @ColumnInfo(name = "current_health")
-    val cHealth: Int = 0,
+    var cHealth: Int = 0,
     @ColumnInfo(name = "current_mana")
-    val cMana: Int = 0,
+    var cMana: Int = 0,
     @ColumnInfo(name = "current_luck")
-    val cLuck: Int = 0,
+    var cLuck: Int = 0,
 //Attributes
     @ColumnInfo(name = "strength")
     var strength: Int = 10,
@@ -37,11 +37,11 @@ data class Character(
     var charisma: Int = 10,
 //Saves
     @ColumnInfo(name = "u_fortitude")
-    val uFortitude: Int = 14,
+    var uFortitude: Int = 14,
     @ColumnInfo(name = "u_reflexes")
-    val uReflexes: Int = 14,
+    var uReflexes: Int = 14,
     @ColumnInfo(name = "u_will")
-    val uWill: Int = 14,
+    var uWill: Int = 14,
 //Skills
     @ColumnInfo(name = "u_agility")
     var uAgility: Int = 14,
@@ -118,4 +118,9 @@ data class Character(
     var uProjectileSpells: Int = 0,
     @ColumnInfo(name = "u_ray_spells")
     var uRaySpells: Int = 0,
+    //Feats
+    @ColumnInfo(name = "sixth_sense")
+    var sixthSense: Boolean = false,
+    @ColumnInfo(name = "enh_initiative")
+    var enhInitiative: Boolean = false,
     )

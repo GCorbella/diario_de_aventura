@@ -97,7 +97,7 @@ class Skills : AppCompatActivity() {
             )
         )
 
-        val BtnEditUses = findViewById<ImageButton>(R.id.btn_edituses_h)
+        val BtnEditUses = findViewById<ImageButton>(R.id.btn_edituses_sklls)
 
         BtnEditUses.setOnClickListener {
             // Cambia el estado de edición del EditText
