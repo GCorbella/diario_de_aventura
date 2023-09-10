@@ -179,29 +179,32 @@
 
     <TextView
         android:id="@+id/txt_race_selection"
-        android:layout_width="250dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_race"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_race"
         app:layout_constraintTop_toTopOf="@+id/txt_race" />
 
     <TextView
         android:id="@+id/txt_background_selection"
-        android:layout_width="250dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_background"
         app:layout_constraintTop_toTopOf="@+id/txt_background" />
 
     <TextView
         android:id="@+id/txt_size_selection"
-        android:layout_width="250dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_size"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_size"
         app:layout_constraintTop_toTopOf="@+id/txt_size" />
 
     <CheckBox
