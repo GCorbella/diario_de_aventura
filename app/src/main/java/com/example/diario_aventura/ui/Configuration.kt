@@ -11,6 +11,7 @@ import com.example.diario_aventura.R
 import com.example.diario_aventura.db.entities.Background
 import com.example.diario_aventura.db.entities.Character
 import com.example.diario_aventura.db.entities.Race
+import com.example.diario_aventura.enums.Skills
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -67,6 +68,25 @@ class Configuration : AppCompatActivity() {
             CoroutineScope(Dispatchers.Main).launch {
                 loadRacesInSpinner()
                 loadBackgroundsInSpinner()
+                loadSkillsInSpinners(dialogView)
+            }
+
+            spinnerBackground.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                val aprSkillsContainer = dialogView.findViewById<LinearLayout>(R.id.ll_aprskills_container)
+                override fun onItemSelected(parentView: AdapterView<*>?, selectedItemView: View?, position: Int, id: Long) {
+                    if (position == 3) {
+                        // Si la posición seleccionada en spinnerBackground es igual a 3,
+                        // muestra el contenido oculto
+                        aprSkillsContainer.visibility = View.VISIBLE
+                    } else {
+                        // En caso contrario, oculta el contenido
+                        aprSkillsContainer.visibility = View.GONE
+                    }
+                }
+
+                override fun onNothingSelected(parentView: AdapterView<*>?) {
+                    // No es necesario hacer nada aquí
+                }
             }
 
             btnCreateCr.setOnClickListener {
@@ -79,7 +99,191 @@ class Configuration : AppCompatActivity() {
                     // y actualizar la lista de personajes en el desplegable
                     CoroutineScope(Dispatchers.IO).launch {
                         val characterDao = (application as AdventureJournal).db.characterDao()
-                        characterDao.createNewCharacter(crName, selectedRace.id, selectedBackground.id)
+                        val newCharacterId = characterDao.createNewCharacter(crName, selectedRace.id, selectedBackground.id)
+
+                        if (selectedBackground.id != 4L) {
+                            val newCharacter = characterDao.getCharacterById(newCharacterId)
+
+                            newCharacter.uAgility += selectedBackground.uAgility
+                            newCharacter.uCrafting1 += selectedBackground.uCrafting1
+                            newCharacter.uCrafting2 += selectedBackground.uCrafting2
+                            newCharacter.uAthletics += selectedBackground.uAthletics
+                            newCharacter.uSpot += selectedBackground.uSpot
+                            newCharacter.uSearch += selectedBackground.uSearch
+                            newCharacter.uConcentration += selectedBackground.uConcentration
+                            newCharacter.uManualDexterity += selectedBackground.uManualDexterity
+                            newCharacter.uEmpathy += selectedBackground.uEmpathy
+                            newCharacter.uListen += selectedBackground.uListen
+                            newCharacter.uPerform1 += selectedBackground.uPerform1
+                            newCharacter.uPerform2 += selectedBackground.uPerform2
+                            newCharacter.uPersuasion += selectedBackground.uPersuasion
+                            newCharacter.uMount += selectedBackground.uMount
+                            newCharacter.uPilot += selectedBackground.uPilot
+                            newCharacter.uHeal += selectedBackground.uHeal
+                            newCharacter.uStealth += selectedBackground.uStealth
+                            newCharacter.uSurvival += selectedBackground.uSurvival
+
+                            if (selectedBackground.meleeProficiency) {
+                                newCharacter.uUnarmed += 14
+                                newCharacter.uDaggers += 14
+                                newCharacter.uMaces += 14
+                                newCharacter.uAxes += 14
+                                newCharacter.uSwords += 14
+                                newCharacter.uRapiers += 14
+                                newCharacter.uWhips += 14
+                                newCharacter.uSpears += 14
+                                newCharacter.u2hMaces += 14
+                                newCharacter.u2hAxes += 14
+                                newCharacter.u2hSwords += 14
+                                newCharacter.uDoubleWeapons += 14
+                            }
+
+                            if (selectedBackground.rangedProficiency) {
+                                newCharacter.uThrowingWeapons += 14
+                                newCharacter.uBows += 14
+                                newCharacter.uCrossbows += 14
+                                newCharacter.uShortFirearms += 14
+                                newCharacter.uLongFirearms += 14
+                                newCharacter.uProjectileSpells += 14
+                                newCharacter.uRaySpells += 14
+                            }
+
+                            characterDao.updateCharacter(newCharacter)
+                        } else {
+                            val newCharacter = characterDao.getCharacterById(newCharacterId)
+
+                            val allSkills = Skills.values().toList()
+                            val filteredSkills = allSkills.filter { it != Skills.CRAFTING_2 && it != Skills.PERFORM_2 && it != Skills.CHOOSE && it != Skills.NONE }
+
+                            val spinnerSkill2 = listOf(
+                                R.id.spinner_aprskill1,
+                                R.id.spinner_aprskill2,
+                                R.id.spinner_aprskill3
+                            )
+                            val spinnerSkill1 = listOf(
+                                R.id.spinner_aprskill4,
+                                R.id.spinner_aprskill5,
+                                R.id.spinner_aprskill6
+                            )
+
+                            for (spinnerId in spinnerSkill2) {
+                                val spinner = dialogView.findViewById<Spinner>(spinnerId)
+                                val selectedSkillPosition = spinner.selectedItemPosition
+                                val selectedSkill = filteredSkills[selectedSkillPosition] // Obtén la habilidad seleccionada
+                                when (selectedSkill.label) {
+                                    "Agilidad" -> {
+                                        newCharacter.uAgility += 36
+                                    }
+                                    "Artesanía" -> {
+                                        newCharacter.uCrafting1 += 36
+                                        newCharacter.uCrafting2 += 36
+                                    }
+                                    "Atletismo" -> {
+                                        newCharacter.uAthletics += 36
+                                    }
+                                    "Avistar" -> {
+                                        newCharacter.uSpot += 36
+                                    }
+                                    "Buscar" -> {
+                                        newCharacter.uSearch += 36
+                                    }
+                                    "Concentración" -> {
+                                        newCharacter.uConcentration += 36
+                                    }
+                                    "Destreza Manual" -> {
+                                        newCharacter.uManualDexterity += 36
+                                    }
+                                    "Empatía" -> {
+                                        newCharacter.uEmpathy += 36
+                                    }
+                                    "Escuchar" -> {
+                                        newCharacter.uListen += 36
+                                    }
+                                    "Interpretar" -> {
+                                        newCharacter.uPerform1 += 36
+                                        newCharacter.uPerform2 += 36
+                                    }
+                                    "Labia" -> {
+                                        newCharacter.uPersuasion += 36
+                                    }
+                                    "Montar" -> {
+                                        newCharacter.uMount += 36
+                                    }
+                                    "Pilotar" -> {
+                                        newCharacter.uPilot += 36
+                                    }
+                                    "Sanar" -> {
+                                        newCharacter.uHeal += 36
+                                    }
+                                    "Sigilo" -> {
+                                        newCharacter.uStealth += 36
+                                    }
+                                    "Supervivencia" -> {
+                                        newCharacter.uSurvival += 36
+                                    }
+                                }
+                            }
+
+                            for (spinnerId in spinnerSkill1) {
+                                val spinner = dialogView.findViewById<Spinner>(spinnerId)
+                                val selectedSkillPosition = spinner.selectedItemPosition
+                                val selectedSkill = filteredSkills[selectedSkillPosition] // Obtén la habilidad seleccionada
+                                when (selectedSkill.label) {
+                                    "Agilidad" -> {
+                                        newCharacter.uAgility += 16
+                                    }
+                                    "Artesanía" -> {
+                                        newCharacter.uCrafting1 += 16
+                                        newCharacter.uCrafting2 += 16
+                                    }
+                                    "Atletismo" -> {
+                                        newCharacter.uAthletics += 16
+                                    }
+                                    "Avistar" -> {
+                                        newCharacter.uSpot += 16
+                                    }
+                                    "Buscar" -> {
+                                        newCharacter.uSearch += 16
+                                    }
+                                    "Concentración" -> {
+                                        newCharacter.uConcentration += 16
+                                    }
+                                    "Destreza Manual" -> {
+                                        newCharacter.uManualDexterity += 16
+                                    }
+                                    "Empatía" -> {
+                                        newCharacter.uEmpathy += 16
+                                    }
+                                    "Escuchar" -> {
+                                        newCharacter.uListen += 16
+                                    }
+                                    "Interpretar" -> {
+                                        newCharacter.uPerform1 += 16
+                                        newCharacter.uPerform2 += 16
+                                    }
+                                    "Labia" -> {
+                                        newCharacter.uPersuasion += 16
+                                    }
+                                    "Montar" -> {
+                                        newCharacter.uMount += 16
+                                    }
+                                    "Pilotar" -> {
+                                        newCharacter.uPilot += 16
+                                    }
+                                    "Sanar" -> {
+                                        newCharacter.uHeal += 16
+                                    }
+                                    "Sigilo" -> {
+                                        newCharacter.uStealth += 16
+                                    }
+                                    "Supervivencia" -> {
+                                        newCharacter.uSurvival += 16
+                                    }
+                                }
+                            }
+
+                            characterDao.updateCharacter(newCharacter)
+                        }
 
                         CoroutineScope(Dispatchers.Main).launch {
                             loadCharactersInSpinner()
@@ -194,5 +398,59 @@ class Configuration : AppCompatActivity() {
         val adapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, backgroundsNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerBackground.adapter = adapter
+    }
+
+    private suspend fun loadSkillsInSpinners(dialogView: View) {
+        // Obtener las referencias de los spinners de aprskill
+        val aprSkillSpinner1 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill1)
+        val aprSkillSpinner2 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill2)
+        val aprSkillSpinner3 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill3)
+        val aprSkillSpinner4 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill4)
+        val aprSkillSpinner5 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill5)
+        val aprSkillSpinner6 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill6)
+
+        // Obtener todas las habilidades
+        val allSkills = Skills.values().toList()
+
+        // Filtrar las habilidades que no deseas incluir
+        val filteredSkills = allSkills.filter { it != Skills.CRAFTING_2 && it != Skills.PERFORM_2 && it != Skills.CHOOSE && it != Skills.NONE }
+
+        // Mapear las habilidades filtradas a sus etiquetas en español
+        val skillLabels = filteredSkills.map { getSkillLabel(it) }
+
+        val adapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, skillLabels)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        aprSkillSpinner1.adapter = adapter
+        aprSkillSpinner2.adapter = adapter
+        aprSkillSpinner3.adapter = adapter
+        aprSkillSpinner4.adapter = adapter
+        aprSkillSpinner5.adapter = adapter
+        aprSkillSpinner6.adapter = adapter
+    }
+
+    private fun getSkillLabel(skill: Skills): String {
+        return when (skill) {
+            Skills.AGILITY -> "Agilidad"
+            Skills.CRAFTING_1 -> "Artesanía"
+            Skills.CRAFTING_2 -> "Artesanía 2"
+            Skills.ATHLETICS -> "Atletismo"
+            Skills.SPOT -> "Avistar"
+            Skills.SEARCH -> "Buscar"
+            Skills.CONCENTRATION -> "Concentración"
+            Skills.MANUAL_DEXTERITY -> "Destreza Manual"
+            Skills.EMPATHY -> "Empatía"
+            Skills.LISTEN -> "Escuchar"
+            Skills.PERFORM_1 -> "Interpretar"
+            Skills.PERFORM_2 -> "Interpretar 2"
+            Skills.PERSUASION -> "Labia"
+            Skills.MOUNT -> "Montar"
+            Skills.PILOT -> "Pilotar"
+            Skills.HEAL -> "Sanar"
+            Skills.STEALTH -> "Sigilo"
+            Skills.SURVIVAL -> "Supervivencia"
+            Skills.CHOOSE -> "Elegir"
+            Skills.NONE -> "Ninguna"
+        }
     }
 }

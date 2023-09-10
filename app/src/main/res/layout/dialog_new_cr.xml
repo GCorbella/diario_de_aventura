@@ -25,6 +25,63 @@
         android:layout_marginTop="16dp"
         android:hint="Selecciona el Trasfondo" />
 
+    <!-- Contenedor para las habilidades -->
+    <LinearLayout
+        android:id="@+id/ll_aprskills_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:visibility="gone"> <!-- Inicialmente oculto -->
+
+        <!-- Primer conjunto de habilidades (2) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Habilidades (2)" />
+
+        <Spinner
+            android:id="@+id/spinner_aprskill1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad 1" />
+
+        <Spinner
+            android:id="@+id/spinner_aprskill2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad 2" />
+
+        <Spinner
+            android:id="@+id/spinner_aprskill3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad 3" />
+
+        <!-- Segundo conjunto de habilidades (1) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Habilidades (1)" />
+
+        <Spinner
+            android:id="@+id/spinner_aprskill4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad 4" />
+
+        <Spinner
+            android:id="@+id/spinner_aprskill5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad 5" />
+
+        <Spinner
+            android:id="@+id/spinner_aprskill6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad 6" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_create_cr"
