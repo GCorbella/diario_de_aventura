@@ -46,25 +46,25 @@ object InitialData {
         )
 
     val initialBackgrounds = listOf(
-        Background(name = "Acólito", uConcentration = 61, uPersuasion = 61, uHeal = 26, uSearch = 16),
-        Background(name = "Acompañante", uPersuasion = 61, uListen = 61, uManualDexterity = 26, uHeal = 16),
+        Background(name = "Acólito", uConcentration = 61, uPersuasion = 61, uHeal = 36, uSearch = 16),
+        Background(name = "Acompañante", uPersuasion = 61, uListen = 61, uManualDexterity = 36, uHeal = 16),
         Background(name = "Alguacil", uSpot = 61, uSearch = 61, uListen = 16, meleeProficiency = true),
         Background(name = "Aprendiz"),
-        Background(name = "Bailarín", uPerform1 = 61, uPerform2 = 61, uAgility = 61, uAthletics = 26, uPersuasion = 16),
+        Background(name = "Bailarín", uPerform1 = 61, uPerform2 = 61, uAgility = 61, uAthletics = 36, uPersuasion = 16),
         Background(name = "Cazador", uSearch = 61, uSurvival = 61, uListen = 16, rangedProficiency = true),
-        Background(name = "Comerciante", uPersuasion = 61, uPilot = 61, uEmpathy = 26, uSearch = 16),
-        Background(name = "Curandero", uHeal = 61, uConcentration = 61, uEmpathy = 26, uPersuasion = 16),
-        Background(name = "Erudito", uConcentration = 61, uPersuasion = 61, uSearch = 26, uCrafting1 = 16, uCrafting2 = 16),
-        Background(name = "Espía", uStealth = 61, uSpot = 61, uPersuasion = 26, uSearch = 16),
-        Background(name = "Guardabosques", uSurvival = 61, uSearch = 61, uEmpathy = 26, uSpot = 16),
-        Background(name = "Herrero", uCrafting1 = 61, uAthletics = 26, uManualDexterity = 16, meleeProficiency = true),
-        Background(name = "Inventor", uCrafting1 = 61, uCrafting2 = 61, uManualDexterity = 61, uConcentration = 26, uSpot = 16),
-        Background(name = "Ladrón", uAgility = 61, uManualDexterity = 61, uStealth = 26, uAthletics = 16),
+        Background(name = "Comerciante", uPersuasion = 61, uPilot = 61, uEmpathy = 36, uSearch = 16),
+        Background(name = "Curandero", uHeal = 61, uConcentration = 61, uEmpathy = 36, uPersuasion = 16),
+        Background(name = "Erudito", uConcentration = 61, uPersuasion = 61, uSearch = 36, uCrafting1 = 16, uCrafting2 = 16),
+        Background(name = "Espía", uStealth = 61, uSpot = 61, uPersuasion = 36, uSearch = 16),
+        Background(name = "Guardabosques", uSurvival = 61, uSearch = 61, uEmpathy = 36, uSpot = 16),
+        Background(name = "Herrero", uCrafting1 = 61, uAthletics = 36, uManualDexterity = 16, meleeProficiency = true),
+        Background(name = "Inventor", uCrafting1 = 61, uCrafting2 = 61, uManualDexterity = 61, uConcentration = 36, uSpot = 16),
+        Background(name = "Ladrón", uAgility = 61, uManualDexterity = 61, uStealth = 36, uAthletics = 16),
         Background(name = "Marinero", uPilot = 61, uAthletics = 61, uSurvival = 16, meleeProficiency = true),
-        Background(name = "Mensajero", uMount = 61, uAthletics = 61, uSearch = 26, uEmpathy = 16),
+        Background(name = "Mensajero", uMount = 61, uAthletics = 61, uSearch = 36, uEmpathy = 16),
         Background(name = "Mercenario", uSurvival = 16, uAthletics = 16, rangedProficiency = true, meleeProficiency = true),
-        Background(name = "Músico", uPerform1 = 61, uPerform2 = 61, uListen = 61, uPersuasion = 26, uManualDexterity = 16),
+        Background(name = "Músico", uPerform1 = 61, uPerform2 = 61, uListen = 61, uPersuasion = 36, uManualDexterity = 16),
         Background(name = "Noble", uMount = 61, uPersuasion = 61, uEmpathy = 16, meleeProficiency = true),
-        Background(name = "Vagabundo", uAthletics = 61, uSurvival = 61, uSearch = 26, uSpot = 16)
+        Background(name = "Vagabundo", uAthletics = 61, uSurvival = 61, uSearch = 36, uSpot = 16)
         )
 }
