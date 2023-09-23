@@ -121,8 +121,18 @@ data class Character(
     @ColumnInfo(name = "u_ray_spells")
     var uRaySpells: Int = 0,
     //Human and Half-Human Bonuses
-    @ColumnInfo(name = "human_bonus_attribute")
-    var hBAttribute: Int = 0,
+    @ColumnInfo(name = "human_bonus_strength")
+    var hBStrength: Int = 0,
+    @ColumnInfo(name = "human_bonus_dexterity")
+    var hBDexterity: Int = 0,
+    @ColumnInfo(name = "human_bonus_constitution")
+    var hBConstitution: Int = 0,
+    @ColumnInfo(name = "human_bonus_intelligence")
+    var hBIntelligence: Int = 0,
+    @ColumnInfo(name = "human_bonus_wisdom")
+    var hBWisdom: Int = 0,
+    @ColumnInfo(name = "human_bonus_charisma")
+    var hBCharisma: Int = 0,
     @ColumnInfo(name = "human_bonus_skill")
     var hBSkill: Skills = Skills.NONE,
     @ColumnInfo(name = "human_bonus_proficiency")

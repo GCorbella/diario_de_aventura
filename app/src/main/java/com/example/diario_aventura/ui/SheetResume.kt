@@ -170,32 +170,33 @@ class SheetResume : AppCompatActivity() {
 
             // Actualizar los TextViews con los valores del personaje
             runOnUiThread {
-                findViewById<TextView>(R.id.txt_health_pts).text = character.cHealth.toString() + "/" + (character.constitution + characterRace.constitution).toString()
-                findViewById<TextView>(R.id.txt_mana_pts).text = character.cMana.toString() + "/" + ((character.wisdom + characterRace.wisdom) * 3).toString()
+                findViewById<TextView>(R.id.txt_health_pts).text = character.cHealth.toString() + "/" + (character.constitution + characterRace.constitution + character.hBConstitution).toString()
+                findViewById<TextView>(R.id.txt_mana_pts).text = character.cMana.toString() + "/" + ((character.wisdom + characterRace.wisdom + character.hBWisdom) * 3).toString()
                 findViewById<TextView>(R.id.txt_luck_pts).text = character.cLuck.toString()
 
                 findViewById<EditText>(R.id.etxt_u_fortitude).setText(character.uFortitude.toString())
                 findViewById<EditText>(R.id.etxt_u_reflexes).setText(character.uReflexes.toString())
                 findViewById<EditText>(R.id.etxt_u_will).setText(character.uWill.toString())
 
-                findViewById<TextView>(R.id.txt_val_str).text = (character.strength + characterRace.strength).toString()
-                findViewById<TextView>(R.id.txt_val_dex).text = (character.dexterity + characterRace.dexterity).toString()
-                findViewById<TextView>(R.id.txt_val_con).text = (character.constitution + characterRace.constitution).toString()
-                findViewById<TextView>(R.id.txt_val_int).text = (character.intelligence + characterRace.intelligence).toString()
-                findViewById<TextView>(R.id.txt_val_wis).text = (character.wisdom + characterRace.wisdom).toString()
-                findViewById<TextView>(R.id.txt_val_cha).text = (character.charisma + characterRace.charisma).toString()
+                findViewById<TextView>(R.id.txt_val_str).text = (character.strength + characterRace.strength + character.hBStrength).toString()
+                findViewById<TextView>(R.id.txt_val_dex).text = (character.dexterity + characterRace.dexterity + character.hBDexterity).toString()
+                findViewById<TextView>(R.id.txt_val_con).text = (character.constitution + characterRace.constitution + character.hBConstitution).toString()
+                findViewById<TextView>(R.id.txt_val_int).text = (character.intelligence + characterRace.intelligence + character.hBIntelligence).toString()
+                findViewById<TextView>(R.id.txt_val_wis).text = (character.wisdom + characterRace.wisdom + character.hBWisdom).toString()
+                findViewById<TextView>(R.id.txt_val_cha).text = (character.charisma + characterRace.charisma + character.hBCharisma).toString()
 
                 if (characterRace.size == "Pequeño") {
                     findViewById<TextView>(R.id.txt_val_speed).text = "8 m. (4 cas.)"
                     if (character.sixthSense) {
                         findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) +
                                                                             ((characterRace.dexterity/2) + (characterRace.wisdom/2)) +
+                                                                            ((character.hBDexterity + character.hBWisdom)/2) +
                                                                             12).toString()
-                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + (characterRace.wisdom/2) + 12).toString()
+                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + (characterRace.wisdom/2) + (character.hBWisdom/2) + 12).toString()
                     } else {
-                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + 12).toString()
+                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + (character.hBDexterity/2) + 12).toString()
                         if ((character.dexterity + characterRace.dexterity)< 10) {
-                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + 12).toString()
+                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + (character.hBDexterity/2) + 12).toString()
                         } else {
                             findViewById<TextView>(R.id.txt_val_defense_desp).text = "12"
                         }
@@ -205,12 +206,13 @@ class SheetResume : AppCompatActivity() {
                     if (character.sixthSense) {
                         findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) +
                                                                             ((characterRace.dexterity/2) + (characterRace.wisdom/2)) +
+                                                                            ((character.hBDexterity + character.hBWisdom)/2) +
                                                                             10).toString()
-                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + (characterRace.wisdom/2) + 10).toString()
+                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + (characterRace.wisdom/2) + (character.hBWisdom/2) + 10).toString()
                     } else {
-                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + 10).toString()
+                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + (character.hBDexterity/2) + 10).toString()
                         if ((character.dexterity + characterRace.dexterity)< 10) {
-                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + 10).toString()
+                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + (character.hBDexterity/2) + 10).toString()
                         } else {
                             findViewById<TextView>(R.id.txt_val_defense_desp).text = "10"
                         }
@@ -218,13 +220,13 @@ class SheetResume : AppCompatActivity() {
                 }
 
                 if (character.enhInitiative) {
-                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + 4).toString()
+                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + (character.hBDexterity/2) + 4).toString()
                 } else {
-                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2)).toString()
+                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + (characterRace.dexterity/2) + (character.hBDexterity/2)).toString()
                 }
                 // Realizar cálculos y actualizar los modificadores
                 calculateAndSetModifiers()
-                updateSkillValues()
+                updateSavesValues()
             }
         }
     }
@@ -301,8 +303,8 @@ class SheetResume : AppCompatActivity() {
             else -> 0 // Valor predeterminado si no se encuentra en ningún rango
         }
     }
-    private fun updateSkillValues() {
-        // Itera a través de los EditText y TextView para actualizar los valores de habilidad basados en los usos
+    private fun updateSavesValues() {
+        // Itera a través de los EditText y TextView para actualizar los valores de las salvaciones basadas en los usos
         for (i in 0 until editTextArray.size) {
             val editText = editTextArray[i]
             val saveValueTextView = saveValueArray[i]
@@ -311,13 +313,13 @@ class SheetResume : AppCompatActivity() {
 
             when (i) {
                 0 -> {
-                    saveValueTextView.text = (newValue + (((character.constitution + characterRace.constitution) - 10) / 2)).toString() // Fortaleza (CON)
+                    saveValueTextView.text = (newValue + (((character.constitution + characterRace.constitution + character.hBConstitution) - 10) / 2)).toString() // Fortaleza (CON)
                 }
                 1 -> {
-                    saveValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Reflejos (DES)
+                    saveValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity + character.hBDexterity) - 10) / 2)).toString() // Reflejos (DES)
                 }
                 2 -> {
-                    saveValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Voluntad (SAB)
+                    saveValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom + character.hBWisdom) - 10) / 2)).toString() // Voluntad (SAB)
                 }
                 else -> saveValueTextView.text = newValue.toString() // Valor predeterminado
             }

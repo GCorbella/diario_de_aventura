@@ -147,12 +147,12 @@ class Configuration : AppCompatActivity() {
                             val selectedHumanBonusProficiencyPosition = humanBonusProficienciesSpinner.selectedItemPosition
 
                             when (selectedHumanBonusAttributePosition) {
-                                0 -> newCharacter.hBAttribute = 1
-                                1 -> newCharacter.hBAttribute = 2
-                                2 -> newCharacter.hBAttribute = 3
-                                3 -> newCharacter.hBAttribute = 4
-                                4 -> newCharacter.hBAttribute = 5
-                                5 -> newCharacter.hBAttribute = 6
+                                0 -> newCharacter.hBStrength += 2
+                                1 -> newCharacter.hBDexterity += 2
+                                2 -> newCharacter.hBConstitution += 2
+                                3 -> newCharacter.hBIntelligence += 2
+                                4 -> newCharacter.hBWisdom += 2
+                                5 -> newCharacter.hBCharisma += 2
                             }
 
                             val selectedHumanBonusSkill = filteredSkills[selectedHumanBonusSkillPosition]

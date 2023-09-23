@@ -235,112 +235,112 @@ class Skills : AppCompatActivity() {
 
             when (i) {
                 0 -> {
-                    if (characterRace.bSkill == Skills.AGILITY) {
+                    if (characterRace.bSkill == Skills.AGILITY || character.hBSkill == Skills.AGILITY || character.hEBSkill == Skills.AGILITY) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity + character.hBDexterity) - 10) / 2)).toString() // Destreza (DEX)
                 }
                 1 -> {
-                    if (characterRace.bSkill == Skills.CRAFTING_1) {
+                    if (characterRace.bSkill == Skills.CRAFTING_1 || character.hBSkill == Skills.CRAFTING_1 || character.hEBSkill == Skills.CRAFTING_1) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence) - 10) / 2)).toString() // Inteligencia (INT)
+                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence + character.hBIntelligence) - 10) / 2)).toString() // Inteligencia (INT)
                 }
                 2 -> {
-                    if (characterRace.bSkill == Skills.CRAFTING_1) {
+                    if (characterRace.bSkill == Skills.CRAFTING_1 || character.hBSkill == Skills.CRAFTING_1 || character.hEBSkill == Skills.CRAFTING_1) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence) - 10) / 2)).toString() // Inteligencia (INT)
+                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence + character.hBIntelligence) - 10) / 2)).toString() // Inteligencia (INT)
                 }
                 3 -> {
-                    if (characterRace.bSkill == Skills.ATHLETICS) {
+                    if (characterRace.bSkill == Skills.ATHLETICS || character.hBSkill == Skills.ATHLETICS || character.hEBSkill == Skills.ATHLETICS) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.strength + characterRace.strength) - 10) / 2)).toString() // Fuerza (STR)
+                    skillValueTextView.text = (newValue + (((character.strength + characterRace.strength + character.hBStrength) - 10) / 2)).toString() // Fuerza (STR)
                 }
                 4 -> {
-                    if (characterRace.bSkill == Skills.SPOT) {
+                    if (characterRace.bSkill == Skills.SPOT || character.hBSkill == Skills.SPOT || character.hEBSkill == Skills.SPOT) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom + character.hBWisdom) - 10) / 2)).toString() // Sabiduría (WIS)
                 }
                 5 -> {
-                    if (characterRace.bSkill == Skills.SEARCH) {
+                    if (characterRace.bSkill == Skills.SEARCH || character.hBSkill == Skills.SEARCH || character.hEBSkill == Skills.SEARCH) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence) - 10) / 2)).toString() // Inteligencia (INT)
+                    skillValueTextView.text = (newValue + (((character.intelligence + characterRace.intelligence + character.hBIntelligence) - 10) / 2)).toString() // Inteligencia (INT)
                 }
                 6 -> {
-                    if (characterRace.bSkill == Skills.CONCENTRATION) {
+                    if (characterRace.bSkill == Skills.CONCENTRATION || character.hBSkill == Skills.CONCENTRATION || character.hEBSkill == Skills.CONCENTRATION) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.constitution + characterRace.constitution) - 10) / 2)).toString() // Constitución (CON)
+                    skillValueTextView.text = (newValue + (((character.constitution + characterRace.constitution + character.hBConstitution) - 10) / 2)).toString() // Constitución (CON)
                 }
                 7 -> {
-                    if (characterRace.bSkill == Skills.MANUAL_DEXTERITY) {
+                    if (characterRace.bSkill == Skills.MANUAL_DEXTERITY || character.hBSkill == Skills.MANUAL_DEXTERITY || character.hEBSkill == Skills.MANUAL_DEXTERITY) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity + character.hBDexterity) - 10) / 2)).toString() // Destreza (DEX)
                 }
                 8 -> {
-                    if (characterRace.bSkill == Skills.EMPATHY) {
+                    if (characterRace.bSkill == Skills.EMPATHY || character.hBSkill == Skills.EMPATHY || character.hEBSkill == Skills.EMPATHY) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma + character.hBCharisma) - 10) / 2)).toString() // Carisma (CHA)
                 }
                 9 -> {
-                    if (characterRace.bSkill == Skills.LISTEN) {
+                    if (characterRace.bSkill == Skills.LISTEN || character.hBSkill == Skills.LISTEN || character.hEBSkill == Skills.LISTEN) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom + character.hBWisdom) - 10) / 2)).toString() // Sabiduría (WIS)
                 }
                 10 -> {
-                    if (characterRace.bSkill == Skills.PERFORM_1) {
+                    if (characterRace.bSkill == Skills.PERFORM_1 || character.hBSkill == Skills.PERFORM_1 || character.hEBSkill == Skills.PERFORM_1) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma + character.hBCharisma) - 10) / 2)).toString() // Carisma (CHA)
                 }
                 11 -> {
-                    if (characterRace.bSkill == Skills.PERFORM_1) {
+                    if (characterRace.bSkill == Skills.PERFORM_1 || character.hBSkill == Skills.PERFORM_1 || character.hEBSkill == Skills.PERFORM_1) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma + character.hBCharisma) - 10) / 2)).toString() // Carisma (CHA)
                 }
                 12 -> {
-                    if (characterRace.bSkill == Skills.PERSUASION) {
+                    if (characterRace.bSkill == Skills.PERSUASION || character.hBSkill == Skills.PERSUASION || character.hEBSkill == Skills.PERSUASION) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma) - 10) / 2)).toString() // Carisma (CHA)
+                    skillValueTextView.text = (newValue + (((character.charisma + characterRace.charisma + character.hBCharisma) - 10) / 2)).toString() // Carisma (CHA)
                 }
                 13 -> {
-                    if (characterRace.bSkill == Skills.MOUNT) {
+                    if (characterRace.bSkill == Skills.MOUNT || character.hBSkill == Skills.MOUNT || character.hEBSkill == Skills.MOUNT) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity + character.hBDexterity) - 10) / 2)).toString() // Destreza (DEX)
                 }
                 14 -> {
-                    if (characterRace.bSkill == Skills.PILOT) {
+                    if (characterRace.bSkill == Skills.PILOT || character.hBSkill == Skills.PILOT || character.hEBSkill == Skills.PILOT) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom + character.hBWisdom) - 10) / 2)).toString() // Sabiduría (WIS)
                 }
                 15 -> {
-                    if (characterRace.bSkill == Skills.HEAL) {
+                    if (characterRace.bSkill == Skills.HEAL || character.hBSkill == Skills.HEAL || character.hEBSkill == Skills.HEAL) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom + character.hBWisdom) - 10) / 2)).toString() // Sabiduría (WIS)
                 }
                 16 -> {
-                    if (characterRace.bSkill == Skills.STEALTH) {
+                    if (characterRace.bSkill == Skills.STEALTH || character.hBSkill == Skills.STEALTH || character.hEBSkill == Skills.STEALTH) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity) - 10) / 2)).toString() // Destreza (DEX)
+                    skillValueTextView.text = (newValue + (((character.dexterity + characterRace.dexterity + character.hBDexterity) - 10) / 2)).toString() // Destreza (DEX)
                 }
                 17 -> {
-                    if (characterRace.bSkill == Skills.SURVIVAL) {
+                    if (characterRace.bSkill == Skills.SURVIVAL || character.hBSkill == Skills.SURVIVAL || character.hEBSkill == Skills.SURVIVAL) {
                         newValue += 3
                     }
-                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom) - 10) / 2)).toString() // Sabiduría (WIS)
+                    skillValueTextView.text = (newValue + (((character.wisdom + characterRace.wisdom + character.hBWisdom) - 10) / 2)).toString() // Sabiduría (WIS)
                 }
                 else -> skillValueTextView.text = newValue.toString() // Valor predeterminado
             }
