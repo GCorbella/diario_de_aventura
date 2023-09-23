@@ -68,6 +68,14 @@ class CrConfiguration : AppCompatActivity() {
                 etxtIntelligence.setText(character.intelligence.toString())
                 etxtWisdom.setText(character.wisdom.toString())
                 etxtCharisma.setText(character.charisma.toString())
+
+                if (character.sixthSense) {
+                    chkSixthSense.isChecked = true
+                }
+
+                if (character.enhInitiative) {
+                    chkEnhancedInitiative.isChecked = true
+                }
             }
 
             etxtStrength.addTextChangedListener(createTextWatcher(characterDao, character) { newValue ->
@@ -120,7 +128,6 @@ class CrConfiguration : AppCompatActivity() {
             }
         }
 
-        // Agregar OnClickListener para el botón "Iniciativa Mejorada"
         chkEnhancedInitiative.setOnClickListener {
             character.enhInitiative = chkEnhancedInitiative.isChecked
             CoroutineScope(Dispatchers.IO).launch {

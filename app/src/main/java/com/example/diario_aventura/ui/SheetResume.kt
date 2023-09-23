@@ -188,12 +188,14 @@ class SheetResume : AppCompatActivity() {
                 if (characterRace.size == "Pequeño") {
                     findViewById<TextView>(R.id.txt_val_speed).text = "8 m. (4 cas.)"
                     if (character.sixthSense) {
-                        findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) + 12).toString()
-                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + 12).toString()
+                        findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) +
+                                                                            (((characterRace.dexterity - 10)/2) + ((characterRace.wisdom - 10)/2)) +
+                                                                            12).toString()
+                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + ((characterRace.wisdom - 10)/2) + 12).toString()
                     } else {
-                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + 12).toString()
-                        if (character.dexterity < 10) {
-                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + 12).toString()
+                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + ((characterRace.dexterity - 10)/2) + 12).toString()
+                        if ((character.dexterity + characterRace.dexterity)< 10) {
+                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + ((characterRace.dexterity - 10)/2) + 12).toString()
                         } else {
                             findViewById<TextView>(R.id.txt_val_defense_desp).text = "12"
                         }
@@ -201,12 +203,14 @@ class SheetResume : AppCompatActivity() {
                 } else {
                     findViewById<TextView>(R.id.txt_val_speed).text = "12 m. (6 cas.)"
                     if (character.sixthSense) {
-                        findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) + 10).toString()
-                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + 10).toString()
+                        findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) +
+                                                                            (((characterRace.dexterity - 10)/2) + ((characterRace.wisdom - 10)/2)) +
+                                                                            10).toString()
+                        findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.wisdom - 10)/2) + ((characterRace.wisdom - 10)/2) + 10).toString()
                     } else {
-                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + 10).toString()
-                        if (character.dexterity < 10) {
-                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + 10).toString()
+                        findViewById<TextView>(R.id.txt_val_defense).text = (((character.dexterity - 10)/2) + ((characterRace.dexterity - 10)/2) + 10).toString()
+                        if ((character.dexterity + characterRace.dexterity)< 10) {
+                            findViewById<TextView>(R.id.txt_val_defense_desp).text = (((character.dexterity - 10)/2) + ((characterRace.dexterity - 10)/2) + 10).toString()
                         } else {
                             findViewById<TextView>(R.id.txt_val_defense_desp).text = "10"
                         }
@@ -214,9 +218,9 @@ class SheetResume : AppCompatActivity() {
                 }
 
                 if (character.enhInitiative) {
-                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + 4).toString()
+                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + ((characterRace.dexterity - 10)/2) + 4).toString()
                 } else {
-                    findViewById<TextView>(R.id.txt_val_initiative).text = ((character.dexterity - 10)/2).toString()
+                    findViewById<TextView>(R.id.txt_val_initiative).text = (((character.dexterity - 10)/2) + ((characterRace.dexterity - 10)/2)).toString()
                 }
                 // Realizar cálculos y actualizar los modificadores
                 calculateAndSetModifiers()
