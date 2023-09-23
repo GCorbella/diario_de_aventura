@@ -25,6 +25,66 @@
         android:layout_marginTop="16dp"
         android:hint="Selecciona el Trasfondo" />
 
+    <!-- Contenedor para los bonus por humano -->
+    <LinearLayout
+        android:id="@+id/ll_humanbonus_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:visibility="gone"> <!-- Inicialmente oculto -->
+
+        <!-- Selección de Atributo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atributo" />
+
+        <Spinner
+            android:id="@+id/spinner_hbattribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Atributo" />
+
+        <!-- Selección de Habilidad -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Habilidad" />
+
+        <Spinner
+            android:id="@+id/spinner_hbskill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad" />
+
+        <!-- Selección de Habilidad Semi-Elfo -->
+        <Spinner
+            android:id="@+id/spinner_hebskill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habilidad Extra" />
+
+        <!-- Selección de Competencia -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Competencia" />
+
+        <Spinner
+            android:id="@+id/spinner_hbproficiency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Competencia" />
+
+        <!-- Selección de Competencia Semi-Orco -->
+        <Spinner
+            android:id="@+id/spinner_hobproficiency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Competencia Extra" />
+    </LinearLayout>
+
     <!-- Contenedor para las habilidades -->
     <LinearLayout
         android:id="@+id/ll_aprskills_container"

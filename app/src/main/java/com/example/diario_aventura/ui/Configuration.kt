@@ -11,6 +11,7 @@ import com.example.diario_aventura.R
 import com.example.diario_aventura.db.entities.Background
 import com.example.diario_aventura.db.entities.Character
 import com.example.diario_aventura.db.entities.Race
+import com.example.diario_aventura.enums.Proficiencies
 import com.example.diario_aventura.enums.Skills
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -69,13 +70,42 @@ class Configuration : AppCompatActivity() {
                 loadRacesInSpinner()
                 loadBackgroundsInSpinner()
                 loadSkillsInSpinners(dialogView)
+                loadHumanBonusInSpinners(dialogView)
+            }
+
+            spinnerRace.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                val humanBonusContainer = dialogView.findViewById<LinearLayout>(R.id.ll_humanbonus_container)
+                val halfElfBonusSkillSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hebskill)
+                val halfOrcBonusProficiencySpinner = dialogView.findViewById<Spinner>(R.id.spinner_hobproficiency)
+                override fun onItemSelected(parentView: AdapterView<*>?, selectedItemView: View?, position: Int, id: Long) {
+                    when (position) {
+                        11, 17, 18 -> humanBonusContainer.visibility = View.VISIBLE
+                        else -> humanBonusContainer.visibility = View.GONE
+                    }
+                    if (position == 11) {
+                        halfElfBonusSkillSpinner.visibility = View.GONE
+                        halfOrcBonusProficiencySpinner.visibility = View.GONE
+                    }
+                    if (position == 17) {
+                        halfElfBonusSkillSpinner.visibility = View.VISIBLE
+                        halfOrcBonusProficiencySpinner.visibility = View.GONE
+                    }
+                    if (position == 18) {
+                        halfElfBonusSkillSpinner.visibility = View.GONE
+                        halfOrcBonusProficiencySpinner.visibility = View.VISIBLE
+                    }
+                }
+
+                override fun onNothingSelected(parentView: AdapterView<*>?) {
+                    // No es necesario hacer nada aquí
+                }
             }
 
             spinnerBackground.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 val aprSkillsContainer = dialogView.findViewById<LinearLayout>(R.id.ll_aprskills_container)
                 override fun onItemSelected(parentView: AdapterView<*>?, selectedItemView: View?, position: Int, id: Long) {
                     if (position == 3) {
-                        // Si la posición seleccionada en spinnerBackground es igual a 3,
+                        // Si la posición seleccionada en spinnerBackground es igual a 3 (Aprendiz),
                         // muestra el contenido oculto
                         aprSkillsContainer.visibility = View.VISIBLE
                     } else {
@@ -100,9 +130,126 @@ class Configuration : AppCompatActivity() {
                     CoroutineScope(Dispatchers.IO).launch {
                         val characterDao = (application as AdventureJournal).db.characterDao()
                         val newCharacterId = characterDao.createNewCharacter(crName, selectedRace.id, selectedBackground.id)
+                        val newCharacter = characterDao.getCharacterById(newCharacterId)
+
+                        val allSkills = Skills.values().toList()
+                        val filteredSkills = allSkills.filter { it != Skills.CRAFTING_2 && it != Skills.PERFORM_2 && it != Skills.CHOOSE && it != Skills.NONE }
+                        val allProficiencies = Proficiencies.values().toList()
+                        val filteredProficiencies = allProficiencies.filter { it != Proficiencies.CHOOSE && it != Proficiencies.NONE }
+
+                        if (selectedRace.id == 12L || selectedRace.id == 18L || selectedRace.id == 19L) {
+                            val humanBonusAttributeSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hbattribute)
+                            val humanBonusSkillsSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hbskill)
+                            val humanBonusProficienciesSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hbproficiency)
+
+                            val selectedHumanBonusAttributePosition = humanBonusAttributeSpinner.selectedItemPosition
+                            val selectedHumanBonusSkillPosition = humanBonusSkillsSpinner.selectedItemPosition
+                            val selectedHumanBonusProficiencyPosition = humanBonusProficienciesSpinner.selectedItemPosition
+
+                            when (selectedHumanBonusAttributePosition) {
+                                0 -> newCharacter.hBAttribute = 1
+                                1 -> newCharacter.hBAttribute = 2
+                                2 -> newCharacter.hBAttribute = 3
+                                3 -> newCharacter.hBAttribute = 4
+                                4 -> newCharacter.hBAttribute = 5
+                                5 -> newCharacter.hBAttribute = 6
+                            }
+
+                            val selectedHumanBonusSkill = filteredSkills[selectedHumanBonusSkillPosition]
+                            when (selectedHumanBonusSkill.label) {
+                                "Agilidad" -> newCharacter.hBSkill = Skills.AGILITY
+                                "Artesanía" -> newCharacter.hBSkill = Skills.CRAFTING_1
+                                "Atletismo" -> newCharacter.hBSkill = Skills.ATHLETICS
+                                "Avistar" -> newCharacter.hBSkill = Skills.SPOT
+                                "Buscar" -> newCharacter.hBSkill = Skills.SEARCH
+                                "Concentración" -> newCharacter.hBSkill = Skills.CONCENTRATION
+                                "Destreza Manual" -> newCharacter.hBSkill = Skills.MANUAL_DEXTERITY
+                                "Empatía" -> newCharacter.hBSkill = Skills.EMPATHY
+                                "Escuchar" -> newCharacter.hBSkill = Skills.LISTEN
+                                "Interpretar" -> newCharacter.hBSkill = Skills.PERFORM_1
+                                "Labia" -> newCharacter.hBSkill = Skills.PERSUASION
+                                "Montar" -> newCharacter.hBSkill = Skills.MOUNT
+                                "Pilotar" -> newCharacter.hBSkill = Skills.PILOT
+                                "Sanar" -> newCharacter.hBSkill = Skills.HEAL
+                                "Sigilo" -> newCharacter.hBSkill = Skills.STEALTH
+                                "Supervivencia" -> newCharacter.hBSkill = Skills.SURVIVAL
+                            }
+
+                            val selectedHumanBonusProficiency = filteredProficiencies[selectedHumanBonusProficiencyPosition]
+                            when (selectedHumanBonusProficiency.label) {
+                                "Desarmado" -> newCharacter.hBProficiency = Proficiencies.UNARMED
+                                "Dagas" -> newCharacter.hBProficiency = Proficiencies.DAGGERS
+                                "Mazas" -> newCharacter.hBProficiency = Proficiencies.MACES
+                                "Hachas" -> newCharacter.hBProficiency = Proficiencies.AXES
+                                "Espadas" -> newCharacter.hBProficiency = Proficiencies.SWORDS
+                                "Estoques" -> newCharacter.hBProficiency = Proficiencies.RAPIERS
+                                "Látigos" -> newCharacter.hBProficiency = Proficiencies.WHIPS
+                                "Lanzas" -> newCharacter.hBProficiency = Proficiencies.SPEARS
+                                "Mazas 2M" -> newCharacter.hBProficiency = Proficiencies._2HMACES
+                                "Hachas 2M" -> newCharacter.hBProficiency = Proficiencies._2HAXES
+                                "Espadas 2M" -> newCharacter.hBProficiency = Proficiencies._2HSWORDS
+                                "Armas Dobles" -> newCharacter.hBProficiency = Proficiencies.DOUBLE_WEAPONS
+                                "Armas Arrojadizas" -> newCharacter.hBProficiency = Proficiencies.THROWING_WEAPONS
+                                "Arcos" -> newCharacter.hBProficiency = Proficiencies.BOWS
+                                "Ballestas" -> newCharacter.hBProficiency = Proficiencies.CROSSBOWS
+                                "Armas de Fuego C." -> newCharacter.hBProficiency = Proficiencies.SHORT_FIREARMS
+                                "Armas de Fuego L." -> newCharacter.hBProficiency = Proficiencies.LONG_FIREARMS
+                                "Hechizos Proyectil" -> newCharacter.hBProficiency = Proficiencies.PROJECTILE_SPELLS
+                                "Hechizos Rayo" -> newCharacter.hBProficiency = Proficiencies.RAY_SPELLS
+                            }
+
+                            if (selectedRace.id == 18L) {
+                                val halfElfBonusSkillsSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hebskill)
+                                val selectedHalfElfBonusSkillPosition = halfElfBonusSkillsSpinner.selectedItemPosition
+                                val selectedHalfElfBonusSkill = filteredSkills[selectedHalfElfBonusSkillPosition]
+                                when (selectedHalfElfBonusSkill.label) {
+                                    "Agilidad" -> newCharacter.hEBSkill = Skills.AGILITY
+                                    "Artesanía" -> newCharacter.hEBSkill = Skills.CRAFTING_1
+                                    "Atletismo" -> newCharacter.hEBSkill = Skills.ATHLETICS
+                                    "Avistar" -> newCharacter.hEBSkill = Skills.SPOT
+                                    "Buscar" -> newCharacter.hEBSkill = Skills.SEARCH
+                                    "Concentración" -> newCharacter.hEBSkill = Skills.CONCENTRATION
+                                    "Destreza Manual" -> newCharacter.hEBSkill = Skills.MANUAL_DEXTERITY
+                                    "Empatía" -> newCharacter.hEBSkill = Skills.EMPATHY
+                                    "Escuchar" -> newCharacter.hEBSkill = Skills.LISTEN
+                                    "Interpretar" -> newCharacter.hEBSkill = Skills.PERFORM_1
+                                    "Labia" -> newCharacter.hEBSkill = Skills.PERSUASION
+                                    "Montar" -> newCharacter.hEBSkill = Skills.MOUNT
+                                    "Pilotar" -> newCharacter.hEBSkill = Skills.PILOT
+                                    "Sanar" -> newCharacter.hEBSkill = Skills.HEAL
+                                    "Sigilo" -> newCharacter.hEBSkill = Skills.STEALTH
+                                    "Supervivencia" -> newCharacter.hEBSkill = Skills.SURVIVAL
+                                }
+                            }
+                            if (selectedRace.id == 19L) {
+                                val halfOrcBonusProficienciesSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hobproficiency)
+                                val selectedHalfOrcBonusProficiencyPosition = halfOrcBonusProficienciesSpinner.selectedItemPosition
+                                val selectedHalfOrcBonusProficiency = filteredProficiencies[selectedHalfOrcBonusProficiencyPosition]
+                                when (selectedHalfOrcBonusProficiency.label) {
+                                    "Desarmado" -> newCharacter.hOBProficiency = Proficiencies.UNARMED
+                                    "Dagas" -> newCharacter.hOBProficiency = Proficiencies.DAGGERS
+                                    "Mazas" -> newCharacter.hOBProficiency = Proficiencies.MACES
+                                    "Hachas" -> newCharacter.hOBProficiency = Proficiencies.AXES
+                                    "Espadas" -> newCharacter.hOBProficiency = Proficiencies.SWORDS
+                                    "Estoques" -> newCharacter.hOBProficiency = Proficiencies.RAPIERS
+                                    "Látigos" -> newCharacter.hOBProficiency = Proficiencies.WHIPS
+                                    "Lanzas" -> newCharacter.hOBProficiency = Proficiencies.SPEARS
+                                    "Mazas 2M" -> newCharacter.hOBProficiency = Proficiencies._2HMACES
+                                    "Hachas 2M" -> newCharacter.hOBProficiency = Proficiencies._2HAXES
+                                    "Espadas 2M" -> newCharacter.hOBProficiency = Proficiencies._2HSWORDS
+                                    "Armas Dobles" -> newCharacter.hOBProficiency = Proficiencies.DOUBLE_WEAPONS
+                                    "Armas Arrojadizas" -> newCharacter.hOBProficiency = Proficiencies.THROWING_WEAPONS
+                                    "Arcos" -> newCharacter.hOBProficiency = Proficiencies.BOWS
+                                    "Ballestas" -> newCharacter.hOBProficiency = Proficiencies.CROSSBOWS
+                                    "Armas de Fuego C." -> newCharacter.hOBProficiency = Proficiencies.SHORT_FIREARMS
+                                    "Armas de Fuego L." -> newCharacter.hOBProficiency = Proficiencies.LONG_FIREARMS
+                                    "Hechizos Proyectil" -> newCharacter.hOBProficiency = Proficiencies.PROJECTILE_SPELLS
+                                    "Hechizos Rayo" -> newCharacter.hOBProficiency = Proficiencies.RAY_SPELLS
+                                }
+                            }
+                        }
 
                         if (selectedBackground.id != 4L) {
-                            val newCharacter = characterDao.getCharacterById(newCharacterId)
 
                             newCharacter.uAgility += selectedBackground.uAgility
                             newCharacter.uCrafting1 += selectedBackground.uCrafting1
@@ -150,10 +297,6 @@ class Configuration : AppCompatActivity() {
 
                             characterDao.updateCharacter(newCharacter)
                         } else {
-                            val newCharacter = characterDao.getCharacterById(newCharacterId)
-
-                            val allSkills = Skills.values().toList()
-                            val filteredSkills = allSkills.filter { it != Skills.CRAFTING_2 && it != Skills.PERFORM_2 && it != Skills.CHOOSE && it != Skills.NONE }
 
                             val spinnerSkill2 = listOf(
                                 R.id.spinner_aprskill1,
@@ -400,7 +543,7 @@ class Configuration : AppCompatActivity() {
         spinnerBackground.adapter = adapter
     }
 
-    private suspend fun loadSkillsInSpinners(dialogView: View) {
+    private fun loadSkillsInSpinners(dialogView: View) {
         // Obtener las referencias de los spinners de aprskill
         val aprSkillSpinner1 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill1)
         val aprSkillSpinner2 = dialogView.findViewById<Spinner>(R.id.spinner_aprskill2)
@@ -429,6 +572,49 @@ class Configuration : AppCompatActivity() {
         aprSkillSpinner6.adapter = adapter
     }
 
+    private fun loadHumanBonusInSpinners(dialogView: View) {
+        val humanBonusAttributeSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hbattribute)
+        val humanBonusSkillSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hbskill)
+        val humanBonusProficiencySpinner = dialogView.findViewById<Spinner>(R.id.spinner_hbproficiency)
+        val halfElfBonusSkillSpinner = dialogView.findViewById<Spinner>(R.id.spinner_hebskill)
+        val halfOrcBonusProficiencySpinner = dialogView.findViewById<Spinner>(R.id.spinner_hobproficiency)
+
+        val attributes = arrayOf("Fuerza", "Destreza", "Constitución", "Inteligencia", "Sabiduría", "Carisma")
+
+        // Obtener todas las habilidades
+        val allSkills = Skills.values().toList()
+
+        // Filtrar las habilidades que no deseas incluir
+        val filteredSkills = allSkills.filter { it != Skills.CRAFTING_2 && it != Skills.PERFORM_2 && it != Skills.CHOOSE && it != Skills.NONE }
+
+        // Mapear las habilidades filtradas a sus etiquetas en español
+        val skillLabels = filteredSkills.map { getSkillLabel(it) }
+
+        // Obtener todas las competencias
+        val allProficiencies = Proficiencies.values().toList()
+
+        // Filtrar las habilidades que no deseas incluir
+        val filteredProficiencies = allProficiencies.filter { it != Proficiencies.CHOOSE && it != Proficiencies.NONE }
+
+        // Mapear las competencias filtradas a sus etiquetas en español
+        val proficienciesLabels = filteredProficiencies.map { getProficiencyLabel(it) }
+
+        val attributeAdapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, attributes)
+        attributeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val skillAdapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, skillLabels)
+        skillAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val proficiencyAdapter = ArrayAdapter(this@Configuration, android.R.layout.simple_spinner_item, proficienciesLabels)
+        proficiencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        humanBonusAttributeSpinner.adapter = attributeAdapter
+        humanBonusSkillSpinner.adapter = skillAdapter
+        halfElfBonusSkillSpinner.adapter = skillAdapter
+        humanBonusProficiencySpinner.adapter = proficiencyAdapter
+        halfOrcBonusProficiencySpinner.adapter = proficiencyAdapter
+    }
+
     private fun getSkillLabel(skill: Skills): String {
         return when (skill) {
             Skills.AGILITY -> "Agilidad"
@@ -451,6 +637,32 @@ class Configuration : AppCompatActivity() {
             Skills.SURVIVAL -> "Supervivencia"
             Skills.CHOOSE -> "Elegir"
             Skills.NONE -> "Ninguna"
+        }
+    }
+
+    private fun getProficiencyLabel(proficiencies: Proficiencies): String {
+        return when (proficiencies) {
+            Proficiencies.UNARMED -> "Desarmado"
+            Proficiencies.DAGGERS -> "Dagas"
+            Proficiencies.MACES -> "Mazas"
+            Proficiencies.AXES -> "Hachas"
+            Proficiencies.SWORDS -> "Espadas"
+            Proficiencies.RAPIERS -> "Estoques"
+            Proficiencies.WHIPS -> "Látigos"
+            Proficiencies.SPEARS -> "Lanzas"
+            Proficiencies._2HMACES -> "Mazas 2M"
+            Proficiencies._2HAXES -> "Hachas 2M"
+            Proficiencies._2HSWORDS -> "Espadas 2M"
+            Proficiencies.DOUBLE_WEAPONS -> "Armas Dobles"
+            Proficiencies.THROWING_WEAPONS -> "Armas Arrojadizas"
+            Proficiencies.BOWS -> "Arcos"
+            Proficiencies.CROSSBOWS -> "Ballestas"
+            Proficiencies.SHORT_FIREARMS -> "Armas de Fuego C."
+            Proficiencies.LONG_FIREARMS -> "Armas de Fuego L."
+            Proficiencies.PROJECTILE_SPELLS -> "Hechizos Proyectil"
+            Proficiencies.RAY_SPELLS -> "Hechizos Rayo"
+            Proficiencies.CHOOSE -> "Choose"
+            Proficiencies.NONE -> "None"
         }
     }
 }

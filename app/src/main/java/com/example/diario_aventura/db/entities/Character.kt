@@ -3,6 +3,8 @@ package com.example.diario_aventura.db.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.diario_aventura.enums.Proficiencies
+import com.example.diario_aventura.enums.Skills
 
 @Entity
 data class Character(
@@ -118,6 +120,17 @@ data class Character(
     var uProjectileSpells: Int = 0,
     @ColumnInfo(name = "u_ray_spells")
     var uRaySpells: Int = 0,
+    //Human and Half-Human Bonuses
+    @ColumnInfo(name = "human_bonus_attribute")
+    var hBAttribute: Int = 0,
+    @ColumnInfo(name = "human_bonus_skill")
+    var hBSkill: Skills = Skills.NONE,
+    @ColumnInfo(name = "human_bonus_proficiency")
+    var hBProficiency: Proficiencies = Proficiencies.NONE,
+    @ColumnInfo(name = "half-elf_bonus_skill")
+    var hEBSkill: Skills = Skills.NONE,
+    @ColumnInfo(name = "half-orc_bonus_proficiency")
+    var hOBProficiency: Proficiencies = Proficiencies.NONE,
     //Feats
     @ColumnInfo(name = "sixth_sense")
     var sixthSense: Boolean = false,
