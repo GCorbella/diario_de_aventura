@@ -1,7 +1,6 @@
 package com.example.diario_aventura
 
 import android.app.Application
-import androidx.room.Room
 import com.example.diario_aventura.db.CharactersDB
 
 class AdventureJournal : Application() {

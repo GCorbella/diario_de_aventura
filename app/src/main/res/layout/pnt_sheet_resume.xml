@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.SheetResume">
 
+    <ImageView
+        android:id="@+id/img_border2"
+        android:layout_width="300dp"
+        android:layout_height="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_defense_desp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_carisma"
+        app:srcCompat="@drawable/cenefa_diario" />
+
     <ImageButton
         android:id="@+id/btn_edituses_sav"
         android:layout_width="35dp"
@@ -20,8 +30,9 @@
         android:id="@+id/txt_val_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="12 m. (6 cas.)"
+        android:layout_marginStart="16dp"
+        android:text="12 m."
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_speed"
         app:layout_constraintStart_toEndOf="@+id/txt_speed"
         app:layout_constraintTop_toTopOf="@+id/txt_speed" />
@@ -32,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="10"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_defense"
         app:layout_constraintStart_toEndOf="@+id/txt_speed"
         app:layout_constraintTop_toTopOf="@+id/txt_defense" />
@@ -40,8 +52,9 @@
         android:id="@+id/btn_skills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="Habilidades"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_combat"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,8 +63,9 @@
         android:id="@+id/btn_combat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="Combate"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_inventory"
         app:layout_constraintStart_toEndOf="@+id/btn_skills" />
@@ -60,8 +74,9 @@
         android:id="@+id/btn_inventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="Inventario"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_combat" />
@@ -70,32 +85,35 @@
         android:id="@+id/txt_mana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="24dp"
+        android:elevation="8dp"
         android:text="Maná"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_vida"
+        android:id="@+id/txt_health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Vida"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toStartOf="@+id/txt_suerte"
         app:layout_constraintStart_toEndOf="@+id/txt_mana"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="8dp" />
 
     <TextView
         android:id="@+id/txt_suerte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginEnd="42dp"
+        android:elevation="8dp"
         android:text="Suerte"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +122,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="8dp"
         android:text="0/0"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_mana"
         app:layout_constraintStart_toStartOf="@+id/txt_mana"
         app:layout_constraintTop_toBottomOf="@+id/txt_mana" />
@@ -114,7 +134,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="8dp"
         android:text="0/0"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_suerte"
         app:layout_constraintStart_toStartOf="@+id/txt_suerte"
         app:layout_constraintTop_toBottomOf="@+id/txt_suerte" />
@@ -124,10 +146,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="8dp"
         android:text="0/0"
-        app:layout_constraintEnd_toEndOf="@+id/txt_vida"
-        app:layout_constraintStart_toStartOf="@+id/txt_vida"
-        app:layout_constraintTop_toBottomOf="@+id/txt_vida" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_health"
+        app:layout_constraintStart_toStartOf="@+id/txt_health"
+        app:layout_constraintTop_toBottomOf="@+id/txt_health" />
 
     <TextView
         android:id="@+id/txt_salvaciones"
@@ -135,7 +159,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="Salvaciones"
-        android:textSize="26sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_health_pts" />
@@ -144,9 +168,9 @@
         android:id="@+id/txt_atributos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="Atributos"
-        android:textSize="26sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_val_ref" />
@@ -155,9 +179,10 @@
         android:id="@+id/txt_fortitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="16dp"
         android:text="Fortaleza"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
 
@@ -167,6 +192,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Reflejos"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/txt_will"
         app:layout_constraintStart_toEndOf="@+id/txt_fortitude"
         app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
@@ -176,8 +202,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="42dp"
         android:text="Voluntad"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_salvaciones" />
 
@@ -186,8 +213,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
         android:text="0"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/etxt_u_fortitude"
         app:layout_constraintStart_toStartOf="@+id/txt_fortitude"
         app:layout_constraintTop_toBottomOf="@+id/txt_fortitude" />
@@ -199,6 +226,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="0"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/etxt_u_reflexes"
         app:layout_constraintStart_toStartOf="@+id/txt_reflexes"
         app:layout_constraintTop_toBottomOf="@+id/txt_reflexes" />
@@ -208,8 +236,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
         android:text="0"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/etxt_u_will"
         app:layout_constraintStart_toStartOf="@+id/txt_will"
         app:layout_constraintTop_toBottomOf="@+id/txt_will" />
@@ -220,7 +248,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Fuerza"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_str"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
@@ -231,7 +259,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Destreza"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_dex"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_fuerza" />
@@ -242,7 +270,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Constitución"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_con"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_destreza" />
@@ -251,61 +279,67 @@
         android:id="@+id/txt_val_int"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
         android:layout_marginEnd="125dp"
         android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_inteligencia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+        app:layout_constraintTop_toTopOf="@+id/txt_inteligencia" />
 
     <TextView
         android:id="@+id/txt_val_wis"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
         android:layout_marginEnd="125dp"
         android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_sabiduria"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_int" />
+        app:layout_constraintTop_toTopOf="@+id/txt_sabiduria" />
 
     <TextView
         android:id="@+id/txt_val_cha"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
         android:layout_marginEnd="125dp"
         android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_carisma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_wis" />
+        app:layout_constraintTop_toTopOf="@+id/txt_carisma" />
 
     <TextView
         android:id="@+id/txt_val_str"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="26dp"
         android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_fuerza"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+        app:layout_constraintTop_toTopOf="@+id/txt_fuerza" />
 
     <TextView
         android:id="@+id/txt_val_dex"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="34dp"
         android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_destreza"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_str" />
+        app:layout_constraintTop_toTopOf="@+id/txt_destreza" />
 
     <TextView
         android:id="@+id/txt_val_con"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="34dp"
         android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_constitucion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_dex" />
+        app:layout_constraintTop_toTopOf="@+id/txt_constitucion" />
 
     <TextView
         android:id="@+id/txt_inteligencia"
@@ -313,7 +347,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Inteligencia"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_val_int"
         app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
@@ -324,7 +358,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Sabiduria"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_val_wis"
         app:layout_constraintTop_toBottomOf="@+id/txt_inteligencia" />
@@ -335,7 +369,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Carisma"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_val_cha"
         app:layout_constraintTop_toBottomOf="@+id/txt_sabiduria" />
@@ -344,61 +378,67 @@
         android:id="@+id/txt_mod_str"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="12dp"
         android:text="+0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_fuerza"
         app:layout_constraintStart_toEndOf="@+id/txt_val_str"
-        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+        app:layout_constraintTop_toTopOf="@+id/txt_fuerza" />
 
     <TextView
         android:id="@+id/txt_mod_dex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="12dp"
         android:text="+0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_destreza"
         app:layout_constraintStart_toEndOf="@+id/txt_val_dex"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_str" />
+        app:layout_constraintTop_toTopOf="@+id/txt_destreza" />
 
     <TextView
         android:id="@+id/txt_mod_con"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="12dp"
         android:text="+0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_constitucion"
         app:layout_constraintStart_toEndOf="@+id/txt_val_con"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_dex" />
+        app:layout_constraintTop_toTopOf="@+id/txt_constitucion" />
 
     <TextView
         android:id="@+id/txt_mod_int"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:text="+0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_inteligencia"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_int"
-        app:layout_constraintTop_toBottomOf="@+id/txt_atributos" />
+        app:layout_constraintTop_toTopOf="@+id/txt_inteligencia" />
 
     <TextView
         android:id="@+id/txt_mod_wis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:text="+0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_sabiduria"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_wis"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_int" />
+        app:layout_constraintTop_toTopOf="@+id/txt_sabiduria" />
 
     <TextView
         android:id="@+id/txt_mod_cha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:text="+0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_carisma"
         app:layout_constraintEnd_toStartOf="@+id/txt_val_cha"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mod_wis" />
+        app:layout_constraintTop_toTopOf="@+id/txt_carisma" />
 
     <TextView
         android:id="@+id/txt_speed"
@@ -407,7 +447,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="Velocidad"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_defense" />
 
@@ -416,9 +456,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:text="Defensa"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_constitucion" />
 
@@ -429,7 +469,7 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="80dp"
         android:text="Iniciativa"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_defense_desp" />
 
@@ -437,9 +477,9 @@
         android:id="@+id/txt_defense_desp"
         android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
+        android:layout_marginEnd="74dp"
         android:text="Defensa \nDesprevenido"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_defense"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_defense" />
@@ -450,6 +490,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="+0"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_initiative"
         app:layout_constraintStart_toEndOf="@+id/txt_initiative"
         app:layout_constraintTop_toTopOf="@+id/txt_initiative" />
@@ -460,6 +501,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="10"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_defense_desp"
         app:layout_constraintStart_toEndOf="@+id/txt_initiative"
         app:layout_constraintTop_toTopOf="@+id/txt_defense_desp" />
@@ -472,7 +514,8 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_mMana"
         app:layout_constraintStart_toStartOf="@+id/txt_mana_pts"
         app:layout_constraintTop_toBottomOf="@+id/txt_mana_pts"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:elevation="8dp" />
 
     <ImageButton
         android:id="@+id/btn_lLuck"
@@ -482,7 +525,8 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_mLuck"
         app:layout_constraintStart_toStartOf="@+id/txt_luck_pts"
         app:layout_constraintTop_toBottomOf="@+id/txt_luck_pts"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:elevation="8dp" />
 
     <ImageButton
         android:id="@+id/btn_lHealth"
@@ -492,7 +536,8 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_mHealth"
         app:layout_constraintStart_toStartOf="@+id/txt_health_pts"
         app:layout_constraintTop_toBottomOf="@+id/txt_health_pts"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:elevation="8dp" />
 
     <ImageButton
         android:id="@+id/btn_mMana"
@@ -502,7 +547,8 @@
         app:layout_constraintEnd_toEndOf="@+id/txt_mana_pts"
         app:layout_constraintStart_toEndOf="@+id/btn_lMana"
         app:layout_constraintTop_toBottomOf="@+id/txt_mana_pts"
-        app:srcCompat="@android:drawable/arrow_up_float" />
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:elevation="8dp" />
 
     <ImageButton
         android:id="@+id/btn_mLuck"
@@ -512,13 +558,15 @@
         app:layout_constraintEnd_toEndOf="@+id/txt_luck_pts"
         app:layout_constraintStart_toEndOf="@+id/btn_lLuck"
         app:layout_constraintTop_toBottomOf="@+id/txt_luck_pts"
-        app:srcCompat="@android:drawable/arrow_up_float" />
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:elevation="8dp" />
 
     <ImageButton
         android:id="@+id/btn_mHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="@+id/txt_health_pts"
         app:layout_constraintStart_toEndOf="@+id/btn_lHealth"
         app:layout_constraintTop_toBottomOf="@+id/txt_health_pts"
@@ -538,13 +586,11 @@
         android:id="@+id/etxt_u_fortitude"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="-16dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="@+id/txt_val_for"
         app:layout_constraintEnd_toEndOf="@+id/txt_fortitude"
         app:layout_constraintStart_toEndOf="@+id/txt_val_for"
@@ -555,12 +601,11 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="-16dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="@+id/txt_val_ref"
         app:layout_constraintEnd_toEndOf="@+id/txt_reflexes"
         app:layout_constraintStart_toEndOf="@+id/txt_val_ref"
@@ -570,16 +615,65 @@
         android:id="@+id/etxt_u_will"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="-16dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="@+id/txt_val_will"
         app:layout_constraintEnd_toEndOf="@+id/txt_will"
         app:layout_constraintStart_toEndOf="@+id/txt_val_will"
         app:layout_constraintTop_toTopOf="@+id/txt_val_will" />
+
+    <ImageView
+        android:id="@+id/img_mana"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_mana_pts"
+        app:layout_constraintEnd_toEndOf="@+id/txt_mana_pts"
+        app:layout_constraintStart_toStartOf="@+id/txt_mana_pts"
+        app:layout_constraintTop_toTopOf="@+id/txt_mana_pts"
+        app:srcCompat="@drawable/mana" />
+
+    <ImageView
+        android:id="@+id/img_health"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_health_pts"
+        app:layout_constraintEnd_toEndOf="@+id/txt_health_pts"
+        app:layout_constraintStart_toStartOf="@+id/txt_health_pts"
+        app:layout_constraintTop_toTopOf="@+id/txt_health_pts"
+        app:srcCompat="@drawable/vida" />
+
+    <ImageView
+        android:id="@+id/img_luck"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_luck_pts"
+        app:layout_constraintEnd_toEndOf="@+id/txt_luck_pts"
+        app:layout_constraintStart_toStartOf="@+id/txt_luck_pts"
+        app:layout_constraintTop_toTopOf="@+id/txt_luck_pts"
+        app:srcCompat="@drawable/suerte" />
+
+    <ImageView
+        android:id="@+id/img_border1"
+        android:layout_width="300dp"
+        android:layout_height="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_salvaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mHealth"
+        app:srcCompat="@drawable/cenefa_diario" />
+
+    <ImageView
+        android:id="@+id/img_border3"
+        android:layout_width="300dp"
+        android:layout_height="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_atributos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_u_reflexes"
+        app:srcCompat="@drawable/cenefa_diario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

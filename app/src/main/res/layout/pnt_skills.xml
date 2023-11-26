@@ -208,199 +208,199 @@
         android:id="@+id/txt_val_agility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_agility"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/txt_agility" />
 
     <TextView
         android:id="@+id/txt_val_crafting1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_crafting1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_agility" />
+        app:layout_constraintTop_toTopOf="@+id/txt_crafting1" />
 
     <TextView
         android:id="@+id/txt_val_crafting2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_crafting2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_crafting1" />
+        app:layout_constraintTop_toTopOf="@+id/txt_crafting2" />
 
     <TextView
         android:id="@+id/txt_val_athletics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_athletics"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_crafting2" />
+        app:layout_constraintTop_toTopOf="@+id/txt_athletics" />
 
     <TextView
         android:id="@+id/txt_val_spot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_spot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_athletics" />
+        app:layout_constraintTop_toTopOf="@+id/txt_spot" />
 
     <TextView
         android:id="@+id/txt_val_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_search"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_spot" />
+        app:layout_constraintTop_toTopOf="@+id/txt_search" />
 
     <TextView
         android:id="@+id/txt_val_concentration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_concentration"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_search" />
+        app:layout_constraintTop_toTopOf="@+id/txt_concentration" />
 
     <TextView
         android:id="@+id/txt_val_manual_dexterity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_manual_dexterity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_concentration" />
+        app:layout_constraintTop_toTopOf="@+id/txt_manual_dexterity" />
 
     <TextView
         android:id="@+id/txt_val_empathy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_empathy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_manual_dexterity" />
+        app:layout_constraintTop_toTopOf="@+id/txt_empathy" />
 
     <TextView
         android:id="@+id/txt_val_listen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_listen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_empathy" />
+        app:layout_constraintTop_toTopOf="@+id/txt_listen" />
 
     <TextView
         android:id="@+id/txt_val_perform1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_perform1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_listen" />
+        app:layout_constraintTop_toTopOf="@+id/txt_perform1" />
 
     <TextView
         android:id="@+id/txt_val_perform2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_perform2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_perform1" />
+        app:layout_constraintTop_toTopOf="@+id/txt_perform2" />
 
     <TextView
         android:id="@+id/txt_val_persuasion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_persuasion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_perform2" />
+        app:layout_constraintTop_toTopOf="@+id/txt_persuasion" />
 
     <TextView
         android:id="@+id/txt_val_mount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_mount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_persuasion" />
+        app:layout_constraintTop_toTopOf="@+id/txt_mount" />
 
     <TextView
         android:id="@+id/txt_val_pilot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_pilot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_mount" />
+        app:layout_constraintTop_toTopOf="@+id/txt_pilot" />
 
     <TextView
         android:id="@+id/txt_val_heal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_heal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_pilot" />
+        app:layout_constraintTop_toTopOf="@+id/txt_heal" />
 
     <TextView
         android:id="@+id/txt_val_stealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_stealth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_heal" />
+        app:layout_constraintTop_toTopOf="@+id/txt_stealth" />
 
     <TextView
         android:id="@+id/txt_val_survival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="196dp"
         android:text="0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_survival"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_val_stealth" />
+        app:layout_constraintTop_toTopOf="@+id/txt_survival" />
 
     <ImageButton
         android:id="@+id/btn_more_agility"
@@ -597,253 +597,253 @@
         android:id="@+id/etxt_u_agility"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_agility"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/txt_agility" />
 
     <EditText
         android:id="@+id/etxt_u_crafting1"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_crafting1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_agility" />
+        app:layout_constraintTop_toTopOf="@+id/txt_crafting1" />
 
     <EditText
         android:id="@+id/etxt_u_crafting2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_crafting2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_crafting1" />
+        app:layout_constraintTop_toTopOf="@+id/txt_crafting2" />
 
     <EditText
         android:id="@+id/etxt_u_athletics"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_athletics"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_crafting2" />
+        app:layout_constraintTop_toTopOf="@+id/txt_athletics" />
 
     <EditText
         android:id="@+id/etxt_u_spot"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_spot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_athletics" />
+        app:layout_constraintTop_toTopOf="@+id/txt_spot" />
 
     <EditText
         android:id="@+id/etxt_u_search"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_search"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_spot" />
+        app:layout_constraintTop_toTopOf="@+id/txt_search" />
 
     <EditText
         android:id="@+id/etxt_u_concentration"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_concentration"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_search" />
+        app:layout_constraintTop_toTopOf="@+id/txt_concentration" />
 
     <EditText
         android:id="@+id/etxt_u_manual_dexterity"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_manual_dexterity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_concentration" />
+        app:layout_constraintTop_toTopOf="@+id/txt_manual_dexterity" />
 
     <EditText
         android:id="@+id/etxt_u_empathy"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_empathy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_manual_dexterity" />
+        app:layout_constraintTop_toTopOf="@+id/txt_empathy" />
 
     <EditText
         android:id="@+id/etxt_u_listen"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_listen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_empathy" />
+        app:layout_constraintTop_toTopOf="@+id/txt_listen" />
 
     <EditText
         android:id="@+id/etxt_u_perform1"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_perform1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_listen" />
+        app:layout_constraintTop_toTopOf="@+id/txt_perform1" />
 
     <EditText
         android:id="@+id/etxt_u_perform2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_perform2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_perform1" />
+        app:layout_constraintTop_toTopOf="@+id/txt_perform2" />
 
     <EditText
         android:id="@+id/etxt_u_persuasion"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_persuasion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_perform2" />
+        app:layout_constraintTop_toTopOf="@+id/txt_persuasion" />
 
     <EditText
         android:id="@+id/etxt_u_mount"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_mount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_persuasion" />
+        app:layout_constraintTop_toTopOf="@+id/txt_mount" />
 
     <EditText
         android:id="@+id/etxt_u_pilot"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_pilot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_mount" />
+        app:layout_constraintTop_toTopOf="@+id/txt_pilot" />
 
     <EditText
         android:id="@+id/etxt_u_heal"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_heal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_pilot" />
+        app:layout_constraintTop_toTopOf="@+id/txt_heal" />
 
     <EditText
         android:id="@+id/etxt_u_stealth"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_stealth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_heal" />
+        app:layout_constraintTop_toTopOf="@+id/txt_stealth" />
 
     <EditText
         android:id="@+id/etxt_u_survival"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="number"
         android:text="14"
         android:textSize="10sp"
-        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_survival"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_u_stealth" />
+        app:layout_constraintTop_toTopOf="@+id/txt_survival" />
 
     <ImageButton
         android:id="@+id/btn_edituses_sklls"

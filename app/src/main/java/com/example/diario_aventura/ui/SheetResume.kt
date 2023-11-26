@@ -81,9 +81,9 @@ class SheetResume : AppCompatActivity() {
                 findViewById(R.id.txt_val_will)
             )
         )
-        val BtnEditUses = findViewById<ImageButton>(R.id.btn_edituses_sav)
+        val btnEditUses = findViewById<ImageButton>(R.id.btn_edituses_sav)
 
-        BtnEditUses.setOnClickListener {
+        btnEditUses.setOnClickListener {
             for (eTxt in editTextArray) {
                 eTxt.isEnabled = !eTxt.isEnabled
             }
@@ -186,7 +186,7 @@ class SheetResume : AppCompatActivity() {
                 findViewById<TextView>(R.id.txt_val_cha).text = (character.charisma + characterRace.charisma + character.hBCharisma).toString()
 
                 if (characterRace.size == "Pequeño") {
-                    findViewById<TextView>(R.id.txt_val_speed).text = "8 m. (4 cas.)"
+                    findViewById<TextView>(R.id.txt_val_speed).text = "8 m."
                     if (character.sixthSense) {
                         findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) +
                                                                             ((characterRace.dexterity/2) + (characterRace.wisdom/2)) +
@@ -202,7 +202,7 @@ class SheetResume : AppCompatActivity() {
                         }
                     }
                 } else {
-                    findViewById<TextView>(R.id.txt_val_speed).text = "12 m. (6 cas.)"
+                    findViewById<TextView>(R.id.txt_val_speed).text = "12 m."
                     if (character.sixthSense) {
                         findViewById<TextView>(R.id.txt_val_defense).text = ((((character.dexterity - 10)/2) + ((character.wisdom - 10)/2)) +
                                                                             ((characterRace.dexterity/2) + (characterRace.wisdom/2)) +

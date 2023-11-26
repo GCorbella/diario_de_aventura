@@ -9,21 +9,24 @@
         android:id="@+id/etxt_new_cr_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre del personaje" />
+        android:hint="Nombre del personaje"
+        android:textColor="@color/white" />
 
     <Spinner
         android:id="@+id/spinner_race"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Selecciona la Raza" />
+        android:hint="Selecciona la Raza"
+        android:textColor="@color/white" />
 
     <Spinner
         android:id="@+id/spinner_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Selecciona el Trasfondo" />
+        android:hint="Selecciona el Trasfondo"
+        android:textColor="@color/white" />
 
     <!-- Contenedor para los bonus por humano -->
     <LinearLayout
@@ -38,51 +41,59 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Atributo" />
+            android:text="Atributo"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_hbattribute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Atributo" />
+            android:hint="Atributo"
+            android:textColor="@color/white" />
 
         <!-- Selección de Habilidad -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Habilidad" />
+            android:text="Habilidad"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_hbskill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad" />
+            android:hint="Habilidad"
+            android:textColor="@color/white" />
 
         <!-- Selección de Habilidad Semi-Elfo -->
         <Spinner
             android:id="@+id/spinner_hebskill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad Extra" />
+            android:hint="Habilidad Extra"
+            android:textColor="@color/white" />
 
         <!-- Selección de Competencia -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Competencia" />
+            android:text="Competencia"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_hbproficiency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Competencia" />
+            android:hint="Competencia"
+            android:textColor="@color/white" />
 
         <!-- Selección de Competencia Semi-Orco -->
         <Spinner
             android:id="@+id/spinner_hobproficiency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Competencia Extra" />
+            android:hint="Competencia Extra"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <!-- Contenedor para las habilidades -->
@@ -92,55 +103,64 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
+        android:textColor="@color/white"
         android:visibility="gone"> <!-- Inicialmente oculto -->
 
         <!-- Primer conjunto de habilidades (2) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Habilidades (2)" />
+            android:text="Habilidades (2)"
+            android:textColor="@color/white"  />
 
         <Spinner
             android:id="@+id/spinner_aprskill1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad 1" />
+            android:hint="Habilidad 1"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_aprskill2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad 2" />
+            android:hint="Habilidad 2"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_aprskill3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad 3" />
+            android:hint="Habilidad 3"
+            android:textColor="@color/white" />
 
         <!-- Segundo conjunto de habilidades (1) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Habilidades (1)" />
+            android:text="Habilidades (1)"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_aprskill4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad 4" />
+            android:hint="Habilidad 4"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_aprskill5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad 5" />
+            android:hint="Habilidad 5"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/spinner_aprskill6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Habilidad 6" />
+            android:hint="Habilidad 6"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <Button
